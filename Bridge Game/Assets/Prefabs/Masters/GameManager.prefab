@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &138798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 480510}
+  - 114: {fileID: 11447210}
+  - 114: {fileID: 11404328}
+  - 114: {fileID: 11441090}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &480510
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.130515, y: 1.4398735, z: 39.28613}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11404328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6157c1e8474944848b9fe8844e872483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  pauseMenu: {fileID: 0}
+--- !u!114 &11441090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c12961be1030f143a5c41d1503666e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - name: TrapRamp
+    preview: {fileID: 166590, guid: 0a21dbefd63f61a47be5c07ee8056fa4, type: 2}
+    prefab: {fileID: 166590, guid: 22e37df40dc638646b87ddf5cb4140a9, type: 2}
+    scrapCost: 0
+  - name: TrapManhole
+    preview: {fileID: 192176, guid: ace995599c300104b939f5dce275db3c, type: 2}
+    prefab: {fileID: 109640, guid: 29cf8995e786afa4a80b77f02cfca8ee, type: 2}
+    scrapCost: 0
+  - name: TrapBolards
+    preview: {fileID: 197370, guid: 3d55590070d23af4d8667d325394bde4, type: 2}
+    prefab: {fileID: 172472, guid: 56cde6c6f047a3940a62d9ae806010fb, type: 2}
+    scrapCost: 0
+  currentObject:
+    name: 
+    preview: {fileID: 0}
+    prefab: {fileID: 0}
+    scrapCost: 0
+  curPreview: {fileID: 0}
+  cam: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 4294966271
+  isBuilding: 0
+  addY: 0
+  prefabRot: {x: 0, y: 0, z: 0}
+  trapMenu: {fileID: 0}
+--- !u!114 &11447210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1a987404489f34b959b653c5af06d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 138798}
+  m_IsPrefabParent: 1
