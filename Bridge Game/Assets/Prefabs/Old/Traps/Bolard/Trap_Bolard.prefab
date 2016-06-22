@@ -61,7 +61,6 @@ GameObject:
   - 95: {fileID: 9545012}
   - 114: {fileID: 11419458}
   - 54: {fileID: 5467520}
-  - 65: {fileID: 6588150}
   - 65: {fileID: 6501806}
   m_Layer: 9
   m_Name: Trap_Bolard_Model
@@ -115,7 +114,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1039.9856, y: 230.88806, z: -492.1945}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461164}
@@ -224,20 +223,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.359866, y: 3.7531765, z: 0.5810814}
-  m_Center: {x: 0.06718528, y: 1.8687023, z: 0.00000025331974}
---- !u!65 &6588150
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190366}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6, y: 0.1, z: 6}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.359866, y: 3.5958998, z: 0.5810814}
+  m_Center: {x: 0.0671854, y: 1.790064, z: 0.00000023841858}
 --- !u!95 &9545012
 Animator:
   serializedVersion: 3
