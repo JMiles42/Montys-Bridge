@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using JMiles42.Maths.Rand;
 
 public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 {
@@ -8,7 +9,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 
 	public float spawnTime;
 	public string seed;
-	public UnityEngine.UI.Text seedTxt;
+	public UnityEngine.UI.InputField seedTxt;
 
 	System.Random rand;
 
@@ -28,7 +29,11 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	}
 
 
-	// Use this for initialization
+	void Start()
+	{
+		SetSeed(RandomStrings.GetRandomAltString(8));
+    }
+	
 	public void StartSpawner()
 	{
 		rand = new System.Random(seed.GetHashCode());
@@ -51,5 +56,11 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	public void SetSeed()
 	{
 		seed = seedTxt.text;
-	} 
+	}
+	public void SetSeed(string s)
+	{
+		seed = s;
+        seedTxt.text = s;
+	}
+	
 }
