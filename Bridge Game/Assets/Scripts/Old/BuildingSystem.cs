@@ -7,6 +7,7 @@ public class BuildingSystem : MonoBehaviour
 	public BuildObjects currentObject;
 	public Transform curPreview;
 	private Vector3 curPos;
+	private Vector3 curRot;
 	public Transform cam;
 	public LayerMask layer;
 	public bool isBuilding;
@@ -164,6 +165,13 @@ public class BuildingSystem : MonoBehaviour
 	public void RotateBuild(bool b = true) //trap placement
 	{
 		rotate180 = b;
+		if( curPreview != null )
+		{
+			if( b )
+				curRot = prefabRot180;
+			else
+				curRot = prefabRot;
+        }
 	}
 
 	private void CheckToDestroy()
