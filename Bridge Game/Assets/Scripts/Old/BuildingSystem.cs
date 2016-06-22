@@ -41,15 +41,16 @@ public class BuildingSystem : MonoBehaviour
 		{
 			startPreview();
 		}
-
-		if( Input.GetKeyDown(KeyCode.Mouse0) && curPreview != null )
-		{
-			Build();
-		}
-
-		if( Input.GetKeyDown(KeyCode.Mouse1) && curPreview != null )
-		{
-			RotateBuild();
+		if( curPreview != null )
+		{ 
+			if( Input.GetKeyDown(KeyCode.Mouse0) )
+			{
+				Build();
+			}
+			else if( Input.GetKeyDown(KeyCode.Mouse1) )
+			{
+				RotateBuild(!rotate180);
+			}
 		}
 		if( Input.GetKeyDown(KeyCode.R) )
 			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
@@ -135,6 +136,7 @@ public class BuildingSystem : MonoBehaviour
 				curPos = hit.point;
 				//curPos.y = curPos.y + (curPreview.transform.GetChild(0).GetComponent<Collider>().bounds.size.y / 2) + 0.00001f;
 				curPos = new Vector3(Mathf.Round(curPos.x), 0, Mathf.Round(curPos.z));
+				curPreview.rotation = Quaternion.Euler(curRot);
 				curPreview.position = curPos;
 			}
 		}
