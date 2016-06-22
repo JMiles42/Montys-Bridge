@@ -13,18 +13,15 @@ public class CamMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		camZoom(Input.GetAxis("Mouse ScrollWheel"));//Call zoom
+		camZoom((Input.GetAxis("Mouse ScrollWheel") * zoomSpeed) * Time.smoothDeltaTime);//Call zoom
+	
 		camRotate(Input.GetAxis("Horizontal"));//Call rotate
 	}
 
 	void camZoom(float amount)
 	{
 		//Set Zoom level for camera
-		myZoomAnimator.SetFloat
-		(
-			"ZoomLevel",
-			Mathf.Clamp(myZoomAnimator.GetFloat("ZoomLevel") + (amount), 0, 1)
-		);
+		myZoomAnimator.SetFloat("ZoomLevel",Mathf.Clamp(myZoomAnimator.GetFloat("ZoomLevel") + (amount), 0, 1));
 	}
 
 	void camRotate(float amount)

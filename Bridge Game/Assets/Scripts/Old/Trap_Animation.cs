@@ -24,22 +24,9 @@ public class Trap_Animation : MonoBehaviour
 		//print (col.name);
 		if( col.tag == "vehicle" )
 		{
-
-			vehicle.GetComponent<DriveScript>().VehicleDamge();
-			if( anim.GetBool("initiate") == false )
-				anim.SetBool("initiate", true);
-
+			vehicle = col.gameObject;
+            vehicle.GetComponent<DriveScript>().VehicleDamge();
+			anim.SetTrigger("initiate");
 		}
 	}
-	void OnTriggerExit(Collider col)
-	{
-		//print (col.name);
-		if( col.tag == "vehicle" )
-		{
-			if( anim.GetBool("initiate") == true )
-				anim.SetBool("initiate", false);
-
-		}
-	}
-
 }

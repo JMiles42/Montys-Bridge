@@ -29,7 +29,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 
 
 	// Use this for initialization
-	void StartSpawner()
+	public void StartSpawner()
 	{
 		rand = new System.Random(seed.GetHashCode());
 		InvokeRepeating("SpawnUnit", 0, spawnTime);
