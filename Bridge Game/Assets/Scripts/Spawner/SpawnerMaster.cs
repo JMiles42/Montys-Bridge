@@ -55,12 +55,13 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 
 	public void SetSeed()
 	{
-		seed = seedTxt.text;
+		SetSeed(seedTxt.text);
 	}
 	public void SetSeed(string s)
 	{
 		seed = s;
         seedTxt.text = s;
+		SimpleAnalitics.RegisterSeed(s);
 	}
 	
 }
