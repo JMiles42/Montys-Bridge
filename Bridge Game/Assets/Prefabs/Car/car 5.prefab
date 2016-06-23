@@ -426,14 +426,18 @@ MonoBehaviour:
   speed: 20
   start: 0
   hit: 0
-  gameManager: {fileID: 0}
+  explodeEffect: {fileID: 100102, guid: e23bdde50cdb3914e849165335ae41e2, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: explodeEffect
+      value: 
+      objectReference: {fileID: 100102, guid: e23bdde50cdb3914e849165335ae41e2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 150456}

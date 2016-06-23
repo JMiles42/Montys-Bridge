@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Crasher.unity
+- path: Assets/Scenes/Crasher.unity
   isLoaded: 1
   isActive: 1

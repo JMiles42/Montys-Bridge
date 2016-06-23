@@ -9,7 +9,7 @@ public class DriveScript : MonoBehaviour
 
 	public bool hit = false;
 
-	public GameObject gameManager;
+	public GameObject explodeEffect;
 
 	// Update is called once per frame
 	void Update()
@@ -44,6 +44,23 @@ public class DriveScript : MonoBehaviour
 	public void VehicleDamge()
 	{
 		hit = true;
+		Invoke("Explode",Random.Range(4f,10f));
+    }
+
+	void Explode()
+	{
+		if( explodeEffect )
+		{
+			GameObject g = (GameObject) Instantiate(explodeEffect,this.transform.position,Quaternion.identity);
+		}
+		Destroy(this.gameObject);
 	}
 
+	public void OnCollisionEnter(Collision col)
+	{
+		if( col.gameObject.tag != "Ground" )
+		{
+			VehicleDamge();
+		}
+	}
 }
