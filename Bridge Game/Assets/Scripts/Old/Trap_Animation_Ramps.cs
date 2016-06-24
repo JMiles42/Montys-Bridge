@@ -11,15 +11,10 @@ public class Trap_Animation_Ramps : MonoBehaviour
 
 	void Start()
 	{
-		vehicle = GameObject.FindGameObjectWithTag("vehicle");
-
 		if( anim == null )
 		{
 			anim = GetComponent<Animator>();
 		}
-
-
-
 	}
 
 	void OnTriggerEnter(Collider col)
@@ -27,20 +22,8 @@ public class Trap_Animation_Ramps : MonoBehaviour
 		//print (col.name);
 		if( col.tag == "vehicle" )
 		{
-			if( anim.GetBool("initiate") == false )
-				anim.SetBool("initiate", true);
+            anim.SetTrigger("start");
 
 		}
 	}
-	void OnTriggerExit(Collider col)
-	{
-		//print (col.name);
-		if( col.tag == "vehicle" )
-		{
-			if( anim.GetBool("initiate") == true )
-				anim.SetBool("initiate", false);
-
-		}
-	}
-
 }

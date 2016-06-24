@@ -26,7 +26,7 @@ public class Trap_Animation : MonoBehaviour
 		{
 			vehicle = col.gameObject;
             vehicle.GetComponent<DriveScript>().VehicleDamge();
-			anim.SetTrigger("initiate");
+			anim.SetTrigger("start");
 		}
 	}
 }

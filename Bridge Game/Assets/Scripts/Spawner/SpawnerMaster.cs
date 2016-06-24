@@ -37,8 +37,10 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	public void StartSpawner()
 	{
 		rand = new System.Random(seed.GetHashCode());
+        print(seed.GetHashCode());
 		InvokeRepeating("SpawnUnit", 0, spawnTime);
-	}
+        SimpleAnalitics.RegisterSeed(seed);
+    }
 
 	void EndSpawner()
 	{
@@ -61,7 +63,6 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	{
 		seed = s;
         seedTxt.text = s;
-		SimpleAnalitics.RegisterSeed(s);
 	}
 	
 }
