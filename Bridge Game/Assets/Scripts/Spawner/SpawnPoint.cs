@@ -10,5 +10,5 @@ public class SpawnPoint : MonoBehaviour
 			return transform.position;
 		}
 	}
-	public int chance;
+    public Lane lane;
 }

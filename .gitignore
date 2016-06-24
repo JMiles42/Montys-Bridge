@@ -81,3 +81,4 @@ $RECYCLE.BIN/
 *.lnk
 Bridge Game/Temp/UnityLockfile
 *.bin
+*.info

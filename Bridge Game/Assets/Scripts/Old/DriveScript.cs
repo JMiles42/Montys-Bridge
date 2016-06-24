@@ -3,7 +3,6 @@ using System.Collections;
 
 public class DriveScript : MonoBehaviour
 {
-
 	public float speed = 20.0f;
 	public bool start = false;
 
@@ -29,8 +28,6 @@ public class DriveScript : MonoBehaviour
 		}
 	}
 
-
-
 	void StartMoving()
 	{
 		transform.Translate(Vector3.forward * speed * Time.smoothDeltaTime);
@@ -51,7 +48,7 @@ public class DriveScript : MonoBehaviour
 	{
 		if( explodeEffect )
 		{
-			GameObject g = (GameObject) Instantiate(explodeEffect,this.transform.position,Quaternion.identity);
+			GameObject g = (GameObject) Instantiate(explodeEffect,transform.position,Quaternion.identity);
 		}
 		Destroy(this.gameObject);
 	}
