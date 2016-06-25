@@ -17,12 +17,17 @@ public class Vehicle : MonoBehaviour
 
 	public GameObject explodeEffect;
 
-	void Start()
+	public virtual void Start()
 	{
 		m_RigidBody = GetComponent<Rigidbody>();
 	}
 
-	void Update()
+	public virtual void Update()
+	{
+		UpdateDriving();
+    }
+
+	public virtual void UpdateDriving()
 	{
 		if( IsDriving )
 		{
@@ -38,12 +43,12 @@ public class Vehicle : MonoBehaviour
 		}
 	}
 
-	void StartMoving()
+	public virtual void StartMoving()
 	{
 		transform.Translate(Vector3.forward * Speed * Time.smoothDeltaTime);
 	}
 
-	void Explode()
+	public virtual void Explode()
 	{
 		if( explodeEffect )
 		{
@@ -52,7 +57,7 @@ public class Vehicle : MonoBehaviour
 		Destroy(this.gameObject);
 	}
 
-	public void VehicleDamage()
+	public virtual void VehicleDamage()
 	{
 		hit = true;
 		Invoke("Explode", Random.Range(4f, 10f));
