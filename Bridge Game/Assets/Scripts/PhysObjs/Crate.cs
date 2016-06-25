@@ -7,5 +7,12 @@ using System.Collections;
 
 public class Crate : MonoBehaviour 
 {
+	void Update()
+	{
 	
+	}
+	void Start()
+	{
+	
+	}
 }

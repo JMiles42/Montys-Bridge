@@ -81,6 +81,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-Bridge Game/Temp/UnityLockfile
 *.bin
 *.info
