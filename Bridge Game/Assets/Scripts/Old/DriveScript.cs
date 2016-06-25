@@ -38,7 +38,7 @@ public class DriveScript : MonoBehaviour
 		start = !start;
 	}
 
-	public void VehicleDamge()
+	public void VehicleDamage()
 	{
 		hit = true;
 		Invoke("Explode",Random.Range(4f,10f));
@@ -57,7 +57,7 @@ public class DriveScript : MonoBehaviour
 	{
 		if( col.gameObject.tag != "Ground" )
 		{
-			VehicleDamge();
+			VehicleDamage();
 		}
 	}
 }

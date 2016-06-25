@@ -40,7 +40,6 @@ public class Vehicle : MonoBehaviour
 
 	void StartMoving()
 	{
-		//m_RigidBody.velocity = (Vector3.forward * (Mathf.Lerp(Speed, 0f, Acceleration * Time.deltaTime)));
 		transform.Translate(Vector3.forward * Speed * Time.smoothDeltaTime);
 	}
 
@@ -53,7 +52,7 @@ public class Vehicle : MonoBehaviour
 		Destroy(this.gameObject);
 	}
 
-	public void VehicleDamge()
+	public void VehicleDamage()
 	{
 		hit = true;
 		Invoke("Explode", Random.Range(4f, 10f));
@@ -63,7 +62,7 @@ public class Vehicle : MonoBehaviour
 	{
 		if( col.gameObject.tag != "Ground" )
 		{
-			VehicleDamge();
+			VehicleDamage();
 		}
 	}
 }

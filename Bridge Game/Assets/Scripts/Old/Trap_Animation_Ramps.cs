@@ -23,7 +23,6 @@ public class Trap_Animation_Ramps : MonoBehaviour
 		if( col.tag == "vehicle" )
 		{
             anim.SetTrigger("start");
-
 		}
 	}
 }

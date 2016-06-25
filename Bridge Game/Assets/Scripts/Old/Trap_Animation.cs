@@ -25,7 +25,10 @@ public class Trap_Animation : MonoBehaviour
 		if( col.tag == "vehicle" )
 		{
 			vehicle = col.gameObject;
-            vehicle.GetComponent<DriveScript>().VehicleDamge();
+			if( vehicle.GetComponent<DriveScript>() )
+				vehicle.GetComponent<DriveScript>().VehicleDamage();
+			else if( vehicle.GetComponent<Vehicle>() )
+				vehicle.GetComponent<Vehicle>().VehicleDamage();
 			anim.SetTrigger("start");
 		}
 	}

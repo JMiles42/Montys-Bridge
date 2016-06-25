@@ -16,7 +16,7 @@ public class Truck : Vehicle
 	{
 		if( col.gameObject.tag != "Ground" && col.gameObject != Trailer )
 		{
-			VehicleDamge();
+			VehicleDamage();
 		}
 	}
 }
