@@ -28,7 +28,7 @@ public class Trap_Animation : MonoBehaviour
 			if( vehicle.GetComponent<DriveScript>() )
 				vehicle.GetComponent<DriveScript>().VehicleDamage();
 			else if( vehicle.GetComponent<Vehicle>() )
-				vehicle.GetComponent<Vehicle>().VehicleDamage();
+				vehicle.GetComponent<Vehicle>().OnHit();
 			anim.SetTrigger("start");
 		}
 	}

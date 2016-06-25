@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [System.Serializable]
-public class Vehicle : MonoBehaviour
+public class Vehicle : MonoBehaviour, IHitable
 {
 	[Header("Vehicle")]
 	public float Speed;
@@ -56,10 +56,10 @@ public class Vehicle : MonoBehaviour
 		}
 		Destroy(this.gameObject);
 	}
-
-	public virtual void VehicleDamage()
+    public virtual void OnHit()
 	{
 		hit = true;
+		m_RigidBody.constraints = RigidbodyConstraints.None;
 		Invoke("Explode", Random.Range(4f, 10f));
 	}
 
@@ -67,7 +67,7 @@ public class Vehicle : MonoBehaviour
 	{
 		if( col.gameObject.tag != "Ground" )
 		{
-			VehicleDamage();
+			OnHit();
 		}
 	}
 }
