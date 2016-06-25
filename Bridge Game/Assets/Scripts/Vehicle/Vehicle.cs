@@ -11,10 +11,16 @@ public class Vehicle : MonoBehaviour
     float m_speed;
     public bool IsDriving;
 	public Lane lane;
+	Rigidbody m_RigidBody;
 
 	public bool hit = false;
 
 	public GameObject explodeEffect;
+
+	void Start()
+	{
+		m_RigidBody = GetComponent<Rigidbody>();
+	}
 
 	void Update()
 	{
@@ -34,6 +40,7 @@ public class Vehicle : MonoBehaviour
 
 	void StartMoving()
 	{
+		//m_RigidBody.velocity = (Vector3.forward * (Mathf.Lerp(Speed, 0f, Acceleration * Time.deltaTime)));
 		transform.Translate(Vector3.forward * Speed * Time.smoothDeltaTime);
 	}
 
@@ -52,7 +59,7 @@ public class Vehicle : MonoBehaviour
 		Invoke("Explode", Random.Range(4f, 10f));
 	}
 
-	public void OnCollisionEnter(Collision col)
+	public virtual void OnCollisionEnter(Collision col)
 	{
 		if( col.gameObject.tag != "Ground" )
 		{
