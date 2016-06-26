@@ -7,8 +7,9 @@ public class Truck : Vehicle
 	public GameObject Trailer;
 	public GameObject Hinge;
 
-	public void Awake()
+	public override void Start()
 	{
+		base.Start();
 		Trailer.transform.SetParent(null);
 	}
 

@@ -22,7 +22,7 @@ public class Vehicle : MonoBehaviour, IHitable
 		m_RigidBody = GetComponent<Rigidbody>();
 	}
 
-	public virtual void Update()
+	public virtual void FixedUpdate()
 	{
 		UpdateDriving();
     }
@@ -33,19 +33,20 @@ public class Vehicle : MonoBehaviour, IHitable
 		{
 			StartMoving();
 		}
-		if( hit )
-		{
-			Speed -= .1f;
-			if( Speed <= 1 )
-			{
-				Speed = 0;
-			}
-		}
+		//if( hit )
+		//{
+		//	Speed -= .1f;
+		//	if( Speed <= 1 )
+		//	{
+		//		Speed = 0;
+		//	}
+		//}
 	}
 
 	public virtual void StartMoving()
 	{
-		transform.Translate(Vector3.forward * Speed * Time.smoothDeltaTime);
+		m_RigidBody.MovePosition(transform.position + (-Vector3.forward * Speed * Time.smoothDeltaTime));
+		//transform.Translate(Vector3.forward * Speed * Time.smoothDeltaTime);
 	}
 
 	public virtual void Explode()

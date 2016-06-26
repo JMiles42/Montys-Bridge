@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,6 +36,7 @@ public class BuildingSystem : MonoBehaviour
 
 	private void Update()
 	{
+		CheckKeyPress();
 		CheckToDestroy();
 		//SelectBuildingToBuild ();
 		if( isBuilding )
@@ -54,6 +56,18 @@ public class BuildingSystem : MonoBehaviour
 		}
 		if( Input.GetKeyDown(KeyCode.R) )
 			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+	}
+
+	void CheckKeyPress()
+	{
+		if( Input.GetKeyDown(KeyCode.G) )
+		{
+			SpawnerMaster.Instance.StartSpawner();
+		}
+		else if( Input.GetKeyDown(KeyCode.T) )
+		{
+			SpawnerMaster.Instance.StartSpawnerTruck();
+		}
 	}
 
 	public void PlaceTrap(int i)

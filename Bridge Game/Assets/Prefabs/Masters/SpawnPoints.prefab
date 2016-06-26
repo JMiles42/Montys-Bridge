@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: vehicle
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2270504221434485236, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -28,7 +28,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: vehicle
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2270504221434485236, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -60,7 +60,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: vehicle
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2270504221434485236, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0227, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496554}
@@ -83,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.001, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496554}
@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0, z: -0}
+  m_LocalPosition: {x: 0.0206, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496554}
@@ -106,8 +106,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136060}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0, y: 1.52, z: 55.2}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: -1.93, y: 1.81, z: 120}
   m_LocalScale: {x: 200, y: 200, z: -189.71182}
   m_Children:
   - {fileID: 470638}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59efa046ff5e9004e80c1dd58871d996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chance: 0
+  lane: 0
 --- !u!114 &11423456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59efa046ff5e9004e80c1dd58871d996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chance: 0
+  lane: 0
 --- !u!114 &11450616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59efa046ff5e9004e80c1dd58871d996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chance: 0
+  lane: 0
 --- !u!114 &11497698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,7 +172,8 @@ MonoBehaviour:
   - {fileID: 106852, guid: a9251f5e2bedab84781fe9258a382dcb, type: 2}
   - {fileID: 148034, guid: a827cba06c59c5646a148f6b45be5087, type: 2}
   - {fileID: 150456, guid: e3928cfcebadd2b40ab0af2ceda3d57c, type: 2}
-  spawnTime: 0.7
+  - {fileID: 157024, guid: 0cb5dd8e65f83114ba12ce3d65491205, type: 2}
+  spawnTime: 1
   seed: Seed
   seedTxt: {fileID: 0}
 --- !u!1001 &100100000

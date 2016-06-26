@@ -34,7 +34,7 @@ GameObject:
   - 23: {fileID: 2368120}
   m_Layer: 0
   m_Name: Cab
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ GameObject:
   - 23: {fileID: 2350278}
   m_Layer: 0
   m_Name: TrailerBed
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +299,7 @@ GameObject:
   - 23: {fileID: 2308450}
   m_Layer: 0
   m_Name: Wheels (1)
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -398,7 +398,7 @@ GameObject:
   - 4: {fileID: 453976}
   m_Layer: 0
   m_Name: Crates
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,7 +457,7 @@ GameObject:
   - 59: {fileID: 5998926}
   m_Layer: 0
   m_Name: Hinge
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -475,7 +475,7 @@ GameObject:
   - 23: {fileID: 2354000}
   m_Layer: 0
   m_Name: Wheels
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -491,7 +491,7 @@ GameObject:
   - 54: {fileID: 5479852}
   m_Layer: 0
   m_Name: Trailer
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -724,7 +724,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173146}
-  m_LocalRotation: {x: 0, y: 0.00000032584137, z: 0, w: -1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -780,9 +780,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157024}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.62, z: 27}
-  m_LocalScale: {x: 200, y: 200, z: 200}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.00019891659}
+  m_LocalPosition: {x: -6.0499997, y: 1.81, z: 94}
+  m_LocalScale: {x: 200, y: 200, z: -189.71182}
   m_Children:
   - {fileID: 463592}
   - {fileID: 418318}
@@ -1727,7 +1727,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5405760
 Rigidbody:
@@ -1742,7 +1742,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5406774
 Rigidbody:
@@ -1757,7 +1757,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5408302
 Rigidbody:
@@ -1772,7 +1772,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5410614
 Rigidbody:
@@ -1787,7 +1787,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5415662
 Rigidbody:
@@ -1802,7 +1802,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5415942
 Rigidbody:
@@ -1817,7 +1817,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5420562
 Rigidbody:
@@ -1826,7 +1826,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157024}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1847,7 +1847,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5429438
 Rigidbody:
@@ -1862,7 +1862,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5439400
 Rigidbody:
@@ -1877,7 +1877,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5442526
 Rigidbody:
@@ -1892,7 +1892,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5442648
 Rigidbody:
@@ -1907,7 +1907,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5452116
 Rigidbody:
@@ -1922,7 +1922,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5466402
 Rigidbody:
@@ -1937,7 +1937,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5467212
 Rigidbody:
@@ -1952,7 +1952,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5469952
 Rigidbody:
@@ -1967,7 +1967,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5471128
 Rigidbody:
@@ -1982,7 +1982,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5473514
 Rigidbody:
@@ -1997,7 +1997,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5479470
 Rigidbody:
@@ -2012,7 +2012,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!54 &5479852
 Rigidbody:
@@ -2057,7 +2057,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!59 &5917226
 HingeJoint:
@@ -2101,7 +2101,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -4.3675136e-22, y: -9.103903e-16, z: 0.0000000027939677}
+  m_ConnectedAnchor: {x: -2.9713476e-16, y: -6.231367e-10, z: 0.000000010244548}
   m_UseSpring: 1
   m_Spring:
     spring: 4.59
@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bfdb3ce496c4146b1917133b652565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: -6
+  Speed: 20
   Weight: 200
   Acceleration: 2
   IsDriving: 0
@@ -2675,7 +2675,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130156}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2686,7 +2686,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172980}
   m_ConnectedBody: {fileID: 5415662}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2697,7 +2697,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198260}
   m_ConnectedBody: {fileID: 5442648}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2708,7 +2708,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164244}
   m_ConnectedBody: {fileID: 5479470}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2719,7 +2719,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144750}
   m_ConnectedBody: {fileID: 5439400}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2730,7 +2730,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110138}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2741,7 +2741,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167902}
   m_ConnectedBody: {fileID: 5466402}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2752,7 +2752,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168756}
   m_ConnectedBody: {fileID: 5429438}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2763,7 +2763,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122532}
   m_ConnectedBody: {fileID: 5442526}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2774,7 +2774,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153162}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2785,7 +2785,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192478}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2796,7 +2796,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101280}
   m_ConnectedBody: {fileID: 5452116}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2807,7 +2807,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167084}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2818,7 +2818,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174530}
   m_ConnectedBody: {fileID: 5415942}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2829,7 +2829,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168196}
   m_ConnectedBody: {fileID: 5404436}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2840,7 +2840,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102708}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2851,7 +2851,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165520}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2862,7 +2862,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175646}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2873,7 +2873,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196094}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2884,7 +2884,7 @@ FixedJoint:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157252}
   m_ConnectedBody: {fileID: 5479852}
-  m_BreakForce: 300
+  m_BreakForce: 150
   m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
@@ -2894,7 +2894,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: IsDriving
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 157024}
