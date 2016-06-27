@@ -9,7 +9,7 @@ using System.Collections;
 public class LevelSettings : ScriptableObject
 {
 	public string LevelName;
-	public VehicleSpawn[] vehicleSpawn;
+	public VehicleSpawn[] VehicleSpawn;
 }
 [System.Serializable]
 public struct VehicleSpawn

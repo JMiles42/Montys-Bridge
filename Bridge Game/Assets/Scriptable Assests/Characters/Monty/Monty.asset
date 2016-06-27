@@ -17,6 +17,6 @@ MonoBehaviour:
   Trap1: {fileID: 11400000, guid: efa368d48190d844ab7f9f846f1afe1a, type: 2}
   Trap2: {fileID: 11400000, guid: d8b3e068c5093ab40a89b055466174fa, type: 2}
   Trap3: {fileID: 11400000, guid: 9904f5d4fd8e6ad48a95c34bf4eaf9af, type: 2}
-  Trap4: {fileID: 0}
-  Trap5: {fileID: 0}
-  Trap6: {fileID: 0}
+  Trap4: {fileID: 11400000, guid: 9fe95af6d8021e849b52143cb64e3434, type: 2}
+  Trap5: {fileID: 11400000, guid: 1a1a09264c770434c95b168fd8e9f933, type: 2}
+  Trap6: {fileID: 11400000, guid: 01738269ac437ec47808c5de56ebb577, type: 2}

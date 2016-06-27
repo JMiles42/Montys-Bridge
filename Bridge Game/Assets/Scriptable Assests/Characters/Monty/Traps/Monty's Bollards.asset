@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de703d08ba71a74d9a72a0d48a8844c, type: 3}
   m_Name: Monty's Bollards
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  Cost: 0
-  Uses: 0
-  RepairCost: 0
-  SellCost: 0
+  Name: Bollards
+  Description: Rases up when a vehicle is near.
+  Cost: 30
+  Uses: 20
+  RepairCost: 10
+  SellCost: 30
   TrapObj: {fileID: 0}
   PlaceHolderObj: {fileID: 0}

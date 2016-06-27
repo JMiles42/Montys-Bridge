@@ -8,6 +8,7 @@ using System;
 namespace JMiles42
 {
 	[Serializable]
+	[DisallowMultipleComponent]
 	public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 	{
 		protected static T instance;
