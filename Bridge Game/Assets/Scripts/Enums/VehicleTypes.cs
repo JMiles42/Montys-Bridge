@@ -1,6 +1,7 @@
 public enum VehicleTypes 
 {
-	Car,
+	Car, 
+	SportsCar,
 	LightTruck,
 	Truck,
 	TruckCrates,
