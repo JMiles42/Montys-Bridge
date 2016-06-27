@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: 0.4
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -85,16 +85,8 @@ BlendTree:
     m_DirectBlendParameter: ZoomLevel
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: f1dcabf05acff1445bddab8f08e125f4, type: 2}
-    m_Threshold: 0.119047105
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: ZoomLevel
-    m_Mirror: 0
-  - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 8e17d31989b6b144da5fe9d11a972987, type: 2}
-    m_Threshold: 0.23809421
+    m_Threshold: 0.17857066
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -110,15 +102,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 1f0c32c92fc0e1f4d9b0325d0982efde, type: 2}
-    m_Threshold: 0.47618842
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: ZoomLevel
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 690daeff189fd194b8b779f10b8cf236, type: 2}
-    m_Threshold: 0.5952355
+    m_Threshold: 0.535712
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -215,7 +199,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110283636}
-    m_Position: {x: 360, y: 60, z: 0}
+    m_Position: {x: 240, y: 24, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110163562}
@@ -224,6 +208,6 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 72, y: -36, z: 0}
   m_EntryPosition: {x: 72, y: 120, z: 0}
-  m_ExitPosition: {x: 600, y: 0, z: 0}
+  m_ExitPosition: {x: 432, y: -36, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 110283636}
