@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ae75cc2f5f2ae4aab2d9a253cb3821, type: 3}
+  m_Name: Monty
+  m_EditorClassIdentifier: 
+  Name: Monty
+  Portrat: {fileID: 0}
+  CaracterObj: {fileID: 0}
+  Trap1: {fileID: 11400000, guid: efa368d48190d844ab7f9f846f1afe1a, type: 2}
+  Trap2: {fileID: 11400000, guid: d8b3e068c5093ab40a89b055466174fa, type: 2}
+  Trap3: {fileID: 11400000, guid: 9904f5d4fd8e6ad48a95c34bf4eaf9af, type: 2}
+  Trap4: {fileID: 0}
+  Trap5: {fileID: 0}
+  Trap6: {fileID: 0}

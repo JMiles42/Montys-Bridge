@@ -14,6 +14,6 @@ public class LevelSettings : ScriptableObject
 [System.Serializable]
 public struct VehicleSpawn
 {
-	public Vehicle vehicle;
+	public VehicleTypes vehicle;
 	public int vehicleCount;
 }
