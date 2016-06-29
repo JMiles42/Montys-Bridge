@@ -43,6 +43,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 484102}
+  - 114: {fileID: 11413024}
   m_Layer: 0
   m_Name: Trap_Bolard
   m_TagString: TrapA
@@ -59,9 +60,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 461164}
   - 95: {fileID: 9545012}
-  - 114: {fileID: 11419458}
   - 54: {fileID: 5467520}
   - 65: {fileID: 6501806}
+  - 114: {fileID: 11413546}
   m_Layer: 9
   m_Name: Trap_Bolard_Model
   m_TagString: Untagged
@@ -114,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6, y: 0, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461164}
@@ -130,7 +131,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 3b7458db6ad8cd74faf77ab98f6f91ee, type: 2}
+  - {fileID: 2100000, guid: e64315ae69d4227498d721b0553fd72f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -156,7 +157,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 3b7458db6ad8cd74faf77ab98f6f91ee, type: 2}
+  - {fileID: 2100000, guid: b3c122c272f72c74bafd9ea8ac5873b2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -242,7 +243,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11419458
+--- !u!114 &11413024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa618d13e073a54a95385f169e19de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  trap: {fileID: 11400000, guid: 9904f5d4fd8e6ad48a95c34bf4eaf9af, type: 2}
+  uses: 0
+--- !u!114 &11413546
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -250,12 +265,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 190366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfab3aca1d1181b4c94c1459b235a8df, type: 3}
+  m_Script: {fileID: 11500000, guid: 00b5cf96efb6c574bbfae34b060bcc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  vehicle: {fileID: 0}
-  trapTriggerType: {fileID: 0}
+  myTrap: {fileID: 11413024}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

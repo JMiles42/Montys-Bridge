@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5de703d08ba71a74d9a72a0d48a8844c, type: 3}
-  m_Name: Monty's Piston
+  m_Name: Monty's Manhole
   m_EditorClassIdentifier: 
-  Name: Pistion
+  Name: Man hole
   Description: Lifts up when a vehicle is above.
   Cost: 20
   Uses: 5

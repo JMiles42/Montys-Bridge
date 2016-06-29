@@ -781,7 +781,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157024}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.00019891659}
-  m_LocalPosition: {x: -6.0499997, y: 1.81, z: 94}
+  m_LocalPosition: {x: -0.05564308, y: 1.5130544, z: -12.366123}
   m_LocalScale: {x: 200, y: 200, z: -189.71182}
   m_Children:
   - {fileID: 463592}
@@ -867,7 +867,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182750}
-  m_LocalRotation: {x: 0.7071066, y: -0.70710695, z: -0.00000011520229, w: 0.00000011520235}
+  m_LocalRotation: {x: 0.7071068, y: -0.7071067, z: 0.000000115202326, w: -0.00000011520231}
   m_LocalPosition: {x: 2.3590018e-14, y: 0.00171, z: 0.009729998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2070,7 +2070,7 @@ HingeJoint:
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.0017099999, y: -0.000000004087728, z: 0.009729998}
-  m_UseSpring: 1
+  m_UseSpring: 0
   m_Spring:
     spring: 4.59
     damper: 1.11
@@ -2101,8 +2101,8 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -2.9713476e-16, y: -6.231367e-10, z: 0.000000010244548}
-  m_UseSpring: 1
+  m_ConnectedAnchor: {x: -6.8129997e-17, y: -1.4287893e-10, z: 0.000000008381903}
+  m_UseSpring: 0
   m_Spring:
     spring: 4.59
     damper: 1.11
@@ -2588,7 +2588,7 @@ MonoBehaviour:
   IsDriving: 0
   lane: 0
   hit: 0
-  explodeEffect: {fileID: 0}
+  explodeEffect: {fileID: 100102, guid: e23bdde50cdb3914e849165335ae41e2, type: 2}
   Trailer: {fileID: 189792}
   Hinge: {fileID: 182750}
 --- !u!114 &11471666
@@ -2905,6 +2905,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: IsDriving
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explodeEffect
+      value: 
+      objectReference: {fileID: 100102, guid: e23bdde50cdb3914e849165335ae41e2, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_UseSpring
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

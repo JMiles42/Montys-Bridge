@@ -46,7 +46,7 @@ GameObject:
   - 95: {fileID: 9599230}
   - 54: {fileID: 5458360}
   - 65: {fileID: 6559890}
-  - 114: {fileID: 11483504}
+  - 114: {fileID: 11419932}
   m_Layer: 0
   m_Name: car 5
   m_TagString: vehicle
@@ -135,7 +135,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150456}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -0.00000016292068}
   m_LocalPosition: {x: -32.92578, y: 4.788835, z: 26.95268}
   m_LocalScale: {x: 200, y: 200, z: -189.71182}
   m_Children:
@@ -412,7 +412,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11483504
+--- !u!114 &11419932
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -420,13 +420,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 150456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06f64fb5a8334f46871b760ac7dfbbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b72012a5703973419234a88dc3e32fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  start: 0
+  Speed: 20
+  Weight: 10
+  Acceleration: 2
+  IsDriving: 0
+  lane: 0
   hit: 0
   explodeEffect: {fileID: 100102, guid: e23bdde50cdb3914e849165335ae41e2, type: 2}
+  Hi: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

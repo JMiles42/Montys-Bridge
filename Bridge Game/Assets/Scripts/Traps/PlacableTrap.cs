@@ -5,20 +5,44 @@ using System.Collections;
 //using System.Collections.Generic;
 //using JMiles42;
 
+
 public class PlacableTrap : MonoBehaviour 
 {
+	[ContextMenuItem("Activate Trigger","PlayAnim")]
 	public Animator anim;
-	public GameObject trapTriggerType;
 
-	void Start()
+	public Trap trap;
+	public int uses;
+	public int MaxUses
 	{
-		if(!anim )
+		get
 		{
-			anim = GetComponent<Animator>();
+			return trap.Uses;
+		}
+	}
+	public int Cost
+	{
+		get
+		{
+			return trap.Cost;
+		}
+	}
+	public int RepairCost
+	{
+		get
+		{
+			return trap.RepairCost;
+		}
+	}
+	public int SellCost
+	{
+		get
+		{
+			return trap.SellCost;
 		}
 	}
 
-	void OnTriggerEnter(Collider col)
+	public void HeardTriggerEnter(Collider col)
 	{
 		//print (col.name);
 		if( col.tag == "vehicle" )
@@ -29,7 +53,22 @@ public class PlacableTrap : MonoBehaviour
 				vehicle.GetComponent<DriveScript>().VehicleDamage();
 			else if( vehicle.GetComponent<Vehicle>() )
 				vehicle.GetComponent<Vehicle>().OnHit();
-			anim.SetTrigger("start");
+			PlayAnim();
 		}
+	}
+
+	public void HeardTriggerStay(Collider col)
+	{
+
+	}
+
+	public void HeardTriggerExit(Collider col)
+	{
+
+	}
+	
+	void PlayAnim()
+	{
+		anim.SetTrigger("start");
 	}
 }
