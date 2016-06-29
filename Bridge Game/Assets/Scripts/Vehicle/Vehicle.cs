@@ -33,14 +33,6 @@ public class Vehicle : MonoBehaviour, IHitable
 		{
 			StartMoving();
 		}
-		//if( hit )
-		//{
-		//	Speed -= .1f;
-		//	if( Speed <= 1 )
-		//	{
-		//		Speed = 0;
-		//	}
-		//}
 	}
 
 	public virtual void StartMoving()

@@ -903,7 +903,6 @@ GameObject:
   - 198: {fileID: 19800084}
   - 199: {fileID: 19900084}
   - 82: {fileID: 8200000}
-  - 114: {fileID: 11400020}
   m_Layer: 0
   m_Name: Smoke_explosion_huge
   m_TagString: Untagged
@@ -2289,17 +2288,6 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d0232d8e1a93242a271b81db99b8af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11400020
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100102}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d0232d8e1a93242a271b81db99b8af, type: 3}

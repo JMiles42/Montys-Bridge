@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f9bf1fc227c5c488e03a913df2770a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 9526182}
   trap: {fileID: 11400000, guid: efa368d48190d844ab7f9f846f1afe1a, type: 2}
   uses: 0
 --- !u!114 &11485688

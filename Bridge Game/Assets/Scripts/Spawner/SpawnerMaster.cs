@@ -35,15 +35,6 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 
 	public void StartSpawner()
 	{
-		/*
-		Vehicle[] v = GetComponents<Vehicle>();
-
-		for( int i = 0; i < v.Length; i++ )
-		{
-			v[i].IsDriving = true;
-		}
-		*/
-
 		rand = new System.Random(seed.GetHashCode());
 		print(seed.GetHashCode());
 		InvokeRepeating("SpawnUnit", 0, spawnTime);
@@ -67,9 +58,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	{
 		print("Unit Spawned");
 		GameObject g = (GameObject)Instantiate(cars[GetRandomCar]);
-		if( g.GetComponent<DriveScript>() )
-			g.GetComponent<DriveScript>().start = true;
-		else if( g.GetComponent<Vehicle>() )
+		if( g.GetComponent<Vehicle>() )
 			g.GetComponent<Vehicle>().IsDriving = true;
 		g.transform.position = m_spawnPoints[GetRandomLane].Location;
 	}
@@ -77,9 +66,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	{
 		print("Unit Spawned");
 		GameObject g = (GameObject)Instantiate(cars[5]);
-		if( g.GetComponent<DriveScript>() )
-			g.GetComponent<DriveScript>().start = true;
-		else if( g.GetComponent<Vehicle>() )
+		if( g.GetComponent<Vehicle>() )
 			g.GetComponent<Vehicle>().IsDriving = true;
 		g.transform.position = m_spawnPoints[GetRandomLane].Location;
 	}

@@ -13,6 +13,7 @@ public class PlacableTrap : MonoBehaviour
 
 	public Trap trap;
 	public int uses;
+	public int usesBeforeBreak;
 	public int MaxUses
 	{
 		get
@@ -70,5 +71,15 @@ public class PlacableTrap : MonoBehaviour
 	void PlayAnim()
 	{
 		anim.SetTrigger("start");
+	}
+
+	public void RepairTrap()
+	{
+		ResetUseCount();
+	}
+	
+	public void ResetUseCount()
+	{
+		usesBeforeBreak = trap.Uses;
 	}
 }
