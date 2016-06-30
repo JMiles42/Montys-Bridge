@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 //using UnityEngine.UI;
 //using UnityEngine.SceneManagement;
 using System.Collections;
@@ -7,16 +7,12 @@ using System.Collections;
 
 public class ExplosionTimeout : MonoBehaviour 
 {
-	#region Vars
-	#endregion
-	#region UnityMethods
-	void OnEnable () 
-	{	}
-	void Start () 
-	{	}
-	void Update () 
-	{	}
-	void FixedUpdate () 
-	{	}
-	#endregion
+	void Start()
+	{
+		Invoke("Hide",10f);
+	}
+	void Hide()
+	{
+		gameObject.SetActive(false);
+	}
 }

@@ -10,7 +10,7 @@ public class Truck : Vehicle
 	public override void Start()
 	{
 		base.Start();
-		Trailer.transform.SetParent(null);
+		//Trailer.transform.SetParent(null);
 	}
 
 	public override void OnCollisionEnter(Collision col)
