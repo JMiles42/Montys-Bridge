@@ -9,15 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eea0864ecb425fd40b1fe3d6cce56249, type: 3}
-  m_Name: Level One
+  m_Name: 2 fweslkngvobn;ozgdrh
   m_EditorClassIdentifier: 
-  LevelName: Level One Test
+  LevelName: 
   thumb: {fileID: 0}
   isSpawnOrdered: 0
-  VehicleSpawn:
-  - vehicle: 2
-    vehicleCount: 7
-  - vehicle: 0
-    vehicleCount: 2
-  - vehicle: 4
-    vehicleCount: 20
+  VehicleSpawn: []

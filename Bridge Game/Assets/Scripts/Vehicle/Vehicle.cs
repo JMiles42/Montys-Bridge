@@ -37,16 +37,16 @@ public class Vehicle : MonoBehaviour, IHitable
 
 	public virtual void StartMoving()
 	{
-		m_RigidBody.MovePosition(transform.position + (-Vector3.forward * Speed * Time.smoothDeltaTime));
-		//transform.Translate(Vector3.forward * Speed * Time.smoothDeltaTime);
+		//m_RigidBody.MovePosition(transform.position + (-Vector3.forward * Speed * Time.smoothDeltaTime));
+		transform.Translate(GetForwardVec() * Speed * Time.smoothDeltaTime);
 	}
 
 	public virtual void Explode()
 	{
-		if( explodeEffect )
-		{
-			GameObject g = (GameObject) Instantiate(explodeEffect,transform.position,Quaternion.identity);
-		}
+	//	if( explodeEffect )
+	//	{
+	//		GameObject g = (GameObject) Instantiate(explodeEffect,transform.position,Quaternion.identity);
+	//	}
 		Destroy(this.gameObject);
 	}
     public virtual void OnHit()
@@ -63,4 +63,8 @@ public class Vehicle : MonoBehaviour, IHitable
 			OnHit();
 		}
 	}
+    public virtual Vector3 GetForwardVec()
+    {
+        return Vector3.forward;
+    }
 }

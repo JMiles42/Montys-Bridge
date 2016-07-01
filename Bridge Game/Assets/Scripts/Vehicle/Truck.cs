@@ -20,4 +20,8 @@ public class Truck : Vehicle
 			OnHit();
 		}
 	}
+    public override Vector3 GetForwardVec()
+    {
+        return Vector3.right;
+    }
 }
