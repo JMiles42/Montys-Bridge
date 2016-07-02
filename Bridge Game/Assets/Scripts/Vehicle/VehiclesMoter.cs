@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [System.Serializable]
-public class Vehicle : MonoBehaviour, IHitable
+public class VehiclesMoter : MonoBehaviour, IHitable
 {
 	[Header("Vehicle")]
 	public float Speed;

@@ -14,7 +14,7 @@ public class Killer : MonoBehaviour
     }
 	void KillCar(GameObject car)
 	{
-		if(car.GetComponent<Vehicle>())
+		if(car.GetComponent<VehiclesMoter>())
 			Destroy(car);
 	}
 }

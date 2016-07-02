@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Truck : Vehicle
+public class Truck : VehiclesMoter
 {
 	[Header("Truck")]
 	public GameObject Trailer;

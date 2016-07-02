@@ -52,8 +52,8 @@ public class PlacableTrap : MonoBehaviour
 			//Remove the first if soon
 			if( vehicle.GetComponent<DriveScript>() )
 				vehicle.GetComponent<DriveScript>().VehicleDamage();
-			else if( vehicle.GetComponent<Vehicle>() )
-				vehicle.GetComponent<Vehicle>().OnHit();
+			else if( vehicle.GetComponent<VehiclesMoter>() )
+				vehicle.GetComponent<VehiclesMoter>().OnHit();
 			PlayAnim();
 		}
 	}

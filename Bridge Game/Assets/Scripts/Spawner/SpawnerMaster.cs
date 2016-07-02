@@ -58,16 +58,16 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	{
 		print("Unit Spawned");
 		GameObject g = (GameObject)Instantiate(cars[GetRandomCar]);
-		if( g.GetComponent<Vehicle>() )
-			g.GetComponent<Vehicle>().IsDriving = true;
+		if( g.GetComponent<VehiclesMoter>() )
+			g.GetComponent<VehiclesMoter>().IsDriving = true;
 		g.transform.position = m_spawnPoints[GetRandomLane].Location;
 	}
 	void SpawnUnitTruck()
 	{
 		print("Unit Spawned");
 		GameObject g = (GameObject)Instantiate(cars[5]);
-		if( g.GetComponent<Vehicle>() )
-			g.GetComponent<Vehicle>().IsDriving = true;
+		if( g.GetComponent<VehiclesMoter>() )
+			g.GetComponent<VehiclesMoter>().IsDriving = true;
 		g.transform.position = m_spawnPoints[GetRandomLane].Location;
 	}
 
