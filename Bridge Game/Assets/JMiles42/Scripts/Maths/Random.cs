@@ -61,4 +61,11 @@ namespace JMiles42.Maths.Rand
 			return s;
 		}
 	}
+	public static class RandomBools
+	{
+		public static bool RandomBool()
+		{
+			return Maths.IsEven(System.DateTime.UtcNow.Millisecond);
+		}
+	}
 }

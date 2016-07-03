@@ -8,10 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea0864ecb425fd40b1fe3d6cce56249, type: 3}
-  m_Name: 2 fweslkngvobn;ozgdrh
+  m_Script: {fileID: 11500000, guid: 7af92b83de1a5004997833e6d295f923, type: 3}
+  m_Name: Truck With Crates
   m_EditorClassIdentifier: 
-  LevelName: 
-  thumb: {fileID: 0}
-  isSpawnOrdered: 0
-  VehicleSpawn: []
+  Name: Truck With Crates
+  Speed: 20
+  Weight: 5
+  Acceleration: 50
+  agro: 1
+  Prefab: {fileID: 0}
