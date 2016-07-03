@@ -60,7 +60,9 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		GameObject g = (GameObject)Instantiate(cars[GetRandomCar]);
 		if( g.GetComponent<VehiclesMoter>() )
 			g.GetComponent<VehiclesMoter>().IsDriving = true;
-		g.transform.position = m_spawnPoints[GetRandomLane].Location;
+		int lane = GetRandomLane;
+		g.GetComponent<VehiclesMoter>().SetLane(m_spawnPoints[lane].lane);
+		g.transform.position = m_spawnPoints[lane].Location;
 	}
 	void SpawnUnitTruck()
 	{
@@ -68,7 +70,9 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		GameObject g = (GameObject)Instantiate(cars[5]);
 		if( g.GetComponent<VehiclesMoter>() )
 			g.GetComponent<VehiclesMoter>().IsDriving = true;
-		g.transform.position = m_spawnPoints[GetRandomLane].Location;
+		int lane = GetRandomLane;
+		g.GetComponent<VehiclesMoter>().SetLane(m_spawnPoints[lane].lane);
+		g.transform.position = m_spawnPoints[lane].Location;
 	}
 
 	public void SetSeed()

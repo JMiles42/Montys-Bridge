@@ -6,9 +6,9 @@ using JMiles42;
 
 public enum Lane
 {
-    Lane1,
-    Lane2,
-    Lane3,
+    Lane1 = 0,
+    Lane2 = 1,
+    Lane3 = 2,
     //Lane4,
     //Lane5,
     //Lane6
@@ -60,10 +60,10 @@ public class VehicleManager : Singleton<VehicleManager>
 
     public void RemoveVehicleToLane(int lane, VehiclesMoter vcl)
     {
-        RemoveVehicleToLane((Lane)lane, vcl);
+        RemoveVehicleFromLane((Lane)lane, vcl);
     }
 
-    public void RemoveVehicleToLane(Lane lane, VehiclesMoter vcl)
+    public void RemoveVehicleFromLane(Lane lane, VehiclesMoter vcl)
     {
         switch (lane)
         {

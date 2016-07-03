@@ -73,10 +73,11 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	#region Hit
 	public virtual void Explode()
 	{
-	//	if( explodeEffect )
-	//	{
-	//		GameObject g = (GameObject) Instantiate(explodeEffect,transform.position,Quaternion.identity);
-	//	}
+		//	if( explodeEffect )
+		//	{
+		//		GameObject g = (GameObject) Instantiate(explodeEffect,transform.position,Quaternion.identity);
+		//	}
+		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
 		Destroy(this.gameObject);
 	}
     public virtual void OnHit()
@@ -101,6 +102,16 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 
 
 	#region AI
+	public virtual void SetLane(Lane lane)
+	{
+		curlane = lane;
+		oldLane = lane;
+	}
+	public virtual void SetLane(int lane)
+	{
+		curlane = (Lane) lane;
+		oldLane = (Lane) lane;
+	}
 	public virtual Lane ChangeCurLane(Lane lane)
 	{
 		InCurrentLane = false;
