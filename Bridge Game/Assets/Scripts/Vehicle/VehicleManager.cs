@@ -58,7 +58,7 @@ public class VehicleManager : Singleton<VehicleManager>
         }
     }
 
-    public void RemoveVehicleToLane(int lane, VehiclesMoter vcl)
+    public void RemoveVehicleFromLane(int lane, VehiclesMoter vcl)
     {
         RemoveVehicleFromLane((Lane)lane, vcl);
     }
