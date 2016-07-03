@@ -2439,6 +2439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11403374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2450,6 +2451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11403542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2461,6 +2463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11406686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2472,6 +2475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11406864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2483,6 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11408226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2494,6 +2499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11411820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2505,6 +2511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11427744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2516,6 +2523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11428796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2527,6 +2535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11434076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2538,6 +2547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11436564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2549,6 +2559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11451206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2560,6 +2571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11456916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2571,6 +2583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11464472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2582,11 +2595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bfdb3ce496c4146b1917133b652565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 20
-  Weight: 200
-  Acceleration: 2
+  vehicleSettings: {fileID: 11400000, guid: 6d3f894c78fc05d44a39b9c77d4f0fbd, type: 2}
   IsDriving: 0
-  lane: 0
+  curlane: 0
   hit: 0
   explodeEffect: {fileID: 100102, guid: e23bdde50cdb3914e849165335ae41e2, type: 2}
   Trailer: {fileID: 189792}
@@ -2602,6 +2613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11481658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2613,6 +2625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11482120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2624,6 +2637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11482994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2635,6 +2649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11483732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2646,6 +2661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11485922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2657,6 +2673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!114 &11495938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2668,6 +2685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joint: {fileID: 0}
 --- !u!138 &13801964
 FixedJoint:
   m_ObjectHideFlags: 1
@@ -2915,6 +2933,11 @@ Prefab:
       propertyPath: m_UseSpring
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: vehicleSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d3f894c78fc05d44a39b9c77d4f0fbd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 157024}

@@ -423,14 +423,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b72012a5703973419234a88dc3e32fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 20
-  Weight: 10
-  Acceleration: 2
+  vehicleSettings: {fileID: 11400000, guid: 7e7283531698f794c8ee6b580a2f92d9, type: 2}
   IsDriving: 0
-  lane: 0
+  curlane: 0
   hit: 0
   explodeEffect: {fileID: 100102, guid: e23bdde50cdb3914e849165335ae41e2, type: 2}
-  Hi: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -442,6 +439,11 @@ Prefab:
       propertyPath: explodeEffect
       value: 
       objectReference: {fileID: 100102, guid: e23bdde50cdb3914e849165335ae41e2, type: 2}
+    - target: {fileID: 0}
+      propertyPath: vehicleSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e7283531698f794c8ee6b580a2f92d9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 106682}
