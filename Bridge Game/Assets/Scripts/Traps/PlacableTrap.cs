@@ -43,42 +43,43 @@ public class PlacableTrap : MonoBehaviour
 		}
 	}
 
-	public void HeardTriggerEnter(Collider col)
+	public virtual void HeardTriggerEnter(Collider col)
 	{
+        if (uses <= 0)
+            return;
 		//print (col.name);
 		if( col.tag == "vehicle" )
 		{
 			GameObject vehicle = col.gameObject;
-			//Remove the first if soon
-			if( vehicle.GetComponent<DriveScript>() )
-				vehicle.GetComponent<DriveScript>().VehicleDamage();
-			else if( vehicle.GetComponent<VehiclesMoter>() )
+			if( vehicle.GetComponent<VehiclesMoter>() )
 				vehicle.GetComponent<VehiclesMoter>().OnHit();
 			PlayAnim();
-		}
+            uses--;
+        }
 	}
 
-	public void HeardTriggerStay(Collider col)
+    public virtual void HeardTriggerStay(Collider col)
 	{
 
 	}
 
-	public void HeardTriggerExit(Collider col)
+    public virtual void HeardTriggerExit(Collider col)
 	{
 
 	}
-	
-	void PlayAnim()
+
+    public virtual void PlayAnim()
 	{
 		anim.SetTrigger("start");
 	}
 
-	public void RepairTrap()
+    public virtual void RepairTrap()
 	{
+        //Take Cost From Scrap
 		ResetUseCount();
 	}
-	
-	public void ResetUseCount()
+
+    public virtual void ResetUseCount()
 	{
 		usesBeforeBreak = trap.Uses;
 	}

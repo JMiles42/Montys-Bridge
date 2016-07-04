@@ -7,16 +7,5 @@ using System.Collections;
 
 public class MontysBollard : PlacableTrap 
 {
-	#region Vars
-	#endregion
-	#region UnityMethods
-	void OnEnable () 
-	{	}
-	void Start () 
-	{	}
-	void Update () 
-	{	}
-	void FixedUpdate () 
-	{	}
-	#endregion
+
 }

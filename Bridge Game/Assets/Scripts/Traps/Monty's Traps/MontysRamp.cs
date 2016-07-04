@@ -7,16 +7,5 @@ using System.Collections;
 
 public class MontysRamp : PlacableTrap
 {
-	#region Vars
-	#endregion
-	#region UnityMethods
-	void OnEnable () 
-	{	}
-	void Start () 
-	{	}
-	void Update () 
-	{	}
-	void FixedUpdate () 
-	{	}
-	#endregion
+
 }
