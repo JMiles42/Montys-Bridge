@@ -45,7 +45,7 @@ public class PlacableTrap : MonoBehaviour
 
 	public virtual void HeardTriggerEnter(Collider col)
 	{
-        if (uses <= 0)
+        if (usesBeforeBreak <= 0)
             return;
 		//print (col.name);
 		if( col.tag == "vehicle" )
@@ -54,9 +54,20 @@ public class PlacableTrap : MonoBehaviour
 			if( vehicle.GetComponent<VehiclesMoter>() )
 				vehicle.GetComponent<VehiclesMoter>().OnHit();
 			PlayAnim();
-            uses--;
+            uses++;
+            usesBeforeBreak--;
         }
 	}
+
+    public virtual void Start()
+    {
+        OnPlaced();
+    }
+
+    public virtual void OnPlaced()
+    {
+        ResetUseCount();
+    }
 
     public virtual void HeardTriggerStay(Collider col)
 	{
