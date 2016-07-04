@@ -9,9 +9,7 @@ using System.Collections;
 public class VehicleSettings : ScriptableObject
 {
 	public string Name;
-	public float Speed;
-	public float Weight;
-	public float Acceleration;
+	public float Weight = 20;
 	public Agro agro;
 	public GameObject Prefab;
 }

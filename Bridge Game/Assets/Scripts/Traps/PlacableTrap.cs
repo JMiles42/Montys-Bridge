@@ -49,8 +49,9 @@ public class PlacableTrap : MonoBehaviour
             return;
 		//print (col.name);
 		if( col.tag == "vehicle" )
-		{
-			GameObject vehicle = col.gameObject;
+        {
+            anim.SetBool("CarIn", true);
+            GameObject vehicle = col.gameObject;
 			if( vehicle.GetComponent<VehiclesMoter>() )
 				vehicle.GetComponent<VehiclesMoter>().OnHit();
 			PlayAnim();
@@ -58,6 +59,16 @@ public class PlacableTrap : MonoBehaviour
             usesBeforeBreak--;
         }
 	}
+
+    public virtual void HeardTriggerStay(Collider col)
+	{
+
+	}
+
+    public virtual void HeardTriggerExit(Collider col)
+	{
+        anim.SetBool("CarIn", false);
+    }
 
     public virtual void Start()
     {
@@ -68,16 +79,6 @@ public class PlacableTrap : MonoBehaviour
     {
         ResetUseCount();
     }
-
-    public virtual void HeardTriggerStay(Collider col)
-	{
-
-	}
-
-    public virtual void HeardTriggerExit(Collider col)
-	{
-
-	}
 
     public virtual void PlayAnim()
 	{

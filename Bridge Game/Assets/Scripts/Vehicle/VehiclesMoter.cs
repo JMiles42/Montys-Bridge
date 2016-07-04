@@ -5,27 +5,14 @@ using JMiles42.Maths.Rand;
 [System.Serializable]
 public class VehiclesMoter : MonoBehaviour, IHitable
 {
-	[Header("Vehicle")]
+    [Header("Vehicle")]
+    public const int SPEED = 20;
 	public VehicleSettings vehicleSettings;
-	public float Speed
-	{
-		get
-		{
-			return vehicleSettings.Speed;
-		}
-	}
 	public float Weight
 	{
 		get
 		{
 			return vehicleSettings.Weight;
-		}
-	}
-	public float Acceleration
-	{
-		get
-		{
-			return vehicleSettings.Acceleration;
 		}
 	}
     float m_speed;
@@ -67,7 +54,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	public virtual void StartMoving()
 	{
 		//m_RigidBody.MovePosition(transform.position + (-Vector3.forward * Speed * Time.smoothDeltaTime));
-		transform.Translate(GetForwardVec() * Speed * Time.smoothDeltaTime);
+		transform.Translate(GetForwardVec() * SPEED * Time.smoothDeltaTime);
 	}
 	#endregion
 	#region Hit
@@ -159,7 +146,14 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 
 public enum CarAiState
 {
-	Driving,
-	Stopped,
-	ChangingLanes
+    Driving,
+    Stopped,
+    ChangingLanes
+}
+
+public enum CarWeight
+{
+    Driving,
+    Stopped,
+    ChangingLanes
 }

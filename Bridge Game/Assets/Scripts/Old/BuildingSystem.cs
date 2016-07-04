@@ -49,14 +49,23 @@ public class BuildingSystem : MonoBehaviour
 			{
 				Build();
 			}
-			else if( Input.GetKeyDown(KeyCode.Mouse1) )
-			{
-				RotateBuild(!rotate180);
-			}
-		}
-		if( Input.GetKeyDown(KeyCode.R) )
-			UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-	}
+            //else if( Input.GetKeyDown(KeyCode.Mouse1) )
+            //{
+            //	RotateBuild(!rotate180);
+            //}
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            PlacableTrap[] pT = GameObject.FindObjectsOfType<PlacableTrap>();
+
+            foreach(PlacableTrap pti in pT)
+            {
+                pti.usesBeforeBreak = Int32.MaxValue;
+            }
+        }
+    }
 
 	void CheckKeyPress()
 	{
