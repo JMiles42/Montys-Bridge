@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 //using UnityEngine.UI;
 //using UnityEngine.SceneManagement;
 using System.Collections;
@@ -7,16 +7,15 @@ using System.Collections;
 
 public class LerpPoints : MonoBehaviour 
 {
-	#region Vars
-	#endregion
-	#region UnityMethods
-	void OnEnable () 
-	{	}
-	void Start () 
-	{	}
-	void Update () 
-	{	}
-	void FixedUpdate () 
-	{	}
-	#endregion
+	public GameObject[] points;
+	public int index;
+
+	public Vector3 GetPosition()
+	{
+		return Vector3.one;
+	}
+	public Quaternion GetRotation()
+	{
+		return Quaternion.identity;
+	}
 }
