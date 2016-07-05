@@ -21,7 +21,6 @@ namespace JMiles42.Converters
 		/// The False symbol for bools
 		/// </summary>
 		const string FALSESTRING = "F";
-
 		/// <summary>
 		/// Converts an Array of bools to a string
 		/// </summary>
@@ -30,7 +29,6 @@ namespace JMiles42.Converters
 		public static string BoolStringFromArray(bool[] from)
 		{
 			string to = "";
-
 			for( int i = 0; i < from.Length; i++ )
 			{
 				if( from[i] )
@@ -38,10 +36,8 @@ namespace JMiles42.Converters
 				else
 					to += FALSESTRING + SPLITSTRING;
 			}
-
 			return to;
 		}
-
 		/// <summary>
 		/// Converts an Array of bools string back to an array
 		/// </summary>
@@ -51,7 +47,6 @@ namespace JMiles42.Converters
 		{
 			string[] s = from.Split(new string[] { SPLITSTRING }, StringSplitOptions.None);
 			bool[] to = new bool[s.Length];
-
 			for( int i = 0; i < s.Length; i++ )
 			{
 				if( s[i] == TRUESTRING )
@@ -59,10 +54,8 @@ namespace JMiles42.Converters
 				else if( s[i] == FALSESTRING )
 					to[i] = false;
 			}
-
 			return to;
 		}
-
 		/// <summary>
 		/// Converts an Array of floats to a string
 		/// </summary>
@@ -71,15 +64,12 @@ namespace JMiles42.Converters
 		public static string FloatStringFromArray(float[] from)
 		{
 			string to = "";
-
 			for( int i = 0; i < from.Length; i++ )
 			{
 				to += from[i].ToString() + SPLITSTRING;
 			}
-
 			return to;
 		}
-
 		/// <summary>
 		/// Converts an Array of floats string back to an array
 		/// </summary>
@@ -89,12 +79,10 @@ namespace JMiles42.Converters
 		{
 			string[] s = from.Split(new string[] { SPLITSTRING }, StringSplitOptions.None);
 			float[] to = new float[s.Length-1];
-
 			for( int i = 0; i < s.Length - 1; i++ )
 			{
 				to[i] = float.Parse(s[i]);
 			}
-
 			return to;
 		}
 	}

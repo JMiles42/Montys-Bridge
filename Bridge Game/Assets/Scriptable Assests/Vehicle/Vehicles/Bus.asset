@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Bus
   m_EditorClassIdentifier: 
   Name: Bus
-  Speed: 20
-  Weight: 5
-  Acceleration: 50
+  Weight: 40
+  howMuchScrapOnDestroy: 15
+  agro: 0
   Prefab: {fileID: 0}

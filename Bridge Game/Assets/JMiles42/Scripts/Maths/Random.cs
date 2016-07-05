@@ -67,5 +67,9 @@ namespace JMiles42.Maths.Rand
 		{
 			return Maths.IsEven(System.DateTime.UtcNow.Millisecond);
 		}
+		public static bool RandomInvertedBool()
+		{
+			return Maths.IsOdd(System.DateTime.UtcNow.Millisecond);
+		}
 	}
 }

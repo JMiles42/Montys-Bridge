@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Name: Truck
   m_EditorClassIdentifier: 
   Name: Truck
-  Speed: 20
-  Weight: 5
-  Acceleration: 50
+  Weight: 50
+  howMuchScrapOnDestroy: 10
   agro: 1
   Prefab: {fileID: 0}

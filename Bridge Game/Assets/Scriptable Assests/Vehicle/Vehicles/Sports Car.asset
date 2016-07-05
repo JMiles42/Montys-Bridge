@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Name: Sports Car
   m_EditorClassIdentifier: 
   Name: Sports Car
-  Speed: 20
-  Weight: 5
-  Acceleration: 50
+  Weight: 20
+  howMuchScrapOnDestroy: 20
   agro: 2
   Prefab: {fileID: 0}

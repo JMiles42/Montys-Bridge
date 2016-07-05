@@ -15,8 +15,10 @@ namespace JMiles42.IO.Generic
 	{
 		public static void LoadGameData<T>(string name, out T data)
 		{
+			//Does space magic if file exists
 			if( File.Exists(Application.persistentDataPath + "/"+name+".data") )//Does the file exist
 			{
+				//Space Magic
 				BinaryFormatter bf = new BinaryFormatter ();
 				string filepath = Application.persistentDataPath+"/"+name+".data";
 				FileStream file = File.Open
@@ -33,6 +35,7 @@ namespace JMiles42.IO.Generic
 	
 		public static void SaveGameData<T>(string name, T data)
 		{
+			//Space Magic
 			BinaryFormatter bf = new BinaryFormatter ();
 			string filepath = Application.persistentDataPath+"/"+name+".data";
 			FileStream file = File.Open
@@ -44,5 +47,5 @@ namespace JMiles42.IO.Generic
 			bf.Serialize(file, data);//Magic happens
 			file.Close();//End file
 		}
-	} 
+	}
 }
