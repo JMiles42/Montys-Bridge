@@ -4822,6 +4822,7 @@ GameObject:
   - 114: {fileID: 272368212}
   - 114: {fileID: 272368213}
   - 114: {fileID: 272368214}
+  - 114: {fileID: 272368215}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4933,6 +4934,20 @@ MonoBehaviour:
     Scrap: 0
     Pistons: 50
     CharactersOwned: 
+  score: {fileID: 987934017}
+--- !u!114 &272368215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272368208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7eab997e329734799235125deb0960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsConnectedToGoogleServices: 0
+  IsConnectedToUnityAds: 0
 --- !u!1 &275049750
 GameObject:
   m_ObjectHideFlags: 0
@@ -11805,7 +11820,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 272368211}
-        m_MethodName: ContinueGame
+        m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11907,7 +11922,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1499068181}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.6375
+  m_Size: 0.63750005
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13555,7 +13570,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17
+  orthographic size: 37.83
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -13575,8 +13590,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 743580550}
-  m_LocalRotation: {x: 0.16844285, y: 0.8312093, z: -0.36122695, w: 0.38759917}
-  m_LocalPosition: {x: -119.9, y: 60.1, z: 100.6}
+  m_LocalRotation: {x: 0.07439418, y: 0.8921554, z: -0.1595389, w: 0.41601878}
+  m_LocalPosition: {x: -119.9, y: 67.3, z: 100.600006}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 874312279}
@@ -14012,10 +14027,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 540}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -16164,7 +16179,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 874312278}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fdebf08a92b7f141b94be8035b9817f, type: 3}
   m_Name: 
@@ -39550,7 +39565,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 77.8, y: 77.8}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2099829390
 MonoBehaviour:
@@ -39743,7 +39758,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 100.5}
+  m_SizeDelta: {x: 0, y: 116}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2100992321
 MonoBehaviour:
