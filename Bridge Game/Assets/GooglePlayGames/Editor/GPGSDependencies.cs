@@ -1,4 +1,4 @@
-﻿// <copyright file="GPGSDependencies.cs" company="Google Inc.">
+// <copyright file="GPGSDependencies.cs" company="Google Inc.">
 // Copyright (C) 2015 Google Inc. All Rights Reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -67,7 +67,11 @@ namespace GooglePlayGames.Editor
             svcSupport.DependOn("com.android.support",
                 "support-v4",
                 "23.1+");
-        }
+
+			svcSupport.DependOn("com.google.android.gms",
+				"play-services-analytics",
+				PluginVersion.PlayServicesVersionConstraint);
+		}
     }
 }
 #endif

@@ -1,0 +1,10 @@
+lastUpgrade=00934
+proj.pluginVersion=0.9.34
+proj.AppId=995467350803
+and.BundleId=com.ForestOfChaosStudios.MontysBridge
+proj.classDir=Assets
+proj.ConstantsClassName=MontysGPlayData
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--%0d%0aGoogle+Play+game+services+IDs.%0d%0aSave+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.%0d%0a--%3e%0d%0a%3cresources%3e%0d%0a++%3cstring+name%3d%22app_id%22%3e995467350803%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22package_name%22%3ecom.ForestOfChaosStudios.MontysBridge%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_tram_catcher%22%3eCgkIk6bps_wcEAIQAA%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_piston_pusher%22%3eCgkIk6bps_wcEAIQAQ%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_stunt_driver%22%3eCgkIk6bps_wcEAIQAg%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_angry_driver%22%3eCgkIk6bps_wcEAIQAw%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_physics%22%3eCgkIk6bps_wcEAIQBA%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_remember_your_vehicles_height%22%3eCgkIk6bps_wcEAIQCg%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22leaderboard_piston_pusher%22%3eCgkIk6bps_wcEAIQCA%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22leaderboard_lifetime_scrap_award%22%3eCgkIk6bps_wcEAIQBQ%3c%2fstring%3e%0d%0a%3c%2fresources%3e%0d%0a
+and.ClientId=995467350803-8uco9a72vbap5e8qg11d6pg5lko3ls96.apps.googleusercontent.com
+proj.requireGPlus=false
+android.SetupDone=true

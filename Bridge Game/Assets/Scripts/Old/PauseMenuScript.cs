@@ -1,5 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
+using JMiles42.IO.Generic;
+
 
 public class PauseMenuScript : MonoBehaviour
 {
@@ -42,6 +45,25 @@ public class PauseMenuScript : MonoBehaviour
 	}
 	public void PauseGame()
 	{
+		Social.ReportScore(ScrapMaster.Instance.gamData.Scrap,MontysGPlayData.leaderboard_lifetime_scrap_award,((bool success)=> { }));
 		EscapeMenu();
+	}
+	public void ResetGame()
+	{
+		SavingLoading.SaveGameData("GameData", ScrapMaster.Instance.gamData);
+		SceneManager.LoadScene(0);
+	}
+	public void LeaderBoard()
+	{
+		Social.ShowLeaderboardUI();
+	}
+	public void Achevment()
+	{
+		Social.ShowAchievementsUI();
+	}
+	public void AddScrap()
+	{
+		ScrapMaster.Instance.gamData.Scrap += 50;
+		Social.ReportScore(ScrapMaster.Instance.gamData.Scrap, MontysGPlayData.leaderboard_lifetime_scrap_award, ((bool success) => { }));
 	}
 }

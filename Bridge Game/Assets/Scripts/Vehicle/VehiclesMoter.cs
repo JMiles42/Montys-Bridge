@@ -15,7 +15,14 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 			return vehicleSettings.Weight;
 		}
 	}
-    float m_speed;
+	public int Scrap
+	{
+		get
+		{
+			return vehicleSettings.howMuchScrapOnDestroy;
+		}
+	}
+	float m_speed;
     public bool IsDriving;
 	public Lane curlane;
 	Lane oldLane;
@@ -65,6 +72,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		//		GameObject g = (GameObject) Instantiate(explodeEffect,transform.position,Quaternion.identity);
 		//	}
 		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
+		ScrapMaster.Instance.gamData.Scrap += Scrap;
 		Destroy(this.gameObject);
 	}
     public virtual void OnHit()

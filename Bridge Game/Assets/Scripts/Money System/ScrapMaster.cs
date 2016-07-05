@@ -16,8 +16,8 @@ public class ScrapMaster : Singleton<ScrapMaster>
 	public void Start()
 	{
 		//SavingLoading.SaveGameData("GameData",gamData);
-		//SavingLoading.LoadGameData("GameData",out gamData);
-		print(gamData.HasScrapToConvert());
+		SavingLoading.LoadGameData("GameData",out gamData);
+		//print(gamData.HasScrapToConvert());
 	}
 }
 [Serializable]
@@ -30,5 +30,13 @@ public struct GameData
 	public bool HasScrapToConvert()
 	{
 		return Scrap > 50 ? true : false;
+	}
+	public void ConvertScrap()
+	{
+		if( HasScrapToConvert() )
+		{
+			Scrap -= 50;
+			Pistons += 1;
+		}
 	}
 }

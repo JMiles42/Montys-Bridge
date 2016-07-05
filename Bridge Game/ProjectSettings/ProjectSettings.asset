@@ -9,7 +9,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Studio 3
+  companyName: NonPlus Games
   productName: Monty's Bridge
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -158,8 +158,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: I:/[0] Legal Stuff/Android Dev Stuff/ForestOfChaosStudios.keystore
+  AndroidKeyaliasName: monty's bridge
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
