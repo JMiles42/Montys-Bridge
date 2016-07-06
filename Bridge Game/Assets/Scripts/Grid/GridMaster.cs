@@ -12,24 +12,25 @@ public class GridMaster : Singleton<GridMaster>
 	public Grid[] Lane3;
 
 	[ContextMenu("Get Grids")]
-	void FindGrids()
+	public void FindGrids()
 	{
 		Grid[] ga = GameObject.FindObjectsOfType<Grid>();
 		int length = ga.Length/3;
 		Lane1 = new Grid[length];
 		Lane2 = new Grid[length];
 		Lane3 = new Grid[length];
-		for( int i = 0; i < length; i++ )
+		int i = 0;
+		for( i = -15; i <= 15; i++ )
 		{
-			Lane1[i] = GameObject.Find("Lane1 : " + i.ToString("0")).GetComponent<Grid>();
+			Lane1[i + 15] = GameObject.Find("Lane1 : " + i.ToString("0")).GetComponent<Grid>();
 		}
-		for( int i = 0; i < length; i++ )
+		for( i = -15; i <= 15; i++ )
 		{
-			Lane2[i] = GameObject.Find("Lane2 : " + i.ToString("0")).GetComponent<Grid>();
+			Lane2[i + 15] = GameObject.Find("Lane2 : " + i.ToString("0")).GetComponent<Grid>();
 		}
-		for( int i = 0; i < length; i++ )
+		for( i = -15; i <= 15; i++ )
 		{
-			Lane3[i] = GameObject.Find("Lane3 : " + i.ToString("0")).GetComponent<Grid>();
+			Lane3[i + 15] = GameObject.Find("Lane3 : " + i.ToString("0")).GetComponent<Grid>();
 		}
 	}
 }

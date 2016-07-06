@@ -17,5 +17,6 @@ MonoBehaviour:
   Uses: 10
   RepairCost: 20
   SellCost: 30
-  TrapObj: {fileID: 0}
+  IsBlocker: 0
+  TrapObj: {fileID: 184374, guid: 36d7a9a5245d62d4d8481279c8e36e1c, type: 2}
   PlaceHolderObj: {fileID: 0}
