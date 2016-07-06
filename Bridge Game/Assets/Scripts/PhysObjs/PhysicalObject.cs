@@ -25,6 +25,10 @@ public class PhysicalObject : MonoBehaviour, IHitable
 		}
 	}
 
+	public virtual void Start()
+	{
+		m_RigidBody = GetComponent<Rigidbody>();
+	}
 	public virtual void OnHit()
 	{
 		m_RigidBody.constraints = RigidbodyConstraints.None;

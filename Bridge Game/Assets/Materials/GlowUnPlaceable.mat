@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Glow
+  m_Name: GlowUnPlaceable
   m_Shader: {fileID: 4800000, guid: c1d64d0c4de7cf646bff9fa24c1d56da, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -151,4 +151,4 @@ Material:
       data:
         first:
           name: _BottomColour
-        second: {r: 0, g: 0.83448267, b: 1, a: 0.3137255}
+        second: {r: 1, g: 0, b: 0, a: 0.3137255}

@@ -14,14 +14,6 @@ public class BuildingSystem : MonoBehaviour
 	public bool isBuilding;
 	public float addY;
 	public Vector3 prefabRot;
-	public Vector3 prefabRot180
-	{
-		get
-		{
-			return new Vector3(prefabRot.x, prefabRot.y + 180, prefabRot.z);
-		}
-	}
-	public bool rotate180;
 
 	public GameObject trapMenu;
 
@@ -49,10 +41,6 @@ public class BuildingSystem : MonoBehaviour
 			{
 				Build();
 			}
-            //else if( Input.GetKeyDown(KeyCode.Mouse1) )
-            //{
-            //	RotateBuild(!rotate180);
-            //}
         }
         if (Input.GetKeyDown(KeyCode.R))
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
@@ -188,10 +176,7 @@ public class BuildingSystem : MonoBehaviour
 		if( po.isBuildable )
 		{
 			GameObject go = (GameObject)Instantiate(currentObject.prefab, curPos, Quaternion.identity);
-			if( rotate180 )
-				go.transform.eulerAngles = prefabRot180;
-			else
-				go.transform.eulerAngles = prefabRot;
+			go.transform.eulerAngles = prefabRot;
 			
 			if( curPreview != null )
 			{
@@ -200,19 +185,6 @@ public class BuildingSystem : MonoBehaviour
 				trapMenu.SetActive(true);
 			}
 			isBuilding = false;
-			RotateBuild(false);
-        }
-	}
-
-	public void RotateBuild(bool b = true) //trap placement
-	{
-		rotate180 = b;
-		if( curPreview != null )
-		{
-			if( b )
-				curRot = prefabRot180;
-			else
-				curRot = prefabRot;
         }
 	}
 
