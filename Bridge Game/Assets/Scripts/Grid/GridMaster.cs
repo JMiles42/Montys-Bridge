@@ -10,7 +10,33 @@ public class GridMaster : Singleton<GridMaster>
 	public Grid[] Lane1;
 	public Grid[] Lane2;
 	public Grid[] Lane3;
+	public bool GridShowing;
+	public Vector3 defualtScale;
 
+	public void ShowGrid()
+	{
+		defualtScale = Lane1[0].highlight.transform.localScale;
+		print("Show Grid");
+		StartCoroutine(AnimateGrid());
+	}
+
+	public void HideGrid()
+	{
+		print("Hide Grid");
+	}
+
+	IEnumerator AnimateGrid()
+	{
+		while(GridShowing)
+		{
+			
+			yield return null;
+		}
+		HideGrid();
+		yield break;
+	}
+
+#if UNITY_EDITOR
 	[ContextMenu("Get Grids")]
 	public void FindGrids()
 	{
@@ -33,4 +59,5 @@ public class GridMaster : Singleton<GridMaster>
 			Lane3[i + 15] = GameObject.Find("Lane3 : " + i.ToString("0")).GetComponent<Grid>();
 		}
 	}
+#endif
 }

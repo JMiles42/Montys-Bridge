@@ -11,11 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de703d08ba71a74d9a72a0d48a8844c, type: 3}
   m_Name: Monty's Trap5
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  Cost: 0
-  Uses: 0
-  RepairCost: 0
-  SellCost: 0
+  Name: Monty's Trap5
+  Description: NULL
+  Cost: 15
+  Uses: 15
+  RepairCost: 15
+  SellCost: 15
+  IsBlocker: 0
   TrapObj: {fileID: 0}
   PlaceHolderObj: {fileID: 0}

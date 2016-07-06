@@ -14093,6 +14093,8 @@ GameObject:
   - 4: {fileID: 548347620}
   - 114: {fileID: 548347619}
   - 114: {fileID: 548347618}
+  - 114: {fileID: 548347622}
+  - 114: {fileID: 548347621}
   m_Layer: 0
   m_Name: Don'tDestroyOBJ
   m_TagString: Untagged
@@ -14140,6 +14142,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!114 &548347621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548347617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de4de59e528cc94a8f59862d6287ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &548347622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548347617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ffbc722db7ddd489a0b3565ba62529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charHolder: {fileID: 11400000, guid: d7f3e2d923db99b428debc523c08bed0, type: 2}
+  characterIndex: 0
 --- !u!1 &550295011
 GameObject:
   m_ObjectHideFlags: 0
@@ -44419,6 +44445,7 @@ MonoBehaviour:
   - {fileID: 1212243939}
   - {fileID: 821326349}
   - {fileID: 670301420}
+  GridShowing: 0
 --- !u!1 &1744607434
 GameObject:
   m_ObjectHideFlags: 0
