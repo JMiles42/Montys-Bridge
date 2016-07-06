@@ -2,9 +2,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using JMiles42.IO.Generic;
+using JMiles42;
 
 
-public class PauseMenuScript : MonoBehaviour
+public class PauseMenuScript : Singleton<PauseMenuScript>
 {
 
 	public bool paused = false;
@@ -16,24 +17,7 @@ public class PauseMenuScript : MonoBehaviour
 	}
 
 
-	void Update()
-	{
-		if( Input.GetKeyDown(KeyCode.Escape) )
-		{
-			if( !paused )
-			{
-				EscapeMenu();
-			}
-			else
-			{
-				pauseMenu.SetActive(false);
-				paused = !paused;
-			}
-		}
-
-	}
-
-	void EscapeMenu()
+	public void EscapeMenu()
 	{
 		paused = true;
 		pauseMenu.SetActive(true);

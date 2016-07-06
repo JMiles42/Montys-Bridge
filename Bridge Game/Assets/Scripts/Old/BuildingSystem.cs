@@ -65,7 +65,24 @@ public class BuildingSystem : MonoBehaviour
                 pti.usesBeforeBreak = Int32.MaxValue;
             }
         }
-    }
+
+
+
+
+			if( Input.GetKeyDown(KeyCode.Escape) )
+			{
+				if( !PauseMenuScript.Instance.paused )
+				{
+				PauseMenuScript.Instance.EscapeMenu();
+				}
+				else
+				{
+					PauseMenuScript.Instance.pauseMenu.SetActive(false);
+					PauseMenuScript.Instance.paused = !PauseMenuScript.Instance.paused;
+				}
+			}
+
+	}
 
 	void CheckKeyPress()
 	{

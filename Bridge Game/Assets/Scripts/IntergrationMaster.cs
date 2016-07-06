@@ -9,6 +9,7 @@ using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 
 
+
 public class IntergrationMaster : Singleton<IntergrationMaster>
 {
 	#region Vars
@@ -18,6 +19,7 @@ public class IntergrationMaster : Singleton<IntergrationMaster>
 
 	void Start()
 	{
+		DontDestroyOnLoad(this);
 		PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
         // enables saving game progress.
         .EnableSavedGames()
@@ -41,6 +43,8 @@ public class IntergrationMaster : Singleton<IntergrationMaster>
 				IsConnectedToGoogleServices = success;
 			});
 		}
+		if( IsConnectedToGoogleServices )
+			SpawnerMaster.Instance.seedTxt.text = "Success";
 		return IsConnectedToGoogleServices;
 	}
 }

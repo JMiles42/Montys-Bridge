@@ -13,16 +13,11 @@ using JMiles42.IO.Generic;
 public class ScrapMaster : Singleton<ScrapMaster> 
 {
 	public GameData gamData;
-	public UnityEngine.UI.Text score;
 	public void Start()
 	{
 		//SavingLoading.SaveGameData("GameData",gamData);
 		SavingLoading.LoadGameData("GameData",out gamData);
 		//print(gamData.HasScrapToConvert());
-	}
-	public void Update()
-	{
-		score.text = gamData.Scrap.ToString();
 	}
 }
 [Serializable]
