@@ -50,8 +50,8 @@ public class TrapMaster : Singleton<TrapMaster>
 		}
 	}
 
-	public void PlaceTrap(Grid g)
+	public void PlaceTrap(Grid g,Trap trap)
 	{
-		
+		g.SpawnTrap(trap);
 	}
 }

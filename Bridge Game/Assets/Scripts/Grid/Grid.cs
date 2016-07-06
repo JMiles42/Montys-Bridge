@@ -26,18 +26,6 @@ public class Grid : MonoBehaviour
 		}
 	}
 
-	void OnValidate()
-	{
-		if(!m_Enter )
-			m_Enter = transform.FindChild("Enter");
-		if( !m_Middle ) 
-			m_Middle = transform.FindChild("Middle");
-		if( !m_Exit )
-			m_Exit = transform.FindChild("Exit");
-
-		UpdateName();
-	}
-
 	public Vector3 GetTrapSpawnLocation()
 	{
 		return transform.position;
@@ -46,9 +34,6 @@ public class Grid : MonoBehaviour
 	{
 		GameObject g = Instantiate(trap.TrapObj);
 	}
-
-
-
 #if UNITY_EDITOR
 	[ContextMenu("Update Name")]
 	void UpdateName()
@@ -70,6 +55,17 @@ public class Grid : MonoBehaviour
 		g.transform.localScale = Vector3.one;
 		g.transform.rotation = Quaternion.Euler(Vector3.zero);
 		highlight = g;
+	}
+	void OnValidate()
+	{
+		if( !m_Enter )
+			m_Enter = transform.FindChild("Enter");
+		if( !m_Middle )
+			m_Middle = transform.FindChild("Middle");
+		if( !m_Exit )
+			m_Exit = transform.FindChild("Exit");
+
+		UpdateName();
 	}
 #endif
 }

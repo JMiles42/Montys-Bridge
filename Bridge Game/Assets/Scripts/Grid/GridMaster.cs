@@ -35,7 +35,6 @@ public class GridMaster : Singleton<GridMaster>
 		HideGrid();
 		yield break;
 	}
-
 #if UNITY_EDITOR
 	[ContextMenu("Get Grids")]
 	public void FindGrids()

@@ -10,16 +10,18 @@ public class CharacterMaster : Singleton<CharacterMaster>
 {
 	public CharacterHolder charHolder;
 	public int characterIndex = 0;
-
 	public void ChangeCharacter(int index)
 	{
 		characterIndex = index;
 	}
-	public void GetTraps()
+	public Texture2D GetPortrat()
 	{
-		
+		return charHolder.m_Characters[characterIndex].Portrat;
 	}
-
+	public string GetName()
+	{
+		return charHolder.m_Characters[characterIndex].Name;
+	}
 	public Trap GetTrap(int trapNum)
 	{
 		switch( trapNum )

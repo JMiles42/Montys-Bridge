@@ -9,7 +9,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using JMiles42;
 using JMiles42.IO.Generic;
 
-
 public class ScrapMaster : Singleton<ScrapMaster> 
 {
 	public GameData gamData;

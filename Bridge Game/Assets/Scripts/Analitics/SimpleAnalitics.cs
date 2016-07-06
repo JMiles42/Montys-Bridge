@@ -8,19 +8,17 @@ public static class SimpleAnalitics // : Singleton<SimpleAnalitics>
 {
 	public static void RegisterSeed(string seed)
 	{
-		Analytics.CustomEvent("Seed Played", new Dictionary<string,object>
-        {
+		Analytics.CustomEvent("Seed Played", new Dictionary<string, object>
+		{
 			{"Seed",seed}
 		});
 		Debug.Log("Seed Sent to Unity :" + seed);
 	}
-
 	public static void TestTransaction()
 	{
 		Analytics.Transaction("testBuy", 42.42m, "USD");
 		Debug.Log("testBuy : $" + 42.42m + " : USD");
 	}
-
 	public static void PersonalData(int dob,Gender gender )
 	{
 		Analytics.SetUserBirthYear(dob);

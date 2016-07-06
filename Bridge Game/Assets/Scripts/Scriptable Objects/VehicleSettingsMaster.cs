@@ -9,4 +9,5 @@ using System.Collections.Generic;
 public class VehicleSettingsMaster : ScriptableObject
 {
 	public List<VehicleSettings> Vehicles;
+	public List<PhysicsObject> Objects;
 }

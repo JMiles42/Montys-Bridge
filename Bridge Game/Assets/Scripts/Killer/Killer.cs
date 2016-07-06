@@ -7,7 +7,6 @@ public class Killer : MonoBehaviour
 	{
 		KillCar(collision.gameObject);
     }
-
 	public void OnTriggerEnter(Collider other)
 	{
 		KillCar(other.gameObject);
