@@ -5,7 +5,8 @@ using System.Collections;
 //using System.Collections.Generic;
 //using JMiles42;
 
-public class PhysicsObject : ScriptableObject 
+[CreateAssetMenu(fileName = "Phys Object", menuName = "Monty's/New Phys Object", order = 1)]
+public class PhysicsObject : ScriptableObject
 {
 	public string Name = "New Phys Object";
 	public float Weight = 20;

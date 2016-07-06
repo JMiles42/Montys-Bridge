@@ -67,10 +67,6 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	#region Hit
 	public virtual void Explode()
 	{
-		//	if( explodeEffect )
-		//	{
-		//		GameObject g = (GameObject) Instantiate(explodeEffect,transform.position,Quaternion.identity);
-		//	}
 		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
 		ScrapMaster.Instance.gamData.Scrap += Scrap;
 		Destroy(this.gameObject);
