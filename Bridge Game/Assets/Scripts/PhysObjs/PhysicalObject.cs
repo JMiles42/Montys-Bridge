@@ -25,6 +25,17 @@ public class PhysicalObject : MonoBehaviour, IHitable
 		}
 	}
 
+	#region Events
+	void OnEnable()
+	{
+		EventManager.StartListening(EventStrings.EXPLODEALLCARS, Explode);
+	}
+	void OnDisable()
+	{
+		EventManager.StopListening(EventStrings.EXPLODEALLCARS, Explode);
+	}
+	#endregion
+
 	public virtual void Start()
 	{
 		m_RigidBody = GetComponent<Rigidbody>();

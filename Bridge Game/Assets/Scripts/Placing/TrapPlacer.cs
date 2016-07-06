@@ -9,13 +9,8 @@ public class TrapPlacer : Singleton<TrapPlacer>
 {
 	public Material placable;
 	public Material unPlacable;
-
 	bool userPlacingTrap = false;
 
-	void Start()
-	{
-	
-	}
 	void StartPlacingTrap()
 	{
 		StartCoroutine(PlacingTrap());

@@ -29,11 +29,20 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	bool InCurrentLane;
 	CarAiState curState;
 	Rigidbody m_RigidBody;
-
 	public bool hit = false;
 
-	public GameObject explodeEffect;
-	
+	#region Events
+	void OnEnable()
+	{
+		EventManager.StartListening(EventStrings.DRIVE, ToggleDriving);
+		EventManager.StartListening(EventStrings.EXPLODEALLCARS, Explode);
+	}
+	void OnDisable()
+	{
+		EventManager.StopListening(EventStrings.DRIVE, ToggleDriving);
+		EventManager.StopListening(EventStrings.EXPLODEALLCARS, Explode);
+	}
+	#endregion
 	public virtual void Start()
 	{
 		m_RigidBody = GetComponent<Rigidbody>();
@@ -67,15 +76,20 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	#region Hit
 	public virtual void Explode()
 	{
+		OnDisable();
 		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
 		ScrapMaster.Instance.gamData.Scrap += Scrap;
 		Destroy(this.gameObject);
 	}
-    public virtual void OnHit()
+	public virtual void OnHit()
 	{
 		hit = true;
 		m_RigidBody.constraints = RigidbodyConstraints.None;
 		Invoke("Explode", Random.Range(4f, 10f));
+	}
+	public void ToggleDriving()
+	{
+		IsDriving = !IsDriving;
 	}
 	public virtual void OnCollisionEnter(Collision col)
 	{
@@ -90,8 +104,6 @@ public class VehiclesMoter : MonoBehaviour, IHitable
     {
         return Vector3.forward;
 	}
-
-
 	#region AI
 	public virtual void SetLane(Lane lane)
 	{
@@ -147,14 +159,12 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	}
 	#endregion
 }
-
 public enum CarAiState
 {
     Driving,
     Stopped,
     ChangingLanes
 }
-
 public enum CarWeight
 {
     Driving,

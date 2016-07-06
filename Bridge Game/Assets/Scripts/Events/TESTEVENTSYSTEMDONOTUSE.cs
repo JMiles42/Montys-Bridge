@@ -8,18 +8,13 @@ using System.Collections;
 
 public class TESTEVENTSYSTEMDONOTUSE : MonoBehaviour 
 {
-	UnityAction listener;
-	void Awake()
-	{
-		listener = new UnityAction(Ear);
-	}
 	void OnEnable()
 	{
-		EventManager.StartListening("earTest", listener);
+		EventManager.StartListening("earTest", Ear);
 	}
 	void OnDisable()
 	{
-		EventManager.StopListening("earTest", listener);
+		EventManager.StopListening("earTest", Ear);
 	}
 	void Ear()
 	{

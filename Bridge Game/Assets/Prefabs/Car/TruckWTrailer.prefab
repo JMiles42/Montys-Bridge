@@ -35,6 +35,7 @@ GameObject:
   - 54: {fileID: 5455450}
   - 138: {fileID: 13896760}
   - 138: {fileID: 13826516}
+  - 114: {fileID: 11420328}
   m_Layer: 0
   m_Name: Trailer
   m_TagString: vehicle
@@ -219,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168046}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: -16.699081, y: 0.39892292, z: 18.700113}
+  m_LocalPosition: {x: -14.8, y: 0.39892292, z: 18.700113}
   m_LocalScale: {x: 0.90000004, y: 0.9, z: 0.90000004}
   m_Children:
   - {fileID: 469700}
@@ -482,7 +483,7 @@ HingeJoint:
   m_Anchor: {x: -3.94, y: 1.76, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -3.9546533e-11, y: -0.00008021353, z: -0.000000040380378}
+  m_ConnectedAnchor: {x: -0.000000004736368, y: -0.000080220685, z: -0.000000040383874}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -514,7 +515,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.15691995e-14, y: 0.0000000011920938, z: -0.0000000047683724}
+  m_ConnectedAnchor: {x: -0.0000000050136837, y: 0.0000000011920762, z: -0.000000004768389}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -619,8 +620,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joint: {fileID: 13896760}
   physObj: {fileID: 11400000, guid: afdc42398168d6e489d13d92913cf791, type: 2}
+  m_RigidBody: {fileID: 0}
+  joint: {fileID: 13896760}
+--- !u!114 &11420328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ca2474b57e5554280b7cb89577621f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physObj: {fileID: 11400000, guid: 37ecba5c8cac5af42b904b42694f3452, type: 2}
+  m_RigidBody: {fileID: 5455450}
 --- !u!114 &11428230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -636,7 +651,6 @@ MonoBehaviour:
   IsDriving: 1
   curlane: 0
   hit: 0
-  explodeEffect: {fileID: 100102, guid: e23bdde50cdb3914e849165335ae41e2, type: 2}
   Trailer: {fileID: 102740}
   Hinge: {fileID: 126978}
 --- !u!114 &11447482
@@ -650,8 +664,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6849bdccc12cdb48821cdf519a9dbaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joint: {fileID: 13826516}
   physObj: {fileID: 11400000, guid: afdc42398168d6e489d13d92913cf791, type: 2}
+  m_RigidBody: {fileID: 0}
+  joint: {fileID: 13826516}
 --- !u!138 &13826516
 FixedJoint:
   m_ObjectHideFlags: 1

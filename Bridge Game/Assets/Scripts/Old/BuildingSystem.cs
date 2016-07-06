@@ -28,7 +28,6 @@ public class BuildingSystem : MonoBehaviour
 
 	private void Update()
 	{
-		CheckKeyPress();
 		CheckToDestroy();
 		//SelectBuildingToBuild ();
 		if( isBuilding )
@@ -61,7 +60,7 @@ public class BuildingSystem : MonoBehaviour
 			{
 				if( !PauseMenuScript.Instance.paused )
 				{
-				PauseMenuScript.Instance.EscapeMenu();
+					PauseMenuScript.Instance.EscapeMenu();
 				}
 				else
 				{
@@ -70,18 +69,6 @@ public class BuildingSystem : MonoBehaviour
 				}
 			}
 
-	}
-
-	void CheckKeyPress()
-	{
-		if( Input.GetKeyDown(KeyCode.G) )
-		{
-			SpawnerMaster.Instance.StartSpawner();
-		}
-		else if( Input.GetKeyDown(KeyCode.T) )
-		{
-			SpawnerMaster.Instance.StartSpawnerTruck();
-		}
 	}
 
 	public void PlaceTrap(int i)
