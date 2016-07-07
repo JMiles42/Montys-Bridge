@@ -13,4 +13,5 @@ public class VehicleSettings : ScriptableObject
 	public int howMuchScrapOnDestroy = 5;
 	public Agro agro = Agro.Calm;
 	public GameObject Prefab;
+	//public GameObject[] SkinVariations;
 }

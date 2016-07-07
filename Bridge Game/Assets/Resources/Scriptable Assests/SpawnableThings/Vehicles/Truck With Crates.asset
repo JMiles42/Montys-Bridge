@@ -15,4 +15,4 @@ MonoBehaviour:
   Weight: 50
   howMuchScrapOnDestroy: 10
   agro: 1
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 104838, guid: 4035d870787b66445bf9c3ae42e2a4f1, type: 2}

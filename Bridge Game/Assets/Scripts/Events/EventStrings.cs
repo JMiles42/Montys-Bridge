@@ -12,6 +12,8 @@ public static class EventStrings
 	public static string STOPSPAWNER = "StopSpawner";
 	public static string DRIVE = "Drive";
 	public static string EXPLODEALLCARS = "ExplodeCars";
+	public static string PAUSE = "Pause";
+	public static string UNPAUSE = "UnPause";
 #endregion
 #region Mouse
 	public static string MOUSELEFTDOWN = "MouseLeftDown";
@@ -20,5 +22,8 @@ public static class EventStrings
 	public static string HORIZONTAL = "Horizontal";
 	public static string VERTICAL = "Vertical";
 	public static string SCROLL = "Scroll";
+#endregion
+#region Other Calls
+	public static string TRAPPLACMENT = "TrapPlacement";
 #endregion
 }

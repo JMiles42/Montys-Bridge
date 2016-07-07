@@ -46,6 +46,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	public virtual void Start()
 	{
 		m_RigidBody = GetComponent<Rigidbody>();
+		m_RigidBody.mass = Weight;
 		RegisterToMaster();
 		curState = CarAiState.Driving;
 		oldLane = curlane;

@@ -5,7 +5,7 @@ using JMiles42.Maths.Rand;
 public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 {
 	public SpawnPoint[] m_spawnPoints;
-	public GameObject[] cars;
+	public VehicleSettingsMaster cars;
 	public float spawnTime;
 	public string seed;
 	public UnityEngine.UI.InputField seedTxt;
@@ -21,7 +21,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	{
 		get
 		{
-			return rand.Next(0, cars.Length);
+			return rand.Next(0, cars.Cars.Count);
 		}
 	}
 
@@ -57,9 +57,8 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	void SpawnUnit()
 	{
 		print("Unit Spawned");
-		GameObject g = (GameObject)Instantiate(cars[GetRandomCar]);
-		if( g.GetComponent<VehiclesMoter>() )
-			g.GetComponent<VehiclesMoter>().IsDriving = true;
+		GameObject g = Instantiate(cars.Cars[GetRandomCar].Prefab);
+		g.GetComponent<VehiclesMoter>().IsDriving = true;
 		int lane = GetRandomLane;
 		g.GetComponent<VehiclesMoter>().SetLane(m_spawnPoints[lane].lane);
 		g.transform.position = m_spawnPoints[lane].Location;

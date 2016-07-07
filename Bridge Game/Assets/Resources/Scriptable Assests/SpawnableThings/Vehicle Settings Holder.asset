@@ -11,10 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ad77d14978f4442bafdb931cdb7f7c, type: 3}
   m_Name: Vehicle Settings Holder
   m_EditorClassIdentifier: 
-  Vehicles:
+  Cars:
   - {fileID: 11400000, guid: 7e7283531698f794c8ee6b580a2f92d9, type: 2}
+  SportsCars:
   - {fileID: 11400000, guid: f624330013e5eb74eac5d5bde51c9449, type: 2}
-  - {fileID: 11400000, guid: d2189061896f8914fb7d9b70daedaaa9, type: 2}
+  Trucks:
   - {fileID: 11400000, guid: 6d3f894c78fc05d44a39b9c77d4f0fbd, type: 2}
+  Buses:
+  - {fileID: 11400000, guid: 74bdd014d900e054d850c3b56700f4ac, type: 2}
+  Special: []
   Objects:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: afdc42398168d6e489d13d92913cf791, type: 2}
+  - {fileID: 11400000, guid: 37ecba5c8cac5af42b904b42694f3452, type: 2}

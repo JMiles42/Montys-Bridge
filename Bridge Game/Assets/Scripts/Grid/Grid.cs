@@ -34,6 +34,12 @@ public class Grid : MonoBehaviour
 	{
 		GameObject g = Instantiate(trap.TrapObj);
 	}
+	public bool IsPlacable()
+	{
+		return !HasTrap;
+	}
+	
+
 #if UNITY_EDITOR
 	[ContextMenu("Update Name")]
 	void UpdateName()

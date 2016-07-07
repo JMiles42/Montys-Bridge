@@ -39,6 +39,7 @@ public class PhysicalObject : MonoBehaviour, IHitable
 	public virtual void Start()
 	{
 		m_RigidBody = GetComponent<Rigidbody>();
+		m_RigidBody.mass = Weight;
 	}
 	public virtual void OnHit()
 	{
