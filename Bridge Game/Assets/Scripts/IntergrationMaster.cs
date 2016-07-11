@@ -12,10 +12,11 @@ using GooglePlayGames.BasicApi;
 
 public class IntergrationMaster : Singleton<IntergrationMaster>
 {
-	#region Vars
+#if UNITY_ANDROID
+#region Vars
 	public bool IsConnectedToGoogleServices;
 	public bool IsConnectedToUnityAds;
-	#endregion
+#endregion
 
 	void Start()
 	{
@@ -47,4 +48,5 @@ public class IntergrationMaster : Singleton<IntergrationMaster>
 			SpawnerMaster.Instance.seedTxt.text = "Success";
 		return IsConnectedToGoogleServices;
 	}
+#endif
 }
