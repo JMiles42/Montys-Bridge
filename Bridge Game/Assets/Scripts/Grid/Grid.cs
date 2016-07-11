@@ -25,7 +25,12 @@ public class Grid : MonoBehaviour
 			return m_Trap != null ? true : false;
 		}
 	}
+	int myRngNum;
 
+	void Start()
+	{
+		myRngNum = GridMaster.Instance.randomGridAnim.Next(-2,2);
+	}
 	public Vector3 GetTrapSpawnLocation()
 	{
 		return transform.position;
@@ -38,8 +43,13 @@ public class Grid : MonoBehaviour
 	{
 		return !HasTrap;
 	}
+	public void Animate()
+	{
+		float f = (Time.deltaTime * myRngNum) *Mathf.Sin( (Mathf.PI * 2)*Time.deltaTime );
+		//print(f);
+		highlight.transform.localScale = Vector3.Lerp(GridMaster.Instance.minScale, GridMaster.Instance.maxScale, (Mathf.Clamp(f,0.1f,1f)));
+	}
 	
-
 #if UNITY_EDITOR
 	[ContextMenu("Update Name")]
 	void UpdateName()

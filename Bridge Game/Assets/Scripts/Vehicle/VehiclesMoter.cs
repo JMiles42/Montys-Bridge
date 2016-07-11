@@ -51,6 +51,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		curState = CarAiState.Driving;
 		oldLane = curlane;
 		InCurrentLane = true;
+		StartCoroutine(Drive());
 	}
 	public void RegisterToMaster()
 	{
@@ -67,6 +68,15 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		{
 			StartMoving();
 		}
+	}
+	public virtual IEnumerator Drive()
+	{
+		while( IsDriving )
+		{
+			transform.Translate(GetForwardVec() * SPEED * Time.smoothDeltaTime);
+			yield return null;
+		}
+		yield break;
 	}
 	public virtual void StartMoving()
 	{

@@ -19,4 +19,4 @@ MonoBehaviour:
   SellCost: 30
   IsBlocker: 0
   TrapObj: {fileID: 184374, guid: 36d7a9a5245d62d4d8481279c8e36e1c, type: 2}
-  PlaceHolderObj: {fileID: 0}
+  PlaceHolderObj: {fileID: 184374, guid: f5009d52ea8bf3345ac727e327f1e91f, type: 2}

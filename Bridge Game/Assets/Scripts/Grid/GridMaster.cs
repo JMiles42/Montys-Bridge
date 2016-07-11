@@ -11,7 +11,18 @@ public class GridMaster : Singleton<GridMaster>
 	public Grid[] Lane2;
 	public Grid[] Lane3;
 	public bool GridShowing;
+	public Material gridPlacable;
+	public Material gridNotPlacable;
+	public Material gridHighlighted;
 	public Vector3 defualtScale;
+	public Vector3 minScale;
+	public Vector3 maxScale;
+	public System.Random randomGridAnim = new System.Random();
+
+	void Start()
+	{
+		ShowGrid();
+	}
 
 	public void ShowGrid()
 	{
@@ -29,7 +40,19 @@ public class GridMaster : Singleton<GridMaster>
 	{
 		while(GridShowing)
 		{
-			
+			print("Animate Grid");
+			for( int l1 = 0; l1 < Lane1.Length; l1++ )
+			{
+				Lane1[l1].Animate();
+			}
+			for( int l2 = 0; l2 < Lane2.Length; l2++ )
+			{
+				Lane1[l2].Animate();
+			}
+			for( int l3 = 0; l3 < Lane3.Length; l3++ )
+			{				
+				Lane1[l3].Animate();
+			}
 			yield return null;
 		}
 		HideGrid();
@@ -39,7 +62,7 @@ public class GridMaster : Singleton<GridMaster>
 	[ContextMenu("Get Grids")]
 	public void FindGrids()
 	{
-		Grid[] ga = GameObject.FindObjectsOfType<Grid>();
+		Grid[] ga = FindObjectsOfType<Grid>();
 		int length = ga.Length/3;
 		Lane1 = new Grid[length];
 		Lane2 = new Grid[length];

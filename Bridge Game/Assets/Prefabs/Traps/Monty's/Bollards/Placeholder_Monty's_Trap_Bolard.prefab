@@ -11,7 +11,6 @@ GameObject:
   - 95: {fileID: 9574148}
   - 54: {fileID: 5401636}
   - 65: {fileID: 6587284}
-  - 114: {fileID: 11467152}
   m_Layer: 9
   m_Name: Trap_Bolard_Model
   m_TagString: Untagged
@@ -62,7 +61,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 447664}
-  - 114: {fileID: 11497358}
+  - 114: {fileID: 11474446}
   m_Layer: 0
   m_Name: Placeholder_Monty's_Trap_Bolard
   m_TagString: TrapA
@@ -243,19 +242,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11467152
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b5cf96efb6c574bbfae34b060bcc9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myTrap: {fileID: 11497358}
---- !u!114 &11497358
+--- !u!114 &11474446
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -263,13 +250,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 168578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa618d13e073a54a95385f169e19de3, type: 3}
+  m_Script: {fileID: 11500000, guid: bffb9c7962692d54cbb46a52749dce51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 9574148}
-  trap: {fileID: 11400000, guid: 9904f5d4fd8e6ad48a95c34bf4eaf9af, type: 2}
-  uses: 0
-  usesBeforeBreak: 0
+  renderers:
+  - {fileID: 2362308}
+  - {fileID: 2382826}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
