@@ -25,12 +25,7 @@ public class Grid : MonoBehaviour
 			return m_Trap != null ? true : false;
 		}
 	}
-	int myRngNum;
-
-	void Start()
-	{
-		myRngNum = GridMaster.Instance.randomGridAnim.Next(-2,2);
-	}
+	
 	public Vector3 GetTrapSpawnLocation()
 	{
 		return transform.position;
@@ -38,18 +33,42 @@ public class Grid : MonoBehaviour
 	public void SpawnTrap(Trap trap)
 	{
 		GameObject g = Instantiate(trap.TrapObj);
+		g.transform.position = GetTrapSpawnLocation();
+		g.transform.localScale = Vector3.one;
+		g.transform.rotation = Quaternion.identity;
 	}
 	public bool IsPlacable()
 	{
 		return !HasTrap;
 	}
-	public void Animate()
+	public void SetMat()
 	{
-		float f = (Time.deltaTime * myRngNum) *Mathf.Sin( (Mathf.PI * 2)*Time.deltaTime );
-		//print(f);
-		highlight.transform.localScale = Vector3.Lerp(GridMaster.Instance.minScale, GridMaster.Instance.maxScale, (Mathf.Clamp(f,0.1f,1f)));
+		Material mat = GetMat();
+		SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+		foreach( SpriteRenderer mr in renderers )
+		{
+			mr.material = mat;
+		}
 	}
-	
+	public void SetMat(Material mat)
+	{
+		SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+		foreach( SpriteRenderer mr in renderers )
+		{
+			mr.material = mat;
+		}
+	}
+	public void SetHighlight(bool onOff)
+	{
+		highlight.SetActive(onOff);
+	}
+	Material GetMat()
+	{
+		if( HasTrap )
+			return GridMaster.Instance.gridNotPlacable;
+		else
+			return GridMaster.Instance.gridPlacable;
+	}	
 #if UNITY_EDITOR
 	[ContextMenu("Update Name")]
 	void UpdateName()

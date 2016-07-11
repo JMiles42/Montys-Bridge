@@ -14,50 +14,56 @@ public class GridMaster : Singleton<GridMaster>
 	public Material gridPlacable;
 	public Material gridNotPlacable;
 	public Material gridHighlighted;
-	public Vector3 defualtScale;
-	public Vector3 minScale;
-	public Vector3 maxScale;
-	public System.Random randomGridAnim = new System.Random();
-
-	void Start()
-	{
-		ShowGrid();
-	}
 
 	public void ShowGrid()
 	{
-		defualtScale = Lane1[0].highlight.transform.localScale;
-		print("Show Grid");
-		StartCoroutine(AnimateGrid());
+		for( int i = 0; i < Lane1.Length; i++ )
+		{
+			Lane1[i].SetHighlight(true);
+		}
+		for( int i = 0; i < Lane2.Length; i++ )
+		{
+			Lane2[i].SetHighlight(true);
+		}
+		for( int i = 0; i < Lane3.Length; i++ )
+		{
+			Lane3[i].SetHighlight(true);
+		}
 	}
-
 	public void HideGrid()
 	{
-		print("Hide Grid");
-	}
-
-	IEnumerator AnimateGrid()
-	{
-		while(GridShowing)
+		for( int i = 0; i < Lane1.Length; i++ )
 		{
-			print("Animate Grid");
-			for( int l1 = 0; l1 < Lane1.Length; l1++ )
-			{
-				Lane1[l1].Animate();
-			}
-			for( int l2 = 0; l2 < Lane2.Length; l2++ )
-			{
-				Lane1[l2].Animate();
-			}
-			for( int l3 = 0; l3 < Lane3.Length; l3++ )
-			{				
-				Lane1[l3].Animate();
-			}
-			yield return null;
+			Lane1[i].SetHighlight(false);
 		}
-		HideGrid();
-		yield break;
+		for( int i = 0; i < Lane2.Length; i++ )
+		{
+			Lane2[i].SetHighlight(false);
+		}
+		for( int i = 0; i < Lane3.Length; i++ )
+		{
+			Lane3[i].SetHighlight(false);
+		}
 	}
+	//IEnumerator UpdateGridHighlight()
+	//{
+	//	while( GridShowing )
+	//	{
+	//		for( int i = 0; i < Lane1.Length; i++ )
+	//		{
+	//			Lane1[i].SetMat();
+	//		}
+	//		for( int i = 0; i < Lane2.Length; i++ )
+	//		{
+	//			Lane2[i].SetMat();
+	//		}
+	//		for( int i = 0; i < Lane3.Length; i++ )
+	//		{
+	//			Lane2[i].SetMat();
+	//		}
+	//		yield return null;
+	//	}
+	//}
 #if UNITY_EDITOR
 	[ContextMenu("Get Grids")]
 	public void FindGrids()

@@ -8,6 +8,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	public VehicleSettingsMaster cars;
 	public float spawnTime;
 	public string seed;
+	public bool spawning;
 	public UnityEngine.UI.InputField seedTxt;
 	System.Random rand;
 	int GetRandomLane
@@ -15,13 +16,6 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		get
 		{
 			return rand.Next(0, 3);
-		}
-	}
-	int GetRandomCar
-	{
-		get
-		{
-			return rand.Next(0, cars.Cars.Count);
 		}
 	}
 
@@ -40,28 +34,39 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	void Start()
 	{
 		SetSeed(RandomStrings.GetRandomAltString(8));
-    }
+		//SimpleAnalitics.RegisterSeed(seed);
+		rand = new System.Random(seed.GetHashCode());
+	}
+	public int GetNumber(int min, int max)
+	{
+		return rand.Next(min, max);
+	}
 	public void StartSpawner()
 	{
-		rand = new System.Random(seed.GetHashCode());
-		print(seed.GetHashCode());
-		InvokeRepeating("SpawnUnit", 0, spawnTime);
-		SimpleAnalitics.RegisterSeed(seed);
+		StartCoroutine(SpawnUnit());
+		spawning = true;
+		GridMaster.Instance.HideGrid();
+	}
+	IEnumerator SpawnUnit()
+	{
+		while( spawning )
+		{
+			GameObject g = Instantiate(cars.GetAVehicle().Prefab);
+			int lane = GetRandomLane;
+			if( g.GetComponent<VehiclesMoter>() )
+				g.GetComponent<VehiclesMoter>().IsDriving = true;
+			else if( g.GetComponentInChildren<VehiclesMoter>() )
+				g.GetComponentInChildren<VehiclesMoter>().IsDriving = true;
+			g.transform.position = m_spawnPoints[lane].Location;
+			//g.transform.Rotate(Vector3.up * 180);
+			yield return new WaitForSeconds(spawnTime);
+		}
 	}
 	void StopSpawner()
 	{
-		CancelInvoke("SpawnUnit");
-		CancelInvoke("SpawnUnitTruck");
-		CancelInvoke("SpawnUnit");
-	}
-	void SpawnUnit()
-	{
-		print("Unit Spawned");
-		GameObject g = Instantiate(cars.Cars[GetRandomCar].Prefab);
-		g.GetComponent<VehiclesMoter>().IsDriving = true;
-		int lane = GetRandomLane;
-		g.GetComponent<VehiclesMoter>().SetLane(m_spawnPoints[lane].lane);
-		g.transform.position = m_spawnPoints[lane].Location;
+		spawning = false;
+		StopCoroutine(SpawnUnit());
+		GridMaster.Instance.ShowGrid();
 	}
 	public void SetSeed()
 	{

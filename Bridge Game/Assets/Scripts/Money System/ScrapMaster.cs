@@ -12,10 +12,11 @@ using JMiles42.IO.Generic;
 public class ScrapMaster : Singleton<ScrapMaster> 
 {
 	public GameData gamData;
+
 	public void Start()
 	{
 		//SavingLoading.SaveGameData("GameData",gamData);
-		SavingLoading.LoadGameData("GameData",out gamData);
+		//SavingLoading.LoadGameData("GameData",out gamData);
 		//print(gamData.HasScrapToConvert());
 	}
 }

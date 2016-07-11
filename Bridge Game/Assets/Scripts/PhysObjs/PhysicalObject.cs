@@ -53,7 +53,7 @@ public class PhysicalObject : MonoBehaviour, IHitable
 	}
 	public virtual void OnCollisionEnter(Collision col)
 	{
-		if( col.gameObject.tag != "vehicle"  )
+		if( col.gameObject.tag != "vehicle" && col.gameObject.tag != "Crate" && col.gameObject.tag != "Ground" )
 		{
 			OnHit();
 		}

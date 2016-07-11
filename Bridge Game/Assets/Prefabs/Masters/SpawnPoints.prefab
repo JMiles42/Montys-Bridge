@@ -167,7 +167,7 @@ MonoBehaviour:
   - {fileID: 11414514}
   - {fileID: 11423456}
   cars: {fileID: 11400000, guid: 2b7aa14c7b3f13d4885722942c615a18, type: 2}
-  spawnTime: 1
+  spawnTime: 1.5
   seed: Seed
   seedTxt: {fileID: 0}
 --- !u!1001 &100100000

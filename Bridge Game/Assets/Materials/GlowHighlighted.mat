@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: GlowHighlighted
-  m_Shader: {fileID: 4800000, guid: c1d64d0c4de7cf646bff9fa24c1d56da, type: 3}
+  m_Shader: {fileID: 10753, guid: 0000000000000000e000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -93,8 +93,8 @@ Material:
         second: 0.5
       data:
         first:
-          name: _GradientBlendAmount
-        second: 0.3
+          name: PixelSnap
+        second: 0
       data:
         first:
           name: _Parallax
@@ -133,6 +133,10 @@ Material:
         second: 0
       data:
         first:
+          name: _GradientBlendAmount
+        second: 0.3
+      data:
+        first:
           name: _Delay
         second: 2.69
     m_Colors:
@@ -143,7 +147,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 0, g: 0.91724133, b: 1, a: 1}
       data:
         first:
           name: _TopColour

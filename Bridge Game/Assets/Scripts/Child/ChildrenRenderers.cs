@@ -3,6 +3,7 @@ using UnityEngine;
 public class ChildrenRenderers : MonoBehaviour
 {
 	public MeshRenderer[] renderers;
+	//public SpriteRenderer[] renderers;
 
 #if UNITY_EDITOR
 	void OnValidate()

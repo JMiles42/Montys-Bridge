@@ -11,7 +11,7 @@ GameObject:
   - 95: {fileID: 9574148}
   - 54: {fileID: 5401636}
   - 65: {fileID: 6587284}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Trap_Bolard_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 33: {fileID: 3348014}
   - 23: {fileID: 2382826}
   - 65: {fileID: 6502648}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bolard04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - 4: {fileID: 475856}
   - 33: {fileID: 3313012}
   - 23: {fileID: 2362308}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trap_Base1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 447664}
   - 114: {fileID: 11474446}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Placeholder_Monty's_Trap_Bolard
   m_TagString: TrapA
   m_Icon: {fileID: 0}
@@ -262,7 +262,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 168578}

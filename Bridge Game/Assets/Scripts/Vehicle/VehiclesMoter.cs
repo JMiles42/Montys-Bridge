@@ -58,10 +58,10 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		VehicleManager.Instance.AddVehicleToLane(curlane, this);
 	}
 	#region Drive
-	public virtual void FixedUpdate()
-	{
-		UpdateDriving();
-    }
+	//public virtual void FixedUpdate()
+	//{
+	//	UpdateDriving();
+    //}
 	public virtual void UpdateDriving()
 	{
 		if( IsDriving )
@@ -74,7 +74,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		while( IsDriving )
 		{
 			transform.Translate(GetForwardVec() * SPEED * Time.smoothDeltaTime);
-			yield return null;
+			yield return new WaitForFixedUpdate();
 		}
 		yield break;
 	}
@@ -95,7 +95,8 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	public virtual void OnHit()
 	{
 		hit = true;
-		m_RigidBody.constraints = RigidbodyConstraints.None;
+		if(m_RigidBody)
+			m_RigidBody.constraints = RigidbodyConstraints.None;
 		Invoke("Explode", Random.Range(4f, 10f));
 	}
 	public void ToggleDriving()

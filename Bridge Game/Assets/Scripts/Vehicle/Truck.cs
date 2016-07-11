@@ -7,16 +7,11 @@ public class Truck : VehiclesMoter
 	public GameObject Trailer;
 	public GameObject Hinge;
 
-	public override void Start()
-	{
-		base.Start();
-		//Trailer.transform.SetParent(null);
-	}
-
 	public override void OnCollisionEnter(Collision col)
 	{
-		if( col.gameObject.tag != "Ground" && col.gameObject != Trailer )
+		if( col.gameObject.tag != "Ground" && col.gameObject != Trailer && col.gameObject.tag != "Crate" )
 		{
+			print("Truck Hit");
 			OnHit();
 		}
 	}
@@ -28,6 +23,7 @@ public class Truck : VehiclesMoter
 
     public void OnJointBreak(float breakForce)
     {
-        Trailer.transform.SetParent(null);
+		if( Trailer )
+			Trailer.transform.SetParent(null);
     }
 }

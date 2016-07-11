@@ -11,12 +11,14 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 	public float Vertical; 
 	public Vector2 MousePos;
 	public float MouseScroll;
+	public bool startedPlacingTrap;
 	void Update()
 	{
 		GetAxisValues();
 		Axis();
 		MousePress();
 		KeyPress();
+		TrapPresses();
 	}
 	void GetAxisValues()
 	{
@@ -30,6 +32,7 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		if( Input.GetMouseButtonDown(0) )
 		{
 			EventManager.TriggerEvent(EventStrings.MOUSELEFTDOWN);
+			EventManager.TriggerEvent(EventStrings.PLACETRAP);
 		}
 		if( MouseScroll != 0 )
 		{

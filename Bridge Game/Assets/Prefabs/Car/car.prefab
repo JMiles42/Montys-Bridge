@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2381708}
   m_Layer: 0
   m_Name: Wheel03
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ GameObject:
   - 23: {fileID: 2377154}
   m_Layer: 0
   m_Name: Wheel01
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   - 23: {fileID: 2370448}
   m_Layer: 0
   m_Name: Wheel04
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ GameObject:
   - 65: {fileID: 6532722}
   m_Layer: 0
   m_Name: Car_Normal_Placeholder
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ GameObject:
   - 23: {fileID: 2346314}
   m_Layer: 0
   m_Name: Wheel02
-  m_TagString: Untagged
+  m_TagString: vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143840}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: -2.0585938, y: 3.2805872, z: -177.71036}
+  m_LocalPosition: {x: -46.63614, y: 0.053400863, z: 108.86845}
   m_LocalScale: {x: 200, y: 200, z: -189.71182}
   m_Children:
   - {fileID: 405566}
