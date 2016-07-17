@@ -68,7 +68,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 
 			if( grid != null )
 			{
-				if( grid.IsPlacable() )
+				if( grid.HasTrap )
 				{
 					display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 				}
@@ -102,22 +102,28 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	}
 	void RaycastToGetGrid()
 	{
+		grid = null;
 		Ray ray = Camera.main.ScreenPointToRay (PlayerInputManager.Instance.MousePos);
-		print("Shoot");
+		//print("Shoot");
 		RaycastHit hit;
 		if( Physics.Raycast(ray, out hit) )
 		{
 			if( hit.transform.GetComponent<Grid>() )
 			{
 				grid = hit.transform.GetComponent<Grid>();
+				if( grid.IsPlacable() )
+					display.GetComponent<ChildrenRenderers>().SetMat(placable);
+				else
+					display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 			}
 		}
 	}
 	void PlaceDownTrap()
 	{
+		RaycastToGetGrid();
 		if( grid )
 		{
-			if( grid.HasTrap )
+			if( !grid.IsPlacable() )
 			{
 				display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 				return;

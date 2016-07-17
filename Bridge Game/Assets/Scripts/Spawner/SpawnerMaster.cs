@@ -59,7 +59,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 				g.GetComponentInChildren<VehiclesMoter>().IsDriving = true;
 			g.transform.position = m_spawnPoints[lane].Location;
 			//g.transform.Rotate(Vector3.up * 180);
-			yield return new WaitForSeconds(spawnTime);
+			yield return WaitForTimes.GetWaitForTime(spawnTime);
 		}
 	}
 	void StopSpawner()

@@ -10,6 +10,7 @@ public class Grid : MonoBehaviour
 	public Transform m_Middle;
 	public Transform m_Exit;
 	public Trap m_Trap;
+	public PlacableTrap m_PlaceTrap;
 	public GameObject highlight;
 #if UNITY_EDITOR
 	public GameObject highlightTemp;
@@ -32,6 +33,18 @@ public class Grid : MonoBehaviour
 		g.transform.position = GetTrapSpawnLocation();
 		g.transform.localScale = Vector3.one;
 		g.transform.rotation = Quaternion.identity;
+		m_PlaceTrap = g.GetComponent<PlacableTrap>();
+		m_Trap = trap;
+	}
+	public void RepairTrap()
+	{
+		m_PlaceTrap.usesBeforeBreak = m_Trap.Uses;
+	}
+	public void SellTrap()
+	{
+		Destroy(m_PlaceTrap);
+		m_PlaceTrap = null;
+		m_Trap = null;
 	}
 	public bool IsPlacable()
 	{

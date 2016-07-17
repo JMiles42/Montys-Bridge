@@ -16,9 +16,9 @@ public class ChildrenRenderers : MonoBehaviour
 	}
 	public void SetMat(Material mat)
 	{
-		foreach( MeshRenderer mr in renderers )
+		for(int i =0; i<renderers.Length;i++ )
 		{
-			mr.material = mat;
+			renderers[i].material = mat;
 		}
 	}
 }

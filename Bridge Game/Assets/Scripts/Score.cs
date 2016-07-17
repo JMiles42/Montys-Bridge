@@ -33,7 +33,7 @@ public class Score : Singleton<Score>
 		{
 			showUpdateRate = getUpdateRate;
 			DisplayScore();
-			yield return new WaitForSeconds(updateRate);
+			yield return WaitForTimes.GetWaitForTime(updateRate);
 		}
 	}
 
