@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-
 // Deriving the Purchaser class from IStoreListener enables it to receive messages from Unity Purchasing.
 public class Purchaser : MonoBehaviour, IStoreListener
 {
@@ -46,7 +45,6 @@ public class Purchaser : MonoBehaviour, IStoreListener
 			InitializePurchasing();
 		}
 	}
-
 	public void InitializePurchasing()
 	{
 		// If we have already connected to Purchasing ...
@@ -77,31 +75,23 @@ public class Purchaser : MonoBehaviour, IStoreListener
 		// and this class' instance. Expect a response either in OnInitialized or OnInitializeFailed.
 		UnityPurchasing.Initialize(this, builder);
 	}
-
-
 	private bool IsInitialized()
 	{
 		// Only say we are initialized if both the Purchasing references are set.
 		return m_StoreController != null && m_StoreExtensionProvider != null;
 	}
-
-
 	public void BuyConsumable()
 	{
 		// Buy the consumable product using its general identifier. Expect a response either 
 		// through ProcessPurchase or OnPurchaseFailed asynchronously.
 		BuyProductID(kProductIDConsumable);
 	}
-
-
 	public void BuyNonConsumable()
 	{
 		// Buy the non-consumable product using its general identifier. Expect a response either 
 		// through ProcessPurchase or OnPurchaseFailed asynchronously.
 		BuyProductID(kProductIDNonConsumable);
 	}
-
-
 	public void BuySubscription()
 	{
 		// Buy the subscription product using its the general identifier. Expect a response either 
@@ -110,8 +100,6 @@ public class Purchaser : MonoBehaviour, IStoreListener
 		// custom store-specific identifiers above.
 		BuyProductID(kProductIDSubscription);
 	}
-
-
 	void BuyProductID(string productId)
 	{
 		// If Purchasing has been initialized ...
@@ -144,8 +132,6 @@ public class Purchaser : MonoBehaviour, IStoreListener
 			Debug.Log("BuyProductID FAIL. Not initialized.");
 		}
 	}
-
-
 	// Restore purchases previously made by this customer. Some platforms automatically restore purchases, like Google. 
 	// Apple currently requires explicit purchase restoration for IAP, conditionally displaying a password prompt.
 	public void RestorePurchases()
@@ -183,12 +169,9 @@ public class Purchaser : MonoBehaviour, IStoreListener
 			Debug.Log("RestorePurchases FAIL. Not supported on this platform. Current = " + Application.platform);
 		}
 	}
-
-
 	//  
 	// --- IStoreListener
 	//
-
 	public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
 	{
 		// Purchasing has succeeded initializing. Collect our Purchasing references.
@@ -199,15 +182,11 @@ public class Purchaser : MonoBehaviour, IStoreListener
 		// Store specific subsystem, for accessing device-specific store features.
 		m_StoreExtensionProvider = extensions;
 	}
-
-
 	public void OnInitializeFailed(InitializationFailureReason error)
 	{
 		// Purchasing set-up has not succeeded. Check error for reason. Consider sharing this reason with the user.
 		Debug.Log("OnInitializeFailed InitializationFailureReason:" + error);
 	}
-
-
 	public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
 	{
 		// A consumable product has been purchased by this user.
@@ -239,8 +218,6 @@ public class Purchaser : MonoBehaviour, IStoreListener
 		// saving purchased products to the cloud, and when that save is delayed. 
 		return PurchaseProcessingResult.Complete;
 	}
-
-
 	public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
 	{
 		// A product purchase attempt did not succeed. Check failureReason for more detail. Consider sharing 

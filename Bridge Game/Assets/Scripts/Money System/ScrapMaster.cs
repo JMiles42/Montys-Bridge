@@ -1,15 +1,9 @@
 using UnityEngine;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-//using System.Collections.Generic;
 using JMiles42;
-using JMiles42.IO.Generic;
 
-public class ScrapMaster : Singleton<ScrapMaster> 
+public class ScrapMaster : Singleton<ScrapMaster>
 {
 	public GameData gamData;
 

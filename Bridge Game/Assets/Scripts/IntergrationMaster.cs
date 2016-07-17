@@ -1,22 +1,17 @@
 using UnityEngine;
-//using UnityEngine.UI;
 using UnityEngine.SocialPlatforms;
-//using UnityEngine.SceneManagement;
 using System.Collections;
-//using System.Collections.Generic;
 using JMiles42;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 
-
-
 public class IntergrationMaster : Singleton<IntergrationMaster>
 {
 #if UNITY_ANDROID
-#region Vars
+	#region Vars
 	public bool IsConnectedToGoogleServices;
 	public bool IsConnectedToUnityAds;
-#endregion
+	#endregion
 
 	void Start()
 	{

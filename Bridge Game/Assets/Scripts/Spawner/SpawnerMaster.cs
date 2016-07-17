@@ -76,5 +76,5 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	{
 		seed = s;
 		seedTxt.text = s;
-	}	
+	}
 }

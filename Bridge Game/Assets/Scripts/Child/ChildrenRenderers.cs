@@ -3,7 +3,6 @@ using UnityEngine;
 public class ChildrenRenderers : MonoBehaviour
 {
 	public MeshRenderer[] renderers;
-	//public SpriteRenderer[] renderers;
 
 #if UNITY_EDITOR
 	void OnValidate()
@@ -11,11 +10,10 @@ public class ChildrenRenderers : MonoBehaviour
 		renderers = GetComponentsInChildren<MeshRenderer>();
 	}
 #endif
-	//void Awake()
-	//{
-	//	renderers = GetComponentsInChildren<MeshRenderer>();
-	//}
-
+	void Awake()
+	{
+		renderers = GetComponentsInChildren<MeshRenderer>();
+	}
 	public void SetMat(Material mat)
 	{
 		foreach( MeshRenderer mr in renderers )

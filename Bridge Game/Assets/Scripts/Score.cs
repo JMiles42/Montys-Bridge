@@ -1,11 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System.Collections;
-//using System.Collections.Generic;
 using JMiles42;
 
-public class Score : Singleton<Score> 
+public class Score : Singleton<Score>
 {
 	public const string SCORESTRING = "Game Score\n <size=20><b>{0}</b></size>";
 	public Text scoreTxt;
@@ -62,7 +60,7 @@ public class Score : Singleton<Score>
 	public void AddScore(int _score)
 	{
 		AddMulti(1);
-		score += ScoreCalculation(multiplyer,_score);
+		score += ScoreCalculation(multiplyer, _score);
 	}
 	public void AddMulti(int _multi)
 	{

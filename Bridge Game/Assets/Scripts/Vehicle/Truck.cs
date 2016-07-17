@@ -15,13 +15,13 @@ public class Truck : VehiclesMoter
 			OnHit();
 		}
 	}
-    public override Vector3 GetForwardVec()
-    {
-        return Vector3.right;
-    }
-    public void OnJointBreak(float breakForce)
-    {
+	public override Vector3 GetForwardVec()
+	{
+		return Vector3.right;
+	}
+	public void OnJointBreak(float breakForce)
+	{
 		if( Trailer )
 			Trailer.transform.SetParent(null);
-    }
+	}
 }

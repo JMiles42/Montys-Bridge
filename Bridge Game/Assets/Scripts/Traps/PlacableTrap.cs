@@ -1,12 +1,8 @@
 using UnityEngine;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System.Collections;
-//using System.Collections.Generic;
-//using JMiles42;
 
 
-public class PlacableTrap : MonoBehaviour 
+public class PlacableTrap : MonoBehaviour
 {
 	[ContextMenuItem("Activate Trigger","PlayAnim")]
 	public Animator anim;
@@ -45,53 +41,46 @@ public class PlacableTrap : MonoBehaviour
 
 	public virtual void HeardTriggerEnter(Collider col)
 	{
-        if (usesBeforeBreak <= 0)
-            return;
+		if( usesBeforeBreak <= 0 )
+			return;
 		//print (col.name);
 		if( col.tag == "vehicle" )
-        {
-            anim.SetBool("CarIn", true);
-            GameObject vehicle = col.gameObject;
+		{
+			anim.SetBool("CarIn", true);
+			GameObject vehicle = col.gameObject;
 			if( vehicle.GetComponent<VehiclesMoter>() )
 				vehicle.GetComponent<VehiclesMoter>().OnHit();
 			PlayAnim();
-            uses++;
-            usesBeforeBreak--;
-        }
+			uses++;
+			usesBeforeBreak--;
+		}
 	}
-
-    public virtual void HeardTriggerStay(Collider col)
+	public virtual void HeardTriggerStay(Collider col)
 	{
 
 	}
-
-    public virtual void HeardTriggerExit(Collider col)
+	public virtual void HeardTriggerExit(Collider col)
 	{
-        anim.SetBool("CarIn", false);
-    }
-
-    public virtual void Start()
-    {
-        OnPlaced();
-    }
-
-    public virtual void OnPlaced()
-    {
-        ResetUseCount();
-    }
-
-    public virtual void PlayAnim()
+		anim.SetBool("CarIn", false);
+	}
+	public virtual void Start()
+	{
+		OnPlaced();
+	}
+	public virtual void OnPlaced()
+	{
+		ResetUseCount();
+	}
+	public virtual void PlayAnim()
 	{
 		anim.SetTrigger("start");
 	}
-
-    public virtual void RepairTrap()
+	public virtual void RepairTrap()
 	{
-        //Take Cost From Scrap
+		//Take Cost From Scrap
 		ResetUseCount();
 	}
-
-    public virtual void ResetUseCount()
+	public virtual void ResetUseCount()
 	{
 		usesBeforeBreak = trap.Uses;
 	}

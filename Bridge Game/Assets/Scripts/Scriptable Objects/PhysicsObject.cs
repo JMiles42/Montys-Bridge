@@ -1,9 +1,5 @@
 using UnityEngine;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System.Collections;
-//using System.Collections.Generic;
-//using JMiles42;
 
 [CreateAssetMenu(fileName = "Phys Object", menuName = "Monty's/New Phys Object", order = 1)]
 public class PhysicsObject : ScriptableObject

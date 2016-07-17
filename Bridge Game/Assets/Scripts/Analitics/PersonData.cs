@@ -7,8 +7,8 @@ public class PersonData : MonoBehaviour
 {
 	public InputField yob;
 	public Slider gender;
-
 	bool hasData = false;
+
 	public void SetData()
 	{
 		if( hasData )

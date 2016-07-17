@@ -1,17 +1,15 @@
 using UnityEngine;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System.Collections;
-//using System.Collections.Generic;
 using JMiles42;
 
-public class PlayerInputManager : Singleton<PlayerInputManager> 
+public class PlayerInputManager : Singleton<PlayerInputManager>
 {
 	public float Horizontal;
-	public float Vertical; 
+	public float Vertical;
 	public Vector2 MousePos;
 	public float MouseScroll;
 	public bool startedPlacingTrap;
+
 	void Update()
 	{
 		GetAxisValues();
@@ -109,23 +107,23 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		switch( index )
 		{
 			case 1:
-				EventManager.TriggerEvent(EventStrings.TRAP1);
-				break;
+			EventManager.TriggerEvent(EventStrings.TRAP1);
+			break;
 			case 2:
-				EventManager.TriggerEvent(EventStrings.TRAP2);
-				break;
+			EventManager.TriggerEvent(EventStrings.TRAP2);
+			break;
 			case 3:
-				EventManager.TriggerEvent(EventStrings.TRAP3);
-				break;
+			EventManager.TriggerEvent(EventStrings.TRAP3);
+			break;
 			case 4:
-				EventManager.TriggerEvent(EventStrings.TRAP4);
-				break;
+			EventManager.TriggerEvent(EventStrings.TRAP4);
+			break;
 			case 5:
-				EventManager.TriggerEvent(EventStrings.TRAP5);
-				break;
+			EventManager.TriggerEvent(EventStrings.TRAP5);
+			break;
 			case 6:
-				EventManager.TriggerEvent(EventStrings.TRAP6);
-				break;
+			EventManager.TriggerEvent(EventStrings.TRAP6);
+			break;
 		}
 	}
 }

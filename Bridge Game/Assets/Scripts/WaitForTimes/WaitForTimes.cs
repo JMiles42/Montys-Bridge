@@ -1,8 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
-using System.Collections;
 using System.Collections.Generic;
 using JMiles42;
 
@@ -17,7 +13,7 @@ public class WaitForTimes : Singleton<WaitForTimes>
 	}
 	public static WaitForSeconds GetWaitForTime(float time)
 	{
-		if( Instance == null )return null;
+		if( Instance == null ) return null;
 
 		WaitForSeconds thisWaitTime = null;
 		if( Instance.waitForDictionary.TryGetValue(time, out thisWaitTime) )

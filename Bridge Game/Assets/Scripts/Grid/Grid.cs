@@ -1,12 +1,8 @@
 using UnityEngine;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System.Collections;
-//using System.Collections.Generic;
-//using JMiles42;
 
 [DisallowMultipleComponent]
-public class Grid : MonoBehaviour 
+public class Grid : MonoBehaviour
 {
 	public int m_Location;
 	public Lane m_Lane;
@@ -15,9 +11,9 @@ public class Grid : MonoBehaviour
 	public Transform m_Exit;
 	public Trap m_Trap;
 	public GameObject highlight;
-	#if UNITY_EDITOR
+#if UNITY_EDITOR
 	public GameObject highlightTemp;
-	#endif
+#endif
 	public bool HasTrap
 	{
 		get
@@ -25,6 +21,7 @@ public class Grid : MonoBehaviour
 			return m_Trap != null ? true : false;
 		}
 	}
+
 	public Vector3 GetTrapSpawnLocation()
 	{
 		return transform.position;
@@ -67,7 +64,7 @@ public class Grid : MonoBehaviour
 			return GridMaster.Instance.gridNotPlacable;
 		else
 			return GridMaster.Instance.gridPlacable;
-	}	
+	}
 #if UNITY_EDITOR
 	[ContextMenu("Update Name")]
 	void UpdateName()

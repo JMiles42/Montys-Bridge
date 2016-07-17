@@ -1,4 +1,4 @@
-public enum Agro 
+public enum Agro
 {
 	Calm,
 	Normal,

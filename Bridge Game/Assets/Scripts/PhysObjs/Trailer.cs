@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Trailer : PhysicalObject 
+public class Trailer : PhysicalObject
 {
-	
+
 }

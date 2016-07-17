@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using JMiles42;
@@ -17,7 +15,7 @@ public class EventManager : Singleton<EventManager>
 	}
 	public static void StartListening(string eventName, UnityAction listener)
 	{
-		if( Instance == null )return;
+		if( Instance == null ) return;
 
 		UnityEvent thisEvent = null;
 		if( Instance.eventDictionary.TryGetValue(eventName, out thisEvent) )

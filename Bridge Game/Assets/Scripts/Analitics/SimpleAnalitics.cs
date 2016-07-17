@@ -19,7 +19,7 @@ public static class SimpleAnalitics // : Singleton<SimpleAnalitics>
 		Analytics.Transaction("testBuy", 42.42m, "USD");
 		Debug.Log("testBuy : $" + 42.42m + " : USD");
 	}
-	public static void PersonalData(int dob,Gender gender )
+	public static void PersonalData(int dob, Gender gender)
 	{
 		Analytics.SetUserBirthYear(dob);
 		Analytics.SetUserGender(gender);

@@ -1,10 +1,6 @@
 using UnityEngine;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
-//using System.Collections.Generic;
-//using JMiles42;
 
 public class PhysicalObject : MonoBehaviour, IHitable
 {

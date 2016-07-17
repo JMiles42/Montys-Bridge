@@ -5,8 +5,9 @@ using JMiles42.Maths.Rand;
 [System.Serializable]
 public class VehiclesMoter : MonoBehaviour, IHitable
 {
-    [Header("Vehicle")]
-    public const int SPEED = 20;
+	[Header("Vehicle")]
+	public const int SPEED = 20;
+	Rigidbody m_RigidBody;
 	public VehicleSettings vehicleSettings;
 	public float Weight
 	{
@@ -22,14 +23,14 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 			return vehicleSettings.howMuchScrapOnDestroy;
 		}
 	}
-	float m_speed;
-    public bool IsDriving;
+	public bool IsDriving;
 	public Lane curlane;
+	public bool hit = false;
 	Lane oldLane;
+
+	float m_speed;
 	bool InCurrentLane;
 	CarAiState curState;
-	Rigidbody m_RigidBody;
-	public bool hit = false;
 
 	#region Events
 	void OnEnable()
@@ -61,7 +62,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	//public virtual void FixedUpdate()
 	//{
 	//	UpdateDriving();
-    //}
+	//}
 	public virtual void UpdateDriving()
 	{
 		if( IsDriving )
@@ -95,7 +96,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	public virtual void OnHit()
 	{
 		hit = true;
-		if(m_RigidBody)
+		if( m_RigidBody )
 			m_RigidBody.constraints = RigidbodyConstraints.None;
 		Invoke("Explode", Random.Range(4f, 10f));
 	}
@@ -112,9 +113,9 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	}
 	#endregion
 	//Used for dumb model imports
-    public virtual Vector3 GetForwardVec()
-    {
-        return Vector3.forward;
+	public virtual Vector3 GetForwardVec()
+	{
+		return Vector3.forward;
 	}
 	#region AI
 	public virtual void SetLane(Lane lane)
@@ -173,13 +174,13 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 }
 public enum CarAiState
 {
-    Driving,
-    Stopped,
-    ChangingLanes
+	Driving,
+	Stopped,
+	ChangingLanes
 }
 public enum CarWeight
 {
-    Driving,
-    Stopped,
-    ChangingLanes
+	Driving,
+	Stopped,
+	ChangingLanes
 }

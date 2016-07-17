@@ -1,7 +1,4 @@
 using UnityEngine;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
-//using System.Collections.Generic;
 using System.Collections;
 using JMiles42;
 
@@ -47,10 +44,6 @@ public class TrapPlacer : Singleton<TrapPlacer>
 		EventManager.StopListening(EventStrings.TRAP6, PlaceTrap6);
 	}
 	#endregion
-	//void Start()
-	//{
-	//	StartPlacingTrap();
-	//}
 	[ContextMenu("PlaceTraping")]
 	public void StartPlacingTrap()
 	{
@@ -67,19 +60,19 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	}
 	IEnumerator PlacingTrap()
 	{
-		EventManager.StartListening(EventStrings.PLACETRAP,PlaceDownTrap);
+		EventManager.StartListening(EventStrings.PLACETRAP, PlaceDownTrap);
 		display = Instantiate(TrapMaster.Instance.TrapByIndex(trapIndex).PlaceHolderObj);
 		while( userPlacingTrap )
 		{
 			RaycastToGetGrid();
 
-			if( grid != null)
+			if( grid != null )
 			{
 				if( grid.IsPlacable() )
 				{
 					display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 				}
-				else 
+				else
 				{
 					display.GetComponent<ChildrenRenderers>().SetMat(placable);
 				}

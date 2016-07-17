@@ -1,15 +1,13 @@
 using UnityEngine;
-//using UnityEngine.UI;
-//using UnityEngine.SceneManagement;
 using System.Collections;
-//using System.Collections.Generic;
 using JMiles42;
 using System;
 
-public class CharacterMaster : Singleton<CharacterMaster> 
+public class CharacterMaster : Singleton<CharacterMaster>
 {
 	public CharacterHolder charHolder;
 	public int characterIndex = 0;
+
 	public void ChangeCharacter(int index)
 	{
 		characterIndex = index;
