@@ -1,7 +1,7 @@
 public enum CarState
 {
-	StopedAtLights,
 	Driving,
+	StopedAtLights,
 	ChangingLanes,
 	Crashed
 }

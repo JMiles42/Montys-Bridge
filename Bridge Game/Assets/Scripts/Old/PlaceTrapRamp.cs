@@ -7,7 +7,7 @@ public class PlaceTrapRamp : MonoBehaviour
 	public GameObject Turret;
 	public GameObject TrapMenu;
 
-	bool placing = false;
+	//bool placing = false;
 
 	public void FirstClick()
 	{

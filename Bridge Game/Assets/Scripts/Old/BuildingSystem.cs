@@ -8,7 +8,6 @@ public class BuildingSystem : MonoBehaviour
 	public BuildObjects currentObject;
 	public Transform curPreview;
 	private Vector3 curPos;
-	private Vector3 curRot;
 	public Transform cam;
 	public LayerMask layer;
 	public bool isBuilding;
@@ -151,7 +150,6 @@ public class BuildingSystem : MonoBehaviour
 				curPos = hit.point;
 				//curPos.y = curPos.y + (curPreview.transform.GetChild(0).GetComponent<Collider>().bounds.size.y / 2) + 0.00001f;
 				curPos = new Vector3(Mathf.Round(curPos.x), 0, Mathf.Round(curPos.z));
-				curPreview.rotation = Quaternion.Euler(curRot);
 				curPreview.position = curPos;
 			}
 		}

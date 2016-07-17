@@ -30,7 +30,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 
 	float m_speed;
 	bool InCurrentLane;
-	CarAiState curState;
+	CarState curState;
 
 	#region Events
 	void OnEnable()
@@ -49,7 +49,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		m_RigidBody = GetComponent<Rigidbody>();
 		m_RigidBody.mass = Weight;
 		RegisterToMaster();
-		curState = CarAiState.Driving;
+		curState = CarState.Driving;
 		oldLane = curlane;
 		InCurrentLane = true;
 		StartCoroutine(Drive());
@@ -171,16 +171,4 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		}
 	}
 	#endregion
-}
-public enum CarAiState
-{
-	Driving,
-	Stopped,
-	ChangingLanes
-}
-public enum CarWeight
-{
-	Driving,
-	Stopped,
-	ChangingLanes
 }
