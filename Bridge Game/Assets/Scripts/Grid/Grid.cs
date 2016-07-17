@@ -25,7 +25,6 @@ public class Grid : MonoBehaviour
 			return m_Trap != null ? true : false;
 		}
 	}
-	
 	public Vector3 GetTrapSpawnLocation()
 	{
 		return transform.position;

@@ -19,6 +19,18 @@ public class ScrapMaster : Singleton<ScrapMaster>
 		//SavingLoading.LoadGameData("GameData",out gamData);
 		//print(gamData.HasScrapToConvert());
 	}
+	public bool CanBuyTrap(Trap t)
+	{
+		if( gamData.Scrap >= t.Cost )
+			return true;
+		else return false;
+	}
+	public bool CanRepairTrap(Trap t)
+	{
+		if( gamData.Scrap >= t.RepairCost )
+			return true;
+		else return false;
+	}
 }
 [Serializable]
 public struct GameData
