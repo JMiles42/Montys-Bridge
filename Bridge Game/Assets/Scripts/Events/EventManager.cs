@@ -10,6 +10,7 @@ public class EventManager : Singleton<EventManager>
 
 	void Awake()
 	{
+		DontDestroyOnLoad(this);
 		if( eventDictionary == null )
 			eventDictionary = new Dictionary<string, UnityEvent>();
 	}

@@ -13861,6 +13861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Horizontal: 0
+  CamScale: 0
   Vertical: 0
   MousePos: {x: 0, y: 0}
   MouseScroll: 0
@@ -18365,7 +18366,6 @@ GameObject:
   - 92: {fileID: 743580553}
   - 124: {fileID: 743580552}
   - 81: {fileID: 743580551}
-  - 95: {fileID: 743580556}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -18434,29 +18434,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 743580550}
-  m_LocalRotation: {x: 0.07439418, y: 0.8921554, z: -0.1595389, w: 0.41601878}
-  m_LocalPosition: {x: -135.1, y: 81.7, z: 115.100006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 40, z: -450}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 874312279}
   m_RootOrder: 1
---- !u!95 &743580556
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 743580550}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d6671b8f12eed6047ac8c20e1ec64016, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &746125867
 GameObject:
   m_ObjectHideFlags: 0
@@ -21790,7 +21773,10 @@ MonoBehaviour:
   bounds: 0
   lookTarget: {fileID: 1340863345}
   moveParent: {fileID: 874312278}
-  myZoomAnimator: {fileID: 743580556}
+  minZoom: 40
+  maxZoom: 200
+  minCamSize: 10
+  maxCamSize: 300
 --- !u!1 &874645465
 GameObject:
   m_ObjectHideFlags: 0

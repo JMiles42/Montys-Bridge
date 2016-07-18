@@ -4,33 +4,34 @@ using System.Collections;
 public static class EventStrings
 {
 	#region Keyboard
-	public static string STARTSPAWNER = "StartSpawner";
-	public static string STOPSPAWNER = "StopSpawner";
-	public static string DRIVE = "Drive";
-	public static string EXPLODEALLCARS = "ExplodeCars";
-	public static string PAUSE = "Pause";
-	public static string UNPAUSE = "UnPause";
+	public const string STARTSPAWNER = "StartSpawner";
+	public const string STOPSPAWNER = "StopSpawner";
+	public const string DRIVE = "Drive";
+	public const string EXPLODEALLCARS = "ExplodeCars";
+	public const string PAUSE = "Pause";
+	public const string UNPAUSE = "UnPause";
 	#endregion
 	#region Mouse
-	public static string MOUSELEFTDOWN = "MouseLeftDown";
+	public const string MOUSELEFTDOWN = "MouseLeftDown";
 	#endregion
 	#region Axis
-	public static string HORIZONTAL = "Horizontal";
-	public static string VERTICAL = "Vertical";
-	public static string SCROLL = "Scroll";
+	public const string HORIZONTAL = "Horizontal";
+	public const string CAMSCALE = "CamScale";
+	public const string VERTICAL = "Vertical";
+	public const string SCROLL = "Scroll";
 	#endregion
 	#region Other Calls
-	public static string STARTTRAPPLACMENT = "StartTrapPlacement";
-	public static string PLACETRAP = "PlaceTrap";
+	public const string STARTTRAPPLACMENT = "StartTrapPlacement";
+	public const string PLACETRAP = "PlaceTrap";
 	#endregion
 	#region TrapCalls
-	public static string TRAP1 = "Trap1";
-	public static string TRAP2 = "Trap2";
-	public static string TRAP3 = "Trap3";
-	public static string TRAP4 = "Trap4";
-	public static string TRAP5 = "Trap5";
-	public static string TRAP6 = "Trap6";
-	public static string REMOVETRAPS = "RemoveTraps";
-	public static string CHEATS = "Cheats";
+	public const string TRAP1 = "Trap1";
+	public const string TRAP2 = "Trap2";
+	public const string TRAP3 = "Trap3";
+	public const string TRAP4 = "Trap4";
+	public const string TRAP5 = "Trap5";
+	public const string TRAP6 = "Trap6";
+	public const string REMOVETRAPS = "RemoveTraps";
+	public const string CHEATS = "Cheats";
 	#endregion
 }
