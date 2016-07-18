@@ -23,6 +23,13 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 			return vehicleSettings.howMuchScrapOnDestroy;
 		}
 	}
+	public Agro agro
+	{
+		get
+		{
+			return vehicleSettings.agro;
+		}
+	}
 	public bool IsDriving;
 	public Lane curlane;
 	public bool hit = false;
@@ -31,6 +38,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	float m_speed;
 	bool InCurrentLane;
 	CarState curState;
+	WaitForFixedUpdate w4FU = new WaitForFixedUpdate();
 
 	#region Events
 	void OnEnable()
@@ -59,30 +67,14 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		VehicleManager.Instance.AddVehicleToLane(curlane, this);
 	}
 	#region Drive
-	//public virtual void FixedUpdate()
-	//{
-	//	UpdateDriving();
-	//}
-	public virtual void UpdateDriving()
-	{
-		if( IsDriving )
-		{
-			StartMoving();
-		}
-	}
 	public virtual IEnumerator Drive()
 	{
 		while( IsDriving )
 		{
 			transform.Translate(GetForwardVec() * SPEED * Time.smoothDeltaTime);
-			yield return new WaitForFixedUpdate();
+			yield return w4FU;
 		}
 		yield break;
-	}
-	public virtual void StartMoving()
-	{
-		//m_RigidBody.MovePosition(transform.position + (-Vector3.forward * Speed * Time.smoothDeltaTime));
-		transform.Translate(GetForwardVec() * SPEED * Time.smoothDeltaTime);
 	}
 	#endregion
 	#region Hit
@@ -149,11 +141,26 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	{
 		//check if lane to change into is free
 		//Ignore this if agro
+		switch( agro )
+		{
+			case Agro.Aggressive:
+			return;
+			case Agro.Calm:
+			return;
+			case Agro.Normal:
+			return;
+			default:
+			return;
+		}
 	}
 	public virtual void CheckCarDistInFront()
 	{
 		//set car to stop if car in front is stoped at lights/trap etc.
 		//Only Respond if car is stopd for something
+		switch( agro )
+		{
+
+		}
 	}
 	public virtual void CheckCarDistToSide()
 	{

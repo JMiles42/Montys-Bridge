@@ -12,7 +12,7 @@ GameObject:
   - 54: {fileID: 5401636}
   - 65: {fileID: 6587284}
   - 114: {fileID: 11467152}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Trap_Bolard_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 0, z: -13}
+  m_LocalPosition: {x: 106.13391, y: 3.638959, z: 295.73224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437750}
@@ -268,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9574148}
   trap: {fileID: 11400000, guid: 9904f5d4fd8e6ad48a95c34bf4eaf9af, type: 2}
+  grid: {fileID: 0}
   uses: 0
   usesBeforeBreak: 0
 --- !u!1001 &100100000

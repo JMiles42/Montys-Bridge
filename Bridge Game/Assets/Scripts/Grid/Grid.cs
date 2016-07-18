@@ -12,9 +12,6 @@ public class Grid : MonoBehaviour
 	public Trap m_Trap;
 	public PlacableTrap m_PlaceTrap;
 	public GameObject highlight;
-#if UNITY_EDITOR
-	public GameObject highlightTemp;
-#endif
 	public bool HasTrap
 	{
 		get
@@ -22,6 +19,9 @@ public class Grid : MonoBehaviour
 			return m_Trap != null ? true : false;
 		}
 	}
+#if UNITY_EDITOR
+	public GameObject highlightTemp;
+#endif
 
 	public Vector3 GetTrapSpawnLocation()
 	{
@@ -34,6 +34,7 @@ public class Grid : MonoBehaviour
 		g.transform.localScale = Vector3.one;
 		g.transform.rotation = Quaternion.identity;
 		m_PlaceTrap = g.GetComponent<PlacableTrap>();
+		m_PlaceTrap.grid = this;
 		m_Trap = trap;
 	}
 	public void RepairTrap()
@@ -41,6 +42,10 @@ public class Grid : MonoBehaviour
 		m_PlaceTrap.usesBeforeBreak = m_Trap.Uses;
 	}
 	public void SellTrap()
+	{
+		RemoveTrap();
+	}
+	public void RemoveTrap()
 	{
 		Destroy(m_PlaceTrap);
 		m_PlaceTrap = null;

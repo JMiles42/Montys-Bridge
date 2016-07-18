@@ -55,6 +55,14 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.EXPLODEALLCARS);
 		}
+		if( Input.GetKeyDown(KeyCode.P) )
+		{
+			EventManager.TriggerEvent(EventStrings.REMOVETRAPS);
+		}
+		if( Input.GetKeyDown(KeyCode.C) )
+		{
+			EventManager.TriggerEvent(EventStrings.CHEATS);
+		}
 	}
 	void Axis()
 	{

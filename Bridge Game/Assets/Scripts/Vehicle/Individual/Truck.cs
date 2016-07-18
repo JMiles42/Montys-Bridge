@@ -11,7 +11,7 @@ public class Truck : VehiclesMoter
 	{
 		if( col.gameObject.tag != "Ground" && col.gameObject != Trailer && col.gameObject.tag != "Crate" )
 		{
-			print("Truck Hit");
+			//print("Truck Hit");
 			OnHit();
 		}
 	}

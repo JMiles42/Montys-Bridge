@@ -30,5 +30,7 @@ public static class EventStrings
 	public static string TRAP4 = "Trap4";
 	public static string TRAP5 = "Trap5";
 	public static string TRAP6 = "Trap6";
+	public static string REMOVETRAPS = "RemoveTraps";
+	public static string CHEATS = "Cheats";
 	#endregion
 }

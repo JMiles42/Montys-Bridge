@@ -926,6 +926,7 @@ MonoBehaviour:
   m_Middle: {fileID: 123676300}
   m_Exit: {fileID: 486678090}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1349016206}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &49864321
@@ -1331,6 +1332,7 @@ MonoBehaviour:
   m_Middle: {fileID: 493213438}
   m_Exit: {fileID: 1551619846}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1242673557}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &78279301
@@ -2063,6 +2065,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1175422648}
   m_Exit: {fileID: 1668184914}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1234219632}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &99076273
@@ -2135,6 +2138,7 @@ MonoBehaviour:
   m_Middle: {fileID: 513785173}
   m_Exit: {fileID: 1601239744}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 517619545}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &100114324
@@ -2310,6 +2314,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1400600003}
   m_Exit: {fileID: 1133106768}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 117879953}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &104508572
@@ -2665,6 +2670,7 @@ MonoBehaviour:
   m_Middle: {fileID: 2096018089}
   m_Exit: {fileID: 487979886}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1978982473}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &110963455
@@ -2764,6 +2770,7 @@ MonoBehaviour:
   m_Middle: {fileID: 172002233}
   m_Exit: {fileID: 1875931859}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1971149114}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &117879953
@@ -3256,6 +3263,7 @@ MonoBehaviour:
   m_Middle: {fileID: 222103826}
   m_Exit: {fileID: 1665232316}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 558744959}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &133058896
@@ -3458,6 +3466,7 @@ MonoBehaviour:
   m_Middle: {fileID: 459015910}
   m_Exit: {fileID: 1566313372}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 881187398}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &135233929
@@ -3816,6 +3825,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1794508505}
   m_Exit: {fileID: 1340329178}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1246100767}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &153130723
@@ -4067,6 +4077,7 @@ MonoBehaviour:
   m_Middle: {fileID: 19017523}
   m_Exit: {fileID: 414257470}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 721430574}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &158308772
@@ -4479,6 +4490,7 @@ MonoBehaviour:
   m_Middle: {fileID: 891855179}
   m_Exit: {fileID: 105467201}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 608050685}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &172002232
@@ -4757,6 +4769,7 @@ MonoBehaviour:
   m_Middle: {fileID: 53692207}
   m_Exit: {fileID: 1504266758}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 635433438}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &193238148
@@ -5129,6 +5142,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1490902784}
   m_Exit: {fileID: 640756843}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2074093589}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &206165389
@@ -5308,6 +5322,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1832782697}
   m_Exit: {fileID: 1064705601}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1056014494}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &214349139
@@ -5635,6 +5650,7 @@ MonoBehaviour:
   m_Middle: {fileID: 32116743}
   m_Exit: {fileID: 631826093}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1272032697}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &225876749
@@ -5947,6 +5963,7 @@ MonoBehaviour:
   m_Middle: {fileID: 2012665139}
   m_Exit: {fileID: 897356774}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1894177648}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &237984887
@@ -6397,6 +6414,7 @@ MonoBehaviour:
   m_Middle: {fileID: 240965958}
   m_Exit: {fileID: 1152810933}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1591815234}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &265104447
@@ -6771,6 +6789,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1134352336}
   m_Exit: {fileID: 957128916}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1637215078}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &278407430
@@ -8043,6 +8062,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1300977664}
   m_Exit: {fileID: 1096472012}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1226077850}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &338157938
@@ -8375,6 +8395,7 @@ MonoBehaviour:
   m_Middle: {fileID: 2129807334}
   m_Exit: {fileID: 899429271}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 796895795}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &354929796
@@ -9566,6 +9587,7 @@ MonoBehaviour:
   m_Middle: {fileID: 995323576}
   m_Exit: {fileID: 925709212}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 124163315}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &413307125
@@ -9795,6 +9817,7 @@ MonoBehaviour:
   m_Middle: {fileID: 79157708}
   m_Exit: {fileID: 1698068932}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2136036538}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &425337545
@@ -10515,6 +10538,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1007896750}
   m_Exit: {fileID: 1509006314}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1527939739}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &453346102
@@ -10946,6 +10970,7 @@ MonoBehaviour:
   m_Middle: {fileID: 299395167}
   m_Exit: {fileID: 599842944}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 3258863}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &464069549
@@ -11018,6 +11043,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1806901085}
   m_Exit: {fileID: 1551943759}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 842653662}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &464168113
@@ -11421,6 +11447,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1680964434}
   m_Exit: {fileID: 315166941}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1769880951}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &476020035
@@ -12917,6 +12944,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1961800927}
   m_Exit: {fileID: 1882925554}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1771875079}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &517619545
@@ -14634,6 +14662,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1484556315}
   m_Exit: {fileID: 559394015}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1487173054}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &577398528
@@ -14858,6 +14887,7 @@ MonoBehaviour:
   m_Middle: {fileID: 314500918}
   m_Exit: {fileID: 1183300370}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 302514289}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &588448673
@@ -15033,6 +15063,7 @@ MonoBehaviour:
   m_Middle: {fileID: 338157939}
   m_Exit: {fileID: 1310210762}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2064737729}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &591818241
@@ -15843,6 +15874,7 @@ MonoBehaviour:
   m_Middle: {fileID: 796772984}
   m_Exit: {fileID: 360565842}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1681867387}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1001 &615426730
@@ -16547,6 +16579,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1571310773}
   m_Exit: {fileID: 519902246}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1005258706}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &649731530
@@ -16921,6 +16954,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1705513759}
   m_Exit: {fileID: 94217994}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 332720935}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &666132374
@@ -17217,6 +17251,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1213822409}
   m_Exit: {fileID: 721978053}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1100493053}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &674653209
@@ -18144,6 +18179,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1947715306}
   m_Exit: {fileID: 1314142058}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1092029746}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &734248897
@@ -18216,6 +18252,7 @@ MonoBehaviour:
   m_Middle: {fileID: 413864091}
   m_Exit: {fileID: 1165450449}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 389655751}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &738211767
@@ -19640,6 +19677,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1698507233}
   m_Exit: {fileID: 1806594663}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2100362423}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1001 &791236962
@@ -20488,6 +20526,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1158393560}
   m_Exit: {fileID: 308467781}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 872072195}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &808112262
@@ -20739,6 +20778,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1266065294}
   m_Exit: {fileID: 1208112241}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1043447242}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &821954665
@@ -21392,6 +21432,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1602735347}
   m_Exit: {fileID: 161206540}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1212218835}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &857079751
@@ -22518,6 +22559,7 @@ MonoBehaviour:
   m_Middle: {fileID: 476119327}
   m_Exit: {fileID: 1515277806}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 839817469}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &899429270
@@ -22617,6 +22659,7 @@ MonoBehaviour:
   m_Middle: {fileID: 159641437}
   m_Exit: {fileID: 277563508}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1938868185}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &909162647
@@ -23414,6 +23457,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1332655776}
   m_Exit: {fileID: 1517941485}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2121486997}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &952115788
@@ -23786,6 +23830,7 @@ MonoBehaviour:
   m_Middle: {fileID: 44240031}
   m_Exit: {fileID: 1050902281}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 931563013}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &956103833
@@ -23988,6 +24033,7 @@ MonoBehaviour:
   m_Middle: {fileID: 505399622}
   m_Exit: {fileID: 65529627}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1028097810}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &966473562
@@ -24520,6 +24566,7 @@ MonoBehaviour:
   m_Middle: {fileID: 66758157}
   m_Exit: {fileID: 195495904}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2101580852}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &986438028
@@ -25434,6 +25481,7 @@ MonoBehaviour:
   m_Middle: {fileID: 389061021}
   m_Exit: {fileID: 768612600}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2021279295}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1011301172
@@ -26990,6 +27038,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1529464178}
   m_Exit: {fileID: 912937388}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 442051227}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1057261741
@@ -27469,6 +27518,7 @@ MonoBehaviour:
   m_Middle: {fileID: 49864322}
   m_Exit: {fileID: 286742855}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1221124960}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1079037312
@@ -27541,6 +27591,7 @@ MonoBehaviour:
   m_Middle: {fileID: 909501579}
   m_Exit: {fileID: 930938624}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1023148862}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1079749954
@@ -27640,6 +27691,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1870254986}
   m_Exit: {fileID: 1025465187}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 382918452}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1085837585
@@ -27774,6 +27826,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1777598388}
   m_Exit: {fileID: 1334018255}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 886560387}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1093601854
@@ -27900,6 +27953,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1765937693}
   m_Exit: {fileID: 1288017637}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2088116839}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1096472011
@@ -28286,6 +28340,7 @@ MonoBehaviour:
   m_Middle: {fileID: 78279302}
   m_Exit: {fileID: 1874327258}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 783510401}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1112429842
@@ -28881,6 +28936,7 @@ MonoBehaviour:
   m_Middle: {fileID: 890248052}
   m_Exit: {fileID: 1170395249}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 327588562}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1139133154
@@ -29518,6 +29574,7 @@ MonoBehaviour:
   m_Middle: {fileID: 377900044}
   m_Exit: {fileID: 1833024764}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 493219309}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1165450448
@@ -30379,6 +30436,7 @@ MonoBehaviour:
   m_Middle: {fileID: 368734601}
   m_Exit: {fileID: 1779372468}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1007239328}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1213822408
@@ -31245,6 +31303,7 @@ MonoBehaviour:
   m_Middle: {fileID: 700991430}
   m_Exit: {fileID: 1179404207}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1757567096}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1265004731
@@ -31520,6 +31579,7 @@ MonoBehaviour:
   m_Middle: {fileID: 339874411}
   m_Exit: {fileID: 1412298678}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 800241748}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1272032697
@@ -32075,6 +32135,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1896282118}
   m_Exit: {fileID: 252967955}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2117669439}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1304475640
@@ -32629,6 +32690,7 @@ MonoBehaviour:
   m_Middle: {fileID: 987461672}
   m_Exit: {fileID: 1959061847}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1133419174}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1322931409
@@ -32701,6 +32763,7 @@ MonoBehaviour:
   m_Middle: {fileID: 528538270}
   m_Exit: {fileID: 682179302}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 843237266}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1323625092
@@ -33722,6 +33785,7 @@ MonoBehaviour:
   m_Middle: {fileID: 134193832}
   m_Exit: {fileID: 746125868}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 108250432}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1384546021
@@ -34362,6 +34426,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1005378994}
   m_Exit: {fileID: 953497770}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1102623527}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1417517895
@@ -35001,6 +35066,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1216984039}
   m_Exit: {fileID: 1093601855}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1774670787}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!33 &1442363897
@@ -35636,6 +35702,7 @@ MonoBehaviour:
   m_Middle: {fileID: 625101719}
   m_Exit: {fileID: 272372066}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 453346102}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1484556314
@@ -36303,6 +36370,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1319573475}
   m_Exit: {fileID: 892814480}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1130066581}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1506010271
@@ -37185,6 +37253,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1896228334}
   m_Exit: {fileID: 1702605230}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 552776542}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1549056568
@@ -37707,6 +37776,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1744607435}
   m_Exit: {fileID: 299799415}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1405700044}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1576910224
@@ -37779,6 +37849,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1340862758}
   m_Exit: {fileID: 1345964667}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1272264391}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1577424572
@@ -38030,6 +38101,7 @@ MonoBehaviour:
   m_Middle: {fileID: 2070940058}
   m_Exit: {fileID: 479587279}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 492772940}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1591815234
@@ -38366,6 +38438,7 @@ MonoBehaviour:
   m_Middle: {fileID: 599951579}
   m_Exit: {fileID: 1672212496}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 435693561}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1618555019
@@ -40844,6 +40917,7 @@ MonoBehaviour:
   m_Middle: {fileID: 649731531}
   m_Exit: {fileID: 125727544}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 46447231}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1702605229
@@ -41601,6 +41675,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1025196855}
   m_Exit: {fileID: 879348962}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1936642421}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1726967760
@@ -43909,6 +43984,7 @@ MonoBehaviour:
   m_Middle: {fileID: 284062574}
   m_Exit: {fileID: 2014321628}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 294700668}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1832782696
@@ -44035,6 +44111,7 @@ MonoBehaviour:
   m_Middle: {fileID: 800039796}
   m_Exit: {fileID: 1801942089}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1085837585}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1838242336
@@ -44935,6 +45012,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1668945331}
   m_Exit: {fileID: 1278170725}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 887025571}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1887266026
@@ -45423,6 +45501,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1974213584}
   m_Exit: {fileID: 1187533090}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 206165389}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1001 &1905878726
@@ -46144,6 +46223,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1239479848}
   m_Exit: {fileID: 1648136501}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 137374288}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1936642421
@@ -46484,6 +46564,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1715021924}
   m_Exit: {fileID: 1186975958}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1715738777}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1959061846
@@ -46838,6 +46919,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1626594360}
   m_Exit: {fileID: 1972683562}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1815423695}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1971149114
@@ -47638,6 +47720,7 @@ MonoBehaviour:
   m_Middle: {fileID: 153130724}
   m_Exit: {fileID: 434860372}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 703569248}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &1995904290
@@ -47943,6 +48026,7 @@ MonoBehaviour:
   m_Middle: {fileID: 551382808}
   m_Exit: {fileID: 1454602789}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2064011058}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2016877493
@@ -48015,6 +48099,7 @@ MonoBehaviour:
   m_Middle: {fileID: 834557188}
   m_Exit: {fileID: 759786667}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1031506049}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2017295959
@@ -48351,6 +48436,7 @@ MonoBehaviour:
   m_Middle: {fileID: 750874458}
   m_Exit: {fileID: 874779165}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 158448128}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2033296434
@@ -49220,6 +49306,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1785188686}
   m_Exit: {fileID: 2089302160}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 2133116552}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2073519791
@@ -49292,6 +49379,7 @@ MonoBehaviour:
   m_Middle: {fileID: 547311440}
   m_Exit: {fileID: 1035014510}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1341764743}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2074093589
@@ -49547,6 +49635,7 @@ MonoBehaviour:
   m_Middle: {fileID: 621927625}
   m_Exit: {fileID: 87260020}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1519378208}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2087649757
@@ -49867,6 +49956,7 @@ MonoBehaviour:
   m_Middle: {fileID: 1041209569}
   m_Exit: {fileID: 1874120497}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 875397003}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2099183430
@@ -49939,6 +50029,7 @@ MonoBehaviour:
   m_Middle: {fileID: 857079752}
   m_Exit: {fileID: 492415941}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 674653209}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2099829388
@@ -50231,6 +50322,7 @@ MonoBehaviour:
   m_Middle: {fileID: 839640236}
   m_Exit: {fileID: 1093753391}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1881018302}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2101580852
@@ -50513,6 +50605,7 @@ MonoBehaviour:
   m_Middle: {fileID: 971283199}
   m_Exit: {fileID: 889099533}
   m_Trap: {fileID: 0}
+  m_PlaceTrap: {fileID: 0}
   highlight: {fileID: 1147779970}
   highlightTemp: {fileID: 166960, guid: 06f36b233f677ee468fb3325db6a0a24, type: 2}
 --- !u!1 &2116468289

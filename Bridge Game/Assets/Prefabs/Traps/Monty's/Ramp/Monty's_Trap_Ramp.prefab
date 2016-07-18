@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2325492}
   - 65: {fileID: 6533198}
   - 54: {fileID: 5482294}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ GameObject:
   - 54: {fileID: 5426168}
   - 65: {fileID: 6524532}
   - 114: {fileID: 11491654}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Trap_Ramp_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -13}
+  m_LocalPosition: {x: 115.729065, y: 0.05, z: 294.5554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411088}
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9575320}
   trap: {fileID: 11400000, guid: efa368d48190d844ab7f9f846f1afe1a, type: 2}
+  grid: {fileID: 0}
   uses: 0
   usesBeforeBreak: 0
 --- !u!114 &11491654
