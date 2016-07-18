@@ -7,19 +7,42 @@ public class CamMovement : MonoBehaviour
 	public  float       zoomSpeed;
 	public  Camera      cam;
 	public  int         bounds;
+	public  GameObject  lookTarget;
+	public  GameObject  moveParent;
 	public  Animator    myZoomAnimator;
 
-	void Update()
+	#region Events
+	void OnEnable()
 	{
-		camZoom((Input.GetAxis("Mouse ScrollWheel") * zoomSpeed) * Time.smoothDeltaTime);
-		camRotate(Input.GetAxis("Horizontal"));
+		EventManager.StartListening(EventStrings.HORIZONTAL, CamMoveH);
+		EventManager.StartListening(EventStrings.VERTICAL, CamMoveV);
+		EventManager.StartListening(EventStrings.SCROLL, camZoom);
 	}
-	void camZoom(float amount)
+	void OnDisable()
 	{
-		myZoomAnimator.SetFloat("ZoomLevel", Mathf.Clamp(myZoomAnimator.GetFloat("ZoomLevel") + (amount), 0, 1));
+		EventManager.StopListening(EventStrings.HORIZONTAL, CamMoveH);
+		EventManager.StopListening(EventStrings.VERTICAL, camRotate);
+		EventManager.StopListening(EventStrings.SCROLL, camZoom);
 	}
-	void camRotate(float amount)
+	#endregion
+	void Start()
 	{
-		transform.RotateAround(transform.localPosition, transform.up, rotateSpeed * amount * Time.smoothDeltaTime);
+		
+	}
+	void camZoom()
+	{
+		
+	}
+	void camRotate()
+	{
+		
+	}
+	void CamMoveH()
+	{
+		
+	}
+	void CamMoveV()
+	{
+		
 	}
 }
