@@ -76,12 +76,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 				{
 					display.GetComponent<ChildrenRenderers>().SetMat(placable);
 				}
-				print("OMG YOU HIT A Grid CARAESDNRFDJKSAESBNDIUFBSIEUBHF");
 				display.transform.position = grid.GetTrapSpawnLocation();
-				if( display.GetComponent<ChildrenRenderers>() )
-				{
-					display.GetComponent<ChildrenRenderers>().SetMat(placable);
-				}
 			}
 			else
 			{
