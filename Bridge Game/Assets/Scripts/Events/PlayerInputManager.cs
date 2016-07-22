@@ -27,7 +27,7 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 	{
 		Horizontal = Input.GetAxis("Horizontal");
 		Vertical = Input.GetAxis("Vertical");
-		CamScale = Input.GetAxis("CamScale");
+		CamScale = Input.GetAxis("QE");
 		MouseScroll = Input.GetAxis("Mouse ScrollWheel");
 		MousePos = Input.mousePosition;
 	}
@@ -37,6 +37,10 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.MOUSELEFTDOWN);
 			EventManager.TriggerEvent(EventStrings.PLACETRAP);
+		}
+		if( Input.GetMouseButtonDown(1) )
+		{
+			EventManager.TriggerEvent(EventStrings.MOUSERIGHTDOWN);
 		}
 		if( MouseScroll != 0 )
 		{
