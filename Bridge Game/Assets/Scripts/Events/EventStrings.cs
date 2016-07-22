@@ -13,6 +13,7 @@ public static class EventStrings
 	#endregion
 	#region Mouse
 	public const string MOUSELEFTDOWN = "MouseLeftDown";
+	public const string MOUSERIGHTDOWN = "MouseRightDown";
 	#endregion
 	#region Axis
 	public const string HORIZONTAL = "Horizontal";

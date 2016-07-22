@@ -46,6 +46,7 @@ public class EventManager : Singleton<EventManager>
 		if( Instance.eventDictionary.TryGetValue(eventName, out thisEvent) )
 		{
 			thisEvent.Invoke();
+			Debug.Log(string.Format("Triggered : {0} Event", eventName));
 		}
 	}
 }
