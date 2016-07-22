@@ -14,32 +14,38 @@ public class GridMaster : Singleton<GridMaster>
 
 	public void ShowGrid()
 	{
-		for( int i = 0; i < Lane1.Length; i++ )
+		int i;
+		for( i = 0; i < Lane1.Length; i++ )
 		{
 			Lane1[i].SetHighlight(true);
 		}
-		for( int i = 0; i < Lane2.Length; i++ )
+		i = 0;
+		for( i = 0; i < Lane2.Length; i++ )
 		{
 			Lane2[i].SetHighlight(true);
 		}
-		for( int i = 0; i < Lane3.Length; i++ )
+		i = 0;
+		for( i = 0; i < Lane3.Length; i++ )
 		{
 			Lane3[i].SetHighlight(true);
 		}
 	}
 	public void HideGrid()
 	{
-		for( int i = 0; i < Lane1.Length; i++ )
+		int i = 0;
+		for( i = 0; i < Lane1.Length; i++ )
 		{
 			print(string.Format("Lane one Hide : {0}",i));
 			Lane1[i].SetHighlight(false);
 		}
-		for( int i = 0; i < Lane2.Length; i++ )
+		i = 0;
+		for( i = 0; i < Lane2.Length; i++ )
 		{
 			print(string.Format("Lane two Hide : {0}",i));
 			Lane2[i].SetHighlight(false);
 		}
-		for( int i = 0; i < Lane3.Length; i++ )
+		i = 0;
+		for( i = 0; i < Lane3.Length; i++ )
 		{
 			print(string.Format("Lane three Hide : {0}",i));
 			Lane3[i].SetHighlight(false);
@@ -74,17 +80,19 @@ public class GridMaster : Singleton<GridMaster>
 		Lane2 = new Grid[length];
 		Lane3 = new Grid[length];
 		int i = 0;
-		for( i = -15; i <= 15; i++ )
+		for( i = 0; i <= length; i++ )
 		{
-			Lane1[i + 15] = GameObject.Find("Lane1 : " + i.ToString("0")).GetComponent<Grid>();
+			Lane1[i] = GameObject.Find(string.Format("Lane1 : {0}", i)).GetComponent<Grid>();
 		}
-		for( i = -15; i <= 15; i++ )
+		i = 0;
+		for( i = 0; i <= length; i++ )
 		{
-			Lane2[i + 15] = GameObject.Find("Lane2 : " + i.ToString("0")).GetComponent<Grid>();
+			Lane2[i] = GameObject.Find(string.Format("Lane2 : {0}", i)).GetComponent<Grid>();
 		}
-		for( i = -15; i <= 15; i++ )
+		i = 0;
+		for( i = 0; i <= length; i++ )
 		{
-			Lane3[i + 15] = GameObject.Find("Lane3 : " + i.ToString("0")).GetComponent<Grid>();
+			Lane3[i] = GameObject.Find(string.Format("Lane3 : {0}", i)).GetComponent<Grid>();
 		}
 	}
 #endif
