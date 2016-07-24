@@ -8,6 +8,8 @@ TagManager:
   - TrapA
   - TrapB
   - Ground
+  - Crate
+  - Bridge
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Player
   - Buildable
   - BuildPreview
-  - 
-  - 
+  - Bridge
+  - BridgeMid
   - 
   - 
   - 

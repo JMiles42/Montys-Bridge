@@ -1,8 +1,155 @@
 using UnityEngine;
 using System.Collections;
+using JMiles42.Maths.Vectors;
 
+public delegate void VoidNoArgs();
 public class CamMovement : MonoBehaviour
 {
+	public  float       rotateSpeed;
+	#region Cams
+	#region OrthoCam
+	public  Camera      orthoCam;
+	public  float       orthoZoomSpeed;
+	public  float       orthoMinZoom;
+	public  float       orthoMaxZoom;
+	#endregion
+	#region PerspCam
+	public  Camera      perspCam;
+	public  float       perspZoomSpeed;
+	[SerializeField]
+			float		curZoom;
+	public	Transform	perspMinZoom;
+	public	Transform	perspMaxZoom;
+	#endregion
+	public  float       yMinLimit = -20f;
+	public  float       yMaxLimit = 80f;
+	#endregion
+	public  VoidNoArgs	camMove;
+	public  bool        camIsOrtho	=	true;
+
+	#region Events
+	void OnEnable()
+	{
+		EventManager.StartListening(EventStrings.MOUSERIGHTDOWN, EndOrbit);
+		EventManager.StartListening(EventStrings.MOUSERIGHTDOWN, StartOrbit);
+		EventManager.StartListening(EventStrings.CAMSWITCH, InvertCam);
+	}
+	void OnDisable()
+	{
+		EventManager.StopListening(EventStrings.MOUSERIGHTDOWN, EndOrbit);
+		EventManager.StopListening(EventStrings.MOUSERIGHTDOWN, StartOrbit);
+		EventManager.StopListening(EventStrings.CAMSWITCH, InvertCam);
+	}
+	#endregion
+	void Start()
+	{
+		SwitchCam();
+	}
+	void LateUpdate()
+	{
+		camMove();
+		RotateCam();
+	}
+	void RotateCam()
+	{
+		float angle = transform.rotation.eulerAngles.x;
+		angle += PlayerInputManager.Instance.Horizontal;
+
+		angle = VectorMaths.ClampAngle(angle, yMinLimit, yMaxLimit);
+		Vector3 finalAngle = new Vector3(0, angle, 0);
+		transform.RotateAroundPivot(Vector3.zero,finalAngle);
+	}	
+	public void InvertCam()
+	{
+		camIsOrtho = !camIsOrtho;
+		SwitchCam(camIsOrtho);
+	}
+	public void SwitchCam(bool ortho = false)
+	{
+		if( ortho )
+		{
+			camMove = OrthoCamMove;
+			perspCam.gameObject.SetActive(false);
+			orthoCam.gameObject.SetActive(true);
+		}
+		else
+		{
+			camMove = PerspCamMove;
+			perspCam.gameObject.SetActive(true);
+			orthoCam.gameObject.SetActive(false);
+		}
+	}
+	public void PerspCamMove()
+	{
+		curZoom = Mathf.Clamp(curZoom - PlayerInputManager.Instance.MouseScroll, 0f, 1f);
+		perspCam.transform.position = Vector3.Slerp
+		(
+			perspMinZoom.position,
+			perspMaxZoom.position,
+			curZoom
+		);
+
+
+		//(
+		//	(
+		//		(
+		//			perspCam.transform.forward * perspZoomSpeed
+		//		) * PlayerInputManager.Instance.MouseScroll
+		//	) * Time.deltaTime
+		//);
+	}
+	public void OrthoCamMove()
+	{
+		orthoCam.orthographicSize =
+		(
+			Mathf.Clamp
+			(
+				(
+					orthoCam.orthographicSize - PlayerInputManager.Instance.MouseScroll * orthoZoomSpeed
+				),
+				orthoMinZoom,
+				orthoMaxZoom
+			)
+		);
+	}
+	void StartOrbit()
+	{
+		StartCoroutine(CamOrbit());
+	}
+	void EndOrbit()
+	{
+		StopCoroutine(CamOrbit());
+	}
+	IEnumerator CamOrbit()
+	{
+		//	camOrbiting = true;
+		//	while( camOrbiting )
+		//	{
+		//		x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
+		//		y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+		//
+		//		y = VectorMaths.ClampAngle(y, yMinLimit, yMaxLimit);
+		//
+		//		Quaternion rotation = Quaternion.Euler(y, x, 0);
+		//
+		//		distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, minZoom, maxZoom);
+		//
+		//		RaycastHit hit;
+		//		if( Physics.Linecast(transform.position, transform.position, out hit) )
+		//		{
+		//			distance -= hit.distance;
+		//		}
+		//		Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
+		//		Vector3 position = rotation * negDistance + transform.position;
+		//
+		//		transform.rotation = rotation;
+		//		camPosObj.transform.position = position;
+		//		yield return null;
+		//	}
+		//	camOrbiting = false;
+		yield return null;
+	}
+	/*
 	public  float       rotateSpeed;
 	public  float       zoomSpeed;
 	public  Camera      cam;
@@ -93,7 +240,7 @@ public class CamMovement : MonoBehaviour
 			x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
 			y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
-			y = ClampAngle(y, yMinLimit, yMaxLimit);
+			y = VectorMaths.ClampAngle(y, yMinLimit, yMaxLimit);
 
 			Quaternion rotation = Quaternion.Euler(y, x, 0);
 
@@ -112,13 +259,5 @@ public class CamMovement : MonoBehaviour
 			yield return null;
 		}
 		camOrbiting = false;
-	}
-	public static float ClampAngle(float angle, float min, float max)
-	{
-		if( angle < -360F )
-			angle += 360F;
-		if( angle > 360F )
-			angle -= 360F;
-		return Mathf.Clamp(angle, min, max);
-	}
+	}*/
 }

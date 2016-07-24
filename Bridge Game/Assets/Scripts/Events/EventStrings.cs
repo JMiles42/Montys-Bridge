@@ -10,6 +10,7 @@ public static class EventStrings
 	public const string EXPLODEALLCARS = "ExplodeCars";
 	public const string PAUSE = "Pause";
 	public const string UNPAUSE = "UnPause";
+	public const string CAMSWITCH = "CamSwitch";
 	#endregion
 	#region Mouse
 	public const string MOUSELEFTDOWN = "MouseLeftDown";

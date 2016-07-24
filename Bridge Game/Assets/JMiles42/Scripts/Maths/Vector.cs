@@ -6,7 +6,7 @@ using System.Collections;
 namespace JMiles42.Maths.Vectors
 {
 
-	public class Vector
+	public static class Vector
 	{
 		public static Vector3 GetVectorDirection(Vector3 vA, Vector3 vB, bool Normalized = true)
 		{
@@ -14,6 +14,18 @@ namespace JMiles42.Maths.Vectors
 			if( Normalized )
 				output.Normalize();
 			return output;
+		}
+	}
+
+	public static class VectorMaths
+	{
+		public static float ClampAngle(float angle, float min, float max)
+		{
+			if( angle < -360F )
+				angle += 360F;
+			if( angle > 360F )
+				angle -= 360F;
+			return Mathf.Clamp(angle, min, max);
 		}
 	}
 
