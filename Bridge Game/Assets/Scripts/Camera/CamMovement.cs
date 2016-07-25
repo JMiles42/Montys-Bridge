@@ -23,6 +23,7 @@ public class CamMovement : MonoBehaviour
 	#endregion
 	public  float       yMinLimit = -20f;
 	public  float       yMaxLimit = 80f;
+			float		rot;
 	#endregion
 	public  VoidNoArgs	camMove;
 	public  bool        camIsOrtho	=	true;
@@ -52,12 +53,10 @@ public class CamMovement : MonoBehaviour
 	}
 	void RotateCam()
 	{
-		float angle = transform.rotation.eulerAngles.x;
-		angle += PlayerInputManager.Instance.Horizontal;
+		rot -= PlayerInputManager.Instance.Horizontal;
 
-		angle = VectorMaths.ClampAngle(angle, yMinLimit, yMaxLimit);
-		Vector3 finalAngle = new Vector3(0, angle, 0);
-		transform.RotateAroundPivot(Vector3.zero,finalAngle);
+		rot = VectorMaths.ClampAngle(rot);
+		transform.rotation = Quaternion.Euler(Vector3.up * rot);
 	}	
 	public void InvertCam()
 	{
@@ -82,7 +81,7 @@ public class CamMovement : MonoBehaviour
 	public void PerspCamMove()
 	{
 		curZoom = Mathf.Clamp(curZoom - PlayerInputManager.Instance.MouseScroll, 0f, 1f);
-		perspCam.transform.position = Vector3.Slerp
+		perspCam.transform.position = Vector3.Lerp
 		(
 			perspMinZoom.position,
 			perspMaxZoom.position,

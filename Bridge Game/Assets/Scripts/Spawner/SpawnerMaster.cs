@@ -52,7 +52,8 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		while( spawning )
 		{
 			GameObject g = Instantiate(cars.GetAVehicle().Prefab);
-			int lane = GetRandomLane;
+			int lane = CheckLane(GetRandomLane);
+
 			if( g.GetComponent<VehiclesMoter>() )
 				g.GetComponent<VehiclesMoter>().IsDriving = true;
 			else if( g.GetComponentInChildren<VehiclesMoter>() )
@@ -61,6 +62,47 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 			//g.transform.Rotate(Vector3.up * 180);
 			yield return WaitForTimes.GetWaitForTime(spawnTime);
 		}
+	}
+	int CheckLane(int l)
+	{
+		bool laneUsed = true;
+		while( laneUsed )
+		{
+			switch( l )
+			{
+				case 0:
+					if( m_spawnPoints[0].CanSpawn() )
+					{
+						laneUsed = false;
+					}
+					else
+					{
+						l = GetRandomLane;
+					}
+				break;
+				case 1:
+					if( m_spawnPoints[1].CanSpawn() )
+					{
+						laneUsed = false;
+					}
+					else
+					{
+						l = GetRandomLane;
+					}
+				break;
+				case 2:
+					if( m_spawnPoints[2].CanSpawn() )
+					{
+						laneUsed = false;
+					}
+					else
+					{
+						l = GetRandomLane;
+					}
+				break;
+			}
+		}
+		return l;
 	}
 	void StopSpawner()
 	{

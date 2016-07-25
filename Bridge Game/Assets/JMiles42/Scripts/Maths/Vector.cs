@@ -27,6 +27,14 @@ namespace JMiles42.Maths.Vectors
 				angle -= 360F;
 			return Mathf.Clamp(angle, min, max);
 		}
+		public static float ClampAngle(float angle)
+		{
+			if( angle < -360F )
+				angle += 360F;
+			if( angle > 360F )
+				angle -= 360F;
+			return angle;
+		}
 	}
 
 	public static class RotateAroundPivotExtensions

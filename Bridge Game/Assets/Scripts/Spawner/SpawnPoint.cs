@@ -11,4 +11,18 @@ public class SpawnPoint : MonoBehaviour
 		}
 	}
     public Lane lane;
+	public Transform lineStart;
+	public Transform lineEnd;
+	public bool CanSpawn()
+	{
+		RaycastHit hit;
+		if( Physics.Linecast(lineStart.position, lineEnd.position, out hit) )
+		{
+			if( hit.collider )
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 }
