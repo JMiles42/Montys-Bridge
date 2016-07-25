@@ -170,7 +170,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.003876, y: 0.01911375, z: 86.41811}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 447746}
@@ -232,7 +232,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151516}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0.7071069, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0.42, z: 5.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vehicleSettings: {fileID: 11400000, guid: 6d3f894c78fc05d44a39b9c77d4f0fbd, type: 2}
-  IsDriving: 1
+  IsDriving: 0
   curlane: 0
   hit: 0
   Trailer: {fileID: 182042}
@@ -723,7 +723,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: IsDriving
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 104838}

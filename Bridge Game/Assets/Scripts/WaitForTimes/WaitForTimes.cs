@@ -4,12 +4,16 @@ using JMiles42;
 
 public class WaitForTimes : Singleton<WaitForTimes>
 {
+	public static WaitForFixedUpdate waitForFixedupdate;
+	public static WaitForEndOfFrame waitForEndOfFrame;
 	Dictionary<float, WaitForSeconds> waitForDictionary;
 
 	void Awake()
 	{
 		if( waitForDictionary == null )
 			waitForDictionary = new Dictionary<float, WaitForSeconds>();
+		waitForFixedupdate = new WaitForFixedUpdate();
+		waitForEndOfFrame = new WaitForEndOfFrame();
 	}
 	public static WaitForSeconds GetWaitForTime(float time)
 	{

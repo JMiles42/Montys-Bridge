@@ -13,16 +13,21 @@ public class SpawnPoint : MonoBehaviour
     public Lane lane;
 	public Transform lineStart;
 	public Transform lineEnd;
-	public bool CanSpawn()
+	public bool Spawnable;
+	public void CanSpawn()
 	{
 		RaycastHit hit;
 		if( Physics.Linecast(lineStart.position, lineEnd.position, out hit) )
 		{
 			if( hit.collider )
 			{
-				return false;
+				print(hit.transform);
+				Spawnable = false;
 			}
+			else
+				Spawnable = true;
 		}
-		return true;
+		else 
+			Spawnable = true;
 	}
 }

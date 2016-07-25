@@ -37,6 +37,13 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		//SimpleAnalitics.RegisterSeed(seed);
 		rand = new System.Random(seed.GetHashCode());
 	}
+	void Update()
+	{
+		for( int i = 0; i < m_spawnPoints.Length; i++ )
+		{
+			m_spawnPoints[i].CanSpawn();
+		}
+	}
 	public int GetNumber(int min, int max)
 	{
 		return rand.Next(min, max);
@@ -59,50 +66,33 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 			else if( g.GetComponentInChildren<VehiclesMoter>() )
 				g.GetComponentInChildren<VehiclesMoter>().IsDriving = true;
 			g.transform.position = m_spawnPoints[lane].Location;
-			//g.transform.Rotate(Vector3.up * 180);
 			yield return WaitForTimes.GetWaitForTime(spawnTime);
 		}
 	}
 	int CheckLane(int l)
 	{
-		bool laneUsed = true;
-		while( laneUsed )
+		if( m_spawnPoints[l].Spawnable )
+			return l;
+		switch( l )
 		{
-			switch( l )
-			{
-				case 0:
-					if( m_spawnPoints[0].CanSpawn() )
-					{
-						laneUsed = false;
-					}
-					else
-					{
-						l = GetRandomLane;
-					}
-				break;
-				case 1:
-					if( m_spawnPoints[1].CanSpawn() )
-					{
-						laneUsed = false;
-					}
-					else
-					{
-						l = GetRandomLane;
-					}
-				break;
-				case 2:
-					if( m_spawnPoints[2].CanSpawn() )
-					{
-						laneUsed = false;
-					}
-					else
-					{
-						l = GetRandomLane;
-					}
-				break;
-			}
+			case 0:
+			l = RandomTwoInts(RandomBools.RandomBool(),1,2);
+			break;
+			case 1:
+			l = RandomTwoInts(RandomBools.RandomBool(), 0, 2);
+			break;
+			case 2:
+			l = RandomTwoInts(RandomBools.RandomBool(), 0, 1);
+			break;
+			default:
+			break;
 		}
 		return l;
+	}
+	int RandomTwoInts(bool b, int a, int c)
+	{
+		if( b ) return a;
+		else return c;
 	}
 	void StopSpawner()
 	{
