@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: bd92ad0fbcb434b4892d695359ccefa4
-timeCreated: 1469155086
-licenseType: Pro
+guid: 0881090326cdaf048998794b54ad4867
+timeCreated: 1469522887
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -10,87 +10,47 @@ ModelImporter:
     100004: pCube12
     100006: pCube13
     100008: pCube17
-    100010: pCube19
-    100012: pCube20
-    100014: pCube21
-    100016: pCube22
-    100018: pCube23
-    100020: pCube27
-    100022: pCube28
-    100024: pCube29
-    100026: pCube30
-    100028: pCube31
-    100030: pCube32
-    100032: pCube33
-    100034: pCube4
-    100036: pCube5
-    100038: pCube6
-    100040: pCube7
-    100042: pCube9
+    100010: pCube29
+    100012: pCube30
+    100014: pCube4
+    100016: pCube5
+    100018: pCube6
+    100020: pCube7
+    100022: pCube9
     400000: //RootNode
     400002: pCube10
     400004: pCube12
     400006: pCube13
     400008: pCube17
-    400010: pCube19
-    400012: pCube20
-    400014: pCube21
-    400016: pCube22
-    400018: pCube23
-    400020: pCube27
-    400022: pCube28
-    400024: pCube29
-    400026: pCube30
-    400028: pCube31
-    400030: pCube32
-    400032: pCube33
-    400034: pCube4
-    400036: pCube5
-    400038: pCube6
-    400040: pCube7
-    400042: pCube9
+    400010: pCube29
+    400012: pCube30
+    400014: pCube4
+    400016: pCube5
+    400018: pCube6
+    400020: pCube7
+    400022: pCube9
     2300000: pCube10
     2300002: pCube12
     2300004: pCube13
     2300006: pCube17
-    2300008: pCube19
-    2300010: pCube20
-    2300012: pCube21
-    2300014: pCube22
-    2300016: pCube23
-    2300018: pCube27
-    2300020: pCube28
-    2300022: pCube29
-    2300024: pCube30
-    2300026: pCube31
-    2300028: pCube32
-    2300030: pCube33
-    2300032: pCube4
-    2300034: pCube5
-    2300036: pCube6
-    2300038: pCube7
-    2300040: pCube9
+    2300008: pCube29
+    2300010: pCube30
+    2300012: pCube4
+    2300014: pCube5
+    2300016: pCube6
+    2300018: pCube7
+    2300020: pCube9
     3300000: pCube10
     3300002: pCube12
     3300004: pCube13
     3300006: pCube17
-    3300008: pCube19
-    3300010: pCube20
-    3300012: pCube21
-    3300014: pCube22
-    3300016: pCube23
-    3300018: pCube27
-    3300020: pCube28
-    3300022: pCube29
-    3300024: pCube30
-    3300026: pCube31
-    3300028: pCube32
-    3300030: pCube33
-    3300032: pCube4
-    3300034: pCube5
-    3300036: pCube6
-    3300038: pCube7
-    3300040: pCube9
+    3300008: pCube29
+    3300010: pCube30
+    3300012: pCube4
+    3300014: pCube5
+    3300016: pCube6
+    3300018: pCube7
+    3300020: pCube9
     4300000: pCube4
     4300002: pCube5
     4300004: pCube6
@@ -100,18 +60,8 @@ ModelImporter:
     4300012: pCube12
     4300014: pCube13
     4300016: pCube17
-    4300018: pCube19
-    4300020: pCube20
-    4300022: pCube21
-    4300024: pCube22
-    4300026: pCube23
-    4300028: pCube27
-    4300030: pCube28
-    4300032: pCube29
-    4300034: pCube30
-    4300036: pCube31
-    4300038: pCube32
-    4300040: pCube33
+    4300018: pCube29
+    4300020: pCube30
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -171,7 +121,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
