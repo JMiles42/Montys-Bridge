@@ -275,7 +275,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.05, z: 180}
+  m_LocalPosition: {x: 0, y: 0.05, z: 329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 458004}
@@ -297,6 +297,7 @@ MonoBehaviour:
   lane: 0
   lineStart: {fileID: 479592}
   lineEnd: {fileID: 401560}
+  Spawnable: 0
 --- !u!114 &11423456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,6 +312,7 @@ MonoBehaviour:
   lane: 2
   lineStart: {fileID: 495552}
   lineEnd: {fileID: 418968}
+  Spawnable: 0
 --- !u!114 &11450616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -325,6 +327,7 @@ MonoBehaviour:
   lane: 1
   lineStart: {fileID: 473050}
   lineEnd: {fileID: 478722}
+  Spawnable: 0
 --- !u!114 &11497698
 MonoBehaviour:
   m_ObjectHideFlags: 1
