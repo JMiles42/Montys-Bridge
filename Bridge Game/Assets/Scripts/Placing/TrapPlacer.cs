@@ -126,7 +126,9 @@ public class TrapPlacer : Singleton<TrapPlacer>
 				display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 				return;
 			}
-			grid.SpawnTrap(TrapMaster.Instance.TrapByIndex(trapIndex));
+			Trap t = TrapMaster.Instance.TrapByIndex(trapIndex);
+			ScrapMaster.Instance.AddScrap(-t.Cost);
+			grid.SpawnTrap(t);
 			grid.SetMat(GridMaster.Instance.gridNotPlacable);
 			userPlacingTrap = false;
 			Destroy(display);

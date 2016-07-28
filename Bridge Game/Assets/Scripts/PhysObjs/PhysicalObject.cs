@@ -46,8 +46,8 @@ public class PhysicalObject : MonoBehaviour, IHitable
 	}
 	public virtual void Explode()
 	{
-		if(hit)
-			ScrapMaster.Instance.gamData.Scrap += Scrap;
+		if( hit )
+			ScrapMaster.Instance.AddScrap(Scrap);
 		Destroy(this.gameObject);
 	}
 	public virtual void OnCollisionEnter(Collision col)

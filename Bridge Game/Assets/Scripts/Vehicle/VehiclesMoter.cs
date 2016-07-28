@@ -83,7 +83,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		OnDisable();
 		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
 		if(hit)
-			ScrapMaster.Instance.gamData.Scrap += Scrap;
+			ScrapMaster.Instance.AddScrap(Scrap);
 		Destroy(this.gameObject);
 	}
 	public virtual void OnHit()

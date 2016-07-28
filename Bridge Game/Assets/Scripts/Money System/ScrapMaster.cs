@@ -13,6 +13,10 @@ public class ScrapMaster : Singleton<ScrapMaster>
 		//SavingLoading.LoadGameData("GameData",out gamData);
 		//print(gamData.HasScrapToConvert());
 	}
+	public void AddScrap(int amount)
+	{
+		gamData.Scrap += amount;
+	}
 	public bool CanBuyTrap(Trap t)
 	{
 		if( gamData.Scrap >= t.Cost )
