@@ -84,7 +84,13 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	{
 		while( spawning )
 		{
-			GameObject g = Instantiate(cars.GetAVehicle().Prefab);
+			if( !WaveMaster.Instance.StillWave() )
+			{
+				spawning = false;
+				StopSpawner();
+				yield break;
+			}
+			GameObject g = Instantiate(WaveMaster.Instance.NextVehicle().Prefab);
 			int lane = CheckLane(GetRandomLane);
 
 			if( g.GetComponent<VehiclesMoter>() )

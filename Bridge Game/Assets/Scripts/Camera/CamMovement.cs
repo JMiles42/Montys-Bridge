@@ -41,7 +41,7 @@ public class CamMovement : Singleton<CamMovement>
 	#endregion
 	void Start()
 	{
-		SwitchCam();
+		SwitchCam(true);
 	}
 	void LateUpdate()
 	{
