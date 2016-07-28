@@ -10,7 +10,9 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	bool userPlacingTrap = false;
 	[SerializeField]
 	int trapIndex;
+	[SerializeField]
 	GameObject display;
+	[SerializeField]
 	Grid grid;
 
 	#region Events
@@ -48,6 +50,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	public void StartPlacingTrap()
 	{
 		StopTraps();
+		GridMaster.Instance.ShowGrid();
 		userPlacingTrap = true;
 		StartCoroutine(PlacingTrap());
 	}
@@ -80,7 +83,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 			}
 			else
 			{
-				Ray ray = Camera.main.ScreenPointToRay (PlayerInputManager.Instance.MousePos);
+				Ray ray = CamMovement.Instance.GetActiveCam().ScreenPointToRay (PlayerInputManager.Instance.MousePos);
 				RaycastHit hit;
 				if( Physics.Raycast(ray, out hit) )
 				{
@@ -98,7 +101,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	void RaycastToGetGrid()
 	{
 		grid = null;
-		Ray ray = Camera.main.ScreenPointToRay (PlayerInputManager.Instance.MousePos);
+		Ray ray = CamMovement.Instance.GetActiveCam().ScreenPointToRay (PlayerInputManager.Instance.MousePos);
 		//print("Shoot");
 		RaycastHit hit;
 		if( Physics.Raycast(ray, out hit) )
@@ -127,10 +130,11 @@ public class TrapPlacer : Singleton<TrapPlacer>
 			grid.SetMat(GridMaster.Instance.gridNotPlacable);
 			userPlacingTrap = false;
 			Destroy(display);
-			display = null;
-			grid = null;
+			GridMaster.Instance.HideGrid();
 			StartTraps();
 			EventManager.StopListening(EventStrings.PLACETRAP, PlaceDownTrap);
+			display = null;
+			grid = null;
 		}
 		else
 		{

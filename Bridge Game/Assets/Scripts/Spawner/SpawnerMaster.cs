@@ -9,6 +9,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	public float spawnTime;
 	public string seed;
 	public bool spawning;
+	public bool endless;
 	public UnityEngine.UI.InputField seedTxt;
 	System.Random rand;
 	int GetRandomLane
@@ -37,7 +38,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		//SimpleAnalitics.RegisterSeed(seed);
 		rand = new System.Random(seed.GetHashCode());
 	}
-	void Update()
+	void FixedUpdate()
 	{
 		for( int i = 0; i < m_spawnPoints.Length; i++ )
 		{
@@ -50,11 +51,36 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	}
 	public void StartSpawner()
 	{
-		StartCoroutine(SpawnUnit());
-		spawning = true;
-		GridMaster.Instance.HideGrid();
+		if( endless )
+		{
+			StartCoroutine(SpawnUnitEndless());
+			spawning = true;
+			GridMaster.Instance.HideGrid();
+		}
+		else
+		{
+			StartCoroutine(SpawnUnitWave());
+			spawning = true;
+			GridMaster.Instance.HideGrid();
+		}
 	}
-	IEnumerator SpawnUnit()
+	IEnumerator SpawnUnitEndless()
+	{
+		while( spawning )
+		{
+			GameObject g = Instantiate(cars.GetAVehicle().Prefab);
+			int lane = CheckLane(GetRandomLane);
+
+			if( g.GetComponent<VehiclesMoter>() )
+				g.GetComponent<VehiclesMoter>().IsDriving = true;
+			else if( g.GetComponentInChildren<VehiclesMoter>() )
+				g.GetComponentInChildren<VehiclesMoter>().IsDriving = true;
+			g.transform.position = m_spawnPoints[lane].Location;
+			yield return WaitForTimes.GetWaitForTime(spawnTime);
+		}
+	}
+
+	IEnumerator SpawnUnitWave()
 	{
 		while( spawning )
 		{
@@ -97,7 +123,8 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	void StopSpawner()
 	{
 		spawning = false;
-		StopCoroutine(SpawnUnit());
+		StopCoroutine(SpawnUnitEndless());
+		StopCoroutine(SpawnUnitWave());
 		GridMaster.Instance.ShowGrid();
 	}
 	public void SetSeed()

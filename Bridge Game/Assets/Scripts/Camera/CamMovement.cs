@@ -1,9 +1,10 @@
 using UnityEngine;
 using System.Collections;
 using JMiles42.Maths.Vectors;
+using JMiles42;
 
 public delegate void VoidNoArgs();
-public class CamMovement : MonoBehaviour
+public class CamMovement : Singleton<CamMovement>
 {
 	public  float       rotateSpeed;
 	#region Cams
@@ -97,5 +98,12 @@ public class CamMovement : MonoBehaviour
 				orthoMaxZoom
 			)
 		);
+	}
+	public Camera GetActiveCam()
+	{
+		if( camIsOrtho )
+			return orthoCam;
+		else
+			return perspCam;
 	}
 }

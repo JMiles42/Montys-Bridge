@@ -6,6 +6,7 @@ public class PhysicalObject : MonoBehaviour, IHitable
 {
 	public PhysicsObject physObj;
 	public Rigidbody m_RigidBody;
+	public bool hit;
 	public float Weight
 	{
 		get
@@ -39,12 +40,14 @@ public class PhysicalObject : MonoBehaviour, IHitable
 	}
 	public virtual void OnHit()
 	{
+		hit = true;
 		m_RigidBody.constraints = RigidbodyConstraints.None;
 		Invoke("Explode", UnityEngine.Random.Range(4f, 10f));
 	}
 	public virtual void Explode()
 	{
-		ScrapMaster.Instance.gamData.Scrap += Scrap;
+		if(hit)
+			ScrapMaster.Instance.gamData.Scrap += Scrap;
 		Destroy(this.gameObject);
 	}
 	public virtual void OnCollisionEnter(Collision col)

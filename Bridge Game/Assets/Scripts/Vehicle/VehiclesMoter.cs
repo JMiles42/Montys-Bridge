@@ -82,7 +82,8 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	{
 		OnDisable();
 		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
-		ScrapMaster.Instance.gamData.Scrap += Scrap;
+		if(hit)
+			ScrapMaster.Instance.gamData.Scrap += Scrap;
 		Destroy(this.gameObject);
 	}
 	public virtual void OnHit()
@@ -159,7 +160,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		//Only Respond if car is stopd for something
 		switch( agro )
 		{
-
+			
 		}
 	}
 	public virtual void CheckCarDistToSide()
