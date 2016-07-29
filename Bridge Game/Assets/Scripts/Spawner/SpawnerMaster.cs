@@ -23,16 +23,18 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	#region Events
 	void OnEnable()
 	{
-		EventManager.StartListening(EventStrings.STARTSPAWNER, StartSpawner);
+		EventManager.StartListening(EventStrings.STARTSPAWNER, Endless);
+		EventManager.StartListening(EventStrings.STARTWAVESPAWNER, StartSpawner);
 		EventManager.StartListening(EventStrings.STOPSPAWNER, StopSpawner);
 	}
 	void OnDisable()
 	{
-		EventManager.StopListening(EventStrings.STARTSPAWNER, StartSpawner);
+		EventManager.StopListening(EventStrings.STARTSPAWNER, Endless);
+		EventManager.StopListening(EventStrings.STARTWAVESPAWNER, StartSpawner);
 		EventManager.StopListening(EventStrings.STOPSPAWNER, StopSpawner);
 	}
 	#endregion
-	void Start()
+	void Awake()
 	{
 		SetSeed(RandomStrings.GetRandomAltString(8));
 		//SimpleAnalitics.RegisterSeed(seed);
@@ -48,6 +50,10 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	public int GetNumber(int min, int max)
 	{
 		return rand.Next(min, max);
+	}
+	public void Endless()
+	{
+		endless = !endless;
 	}
 	public void StartSpawner()
 	{

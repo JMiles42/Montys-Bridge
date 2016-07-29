@@ -22309,7 +22309,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496554, guid: 7a69e3a3d377e7b48ac4138f3ae907e4, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11497698, guid: 7a69e3a3d377e7b48ac4138f3ae907e4, type: 2}
       propertyPath: seedTxt

@@ -57,11 +57,15 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		}
 		if( Input.GetKeyDown(KeyCode.G) )
 		{
-			EventManager.TriggerEvent(EventStrings.STARTSPAWNER);
+			EventManager.TriggerEvent(EventStrings.STARTWAVESPAWNER);
 		}
 		if( Input.GetKeyDown(KeyCode.Z) )
 		{
 			EventManager.TriggerEvent(EventStrings.STOPSPAWNER);
+		}
+		if( Input.GetKeyDown(KeyCode.T) )
+		{
+			EventManager.TriggerEvent(EventStrings.STARTSPAWNER);
 		}
 		//if( Input.GetKeyDown(KeyCode.Tab) )
 		//{

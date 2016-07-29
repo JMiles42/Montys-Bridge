@@ -11,12 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de703d08ba71a74d9a72a0d48a8844c, type: 3}
   m_Name: Monty's Trap5
   m_EditorClassIdentifier: 
-  Name: Monty's Trap5
-  Description: NULL
+  Name: Stunt Ramp
+  Description: Lifts up when a Car is near.
   Cost: 15
   Uses: 15
   RepairCost: 15
   SellCost: 15
   IsBlocker: 0
-  TrapObj: {fileID: 0}
-  PlaceHolderObj: {fileID: 0}
+  IsAirTrap: 0
+  TrapObj: {fileID: 184374, guid: 953501e451fe27f4ab855f9eadff2ebc, type: 2}
+  PlaceHolderObj: {fileID: 184374, guid: 7868fac67782bb845aeff35e2da8be39, type: 2}

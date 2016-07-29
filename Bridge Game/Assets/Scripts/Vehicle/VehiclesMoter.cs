@@ -53,7 +53,6 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	float m_speed;
 	bool InCurrentLane;
 	CarState curState;
-	WaitForFixedUpdate w4FU = new WaitForFixedUpdate();
 
 	#region Events
 	protected void OnEnable()

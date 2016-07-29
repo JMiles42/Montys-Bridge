@@ -19,6 +19,7 @@ public class SimpleSceneLoader : MonoBehaviour
 
 	public void LoadScene()
 	{
+		SceneManager.UnloadScene(levelNum);
 		SceneManager.LoadScene(levelNum);
 	}
 	public void LoadScene(int s)

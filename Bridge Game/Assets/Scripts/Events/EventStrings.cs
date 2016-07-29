@@ -5,6 +5,7 @@ public static class EventStrings
 {
 	#region Keyboard
 	public const string STARTSPAWNER = "StartSpawner";
+	public const string STARTWAVESPAWNER = "StartWaveSpawner";
 	public const string STOPSPAWNER = "StopSpawner";
 	public const string GENWAVE = "WaveGen";
 	public const string DRIVE = "Drive";

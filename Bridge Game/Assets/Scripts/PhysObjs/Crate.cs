@@ -20,7 +20,8 @@ public class Crate : PhysicalObject, IHitable
 	{
 		noParent = true;
 		transform.SetParent(null);
-		m_RigidBody.AddExplosionForce(500, explosionPoint.position, 10);
+		if(explosionPoint)
+			m_RigidBody.AddExplosionForce(500, explosionPoint.position, 10);
 		//StartCoroutine(Drive());
 	}
 
