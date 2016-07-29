@@ -29,7 +29,7 @@ public class MontysDrone : PlacableTrap
 				case VehicleTypes.Truck:
 				return;
 				case VehicleTypes.Car:
-				vehicleRB.AddForce(Vector3.up * magnetStrength, ForceMode.Acceleration);
+				vehicleRB.AddForceAtPosition(Vector3.up * magnetStrength,col.ClosestPointOnBounds(transform.position), ForceMode.Acceleration);
 				return;
 				case VehicleTypes.SportsCar:
 				vehicleRB.AddForce(Vector3.up * 2 * magnetStrength, ForceMode.Acceleration);
