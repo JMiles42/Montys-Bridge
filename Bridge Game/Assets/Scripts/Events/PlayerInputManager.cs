@@ -51,7 +51,7 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.CAMSWITCH);
 		}
-		if( Input.GetKeyDown(KeyCode.P) )
+		if( Input.GetKeyDown(KeyCode.O) )
 		{
 			EventManager.TriggerEvent(EventStrings.GENWAVE);
 		}
@@ -78,6 +78,10 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		if( Input.GetKeyDown(KeyCode.C) )
 		{
 			EventManager.TriggerEvent(EventStrings.CHEATS);
+		}
+		if( Input.GetKeyDown(KeyCode.R) )
+		{
+			EventManager.TriggerEvent(EventStrings.LEVELLOAD);
 		}
 	}
 	void Axis()

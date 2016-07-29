@@ -153,7 +153,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.04, y: 0.043, z: 366.5795}
+  m_LocalPosition: {x: 0.2587419, y: -0.000011379498, z: 63.638763}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 447746}
@@ -259,7 +259,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: deb40328ba8323743999c13f0a20b53b, type: 2}
+  - {fileID: 2100000, guid: a58f767302893b24ebec279587cb5517, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -285,7 +285,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: a58f767302893b24ebec279587cb5517, type: 2}
+  - {fileID: 2100000, guid: deb40328ba8323743999c13f0a20b53b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -311,7 +311,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: a58f767302893b24ebec279587cb5517, type: 2}
+  - {fileID: 2100000, guid: deb40328ba8323743999c13f0a20b53b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -337,7 +337,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: deb40328ba8323743999c13f0a20b53b, type: 2}
+  - {fileID: 2100000, guid: a58f767302893b24ebec279587cb5517, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -466,7 +466,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.2182477, y: -1.0860608, z: 0.000003653574}
+  m_ConnectedAnchor: {x: -0.2182477, y: -1.086061, z: 0.0000036204615}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -575,6 +575,7 @@ MonoBehaviour:
   m_RigidBody: {fileID: 5422386}
   hit: 0
   joint: {fileID: 13826324}
+  explosionPoint: {fileID: 0}
 --- !u!114 &11449534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -590,6 +591,7 @@ MonoBehaviour:
   m_RigidBody: {fileID: 5462920}
   hit: 0
   joint: {fileID: 13899288}
+  explosionPoint: {fileID: 0}
 --- !u!114 &11466826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -620,6 +622,8 @@ MonoBehaviour:
   IsDriving: 1
   curlane: 0
   hit: 0
+  JointToTrailer: {fileID: 0}
+  tray: {fileID: 0}
   Trailer: {fileID: 5421176}
   Hinge: {fileID: 5446410}
 --- !u!138 &13826324

@@ -1661,7 +1661,7 @@ Transform:
   m_Children:
   - {fileID: 791236964}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &142068268
 GameObject:
   m_ObjectHideFlags: 0
@@ -5093,7 +5093,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 483584, guid: eb1eb625cad5bb74b83a175f6d7598ac, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6528564, guid: eb1eb625cad5bb74b83a175f6d7598ac, type: 2}
       propertyPath: m_Enabled
@@ -6398,6 +6398,7 @@ GameObject:
   - 114: {fileID: 548347621}
   - 114: {fileID: 548347623}
   - 114: {fileID: 548347626}
+  - 114: {fileID: 548347627}
   m_Layer: 0
   m_Name: Don'tDestroyOBJ
   m_TagString: Untagged
@@ -6522,6 +6523,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba67702dbfa445442872405de64969e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &548347627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548347617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45abf4d8ddfb17c4ab2c0823a995a422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelNum: 0
 --- !u!1 &550118890
 GameObject:
   m_ObjectHideFlags: 0
