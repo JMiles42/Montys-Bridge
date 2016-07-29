@@ -6,7 +6,9 @@ public class VehicleSettings : ScriptableObject
 {
 	public string Name = "New Vehicle";
 	public float Weight = 20;
+	public int Score = 100;
 	public int howMuchScrapOnDestroy = 5;
 	public Agro agro = Agro.Calm;
+	public VehicleTypes size;
 	public GameObject Prefab;
 }

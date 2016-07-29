@@ -5,7 +5,6 @@ using JMiles42;
 public class PlayerInputManager : Singleton<PlayerInputManager>
 {
 	public float Horizontal;
-	public float CamScale;
 	public float Vertical;
 	public Vector2 MousePos;
 	public float MouseScroll;
@@ -25,10 +24,9 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 	}
 	void GetAxisValues()
 	{
-		Horizontal = Input.GetAxis("Horizontal");
-		Vertical = Input.GetAxis("Vertical");
-		CamScale = Input.GetAxis("QE");
-		MouseScroll = Input.GetAxis("Mouse ScrollWheel");
+		Horizontal = Input.GetAxis(PlayerInputStrings.Horizontal);
+		Vertical = Input.GetAxis(PlayerInputStrings.Vertical);
+		MouseScroll = Input.GetAxis(PlayerInputStrings.MouseScrollWheel);
 		MousePos = Input.mousePosition;
 	}
 	void MousePress()
@@ -53,6 +51,10 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.CAMSWITCH);
 		}
+		if( Input.GetKeyDown(KeyCode.P) )
+		{
+			EventManager.TriggerEvent(EventStrings.GENWAVE);
+		}
 		if( Input.GetKeyDown(KeyCode.G) )
 		{
 			EventManager.TriggerEvent(EventStrings.STARTSPAWNER);
@@ -61,10 +63,10 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.STOPSPAWNER);
 		}
-		if( Input.GetKeyDown(KeyCode.Tab) )
-		{
-			EventManager.TriggerEvent(EventStrings.DRIVE);
-		}
+		//if( Input.GetKeyDown(KeyCode.Tab) )
+		//{
+		//	EventManager.TriggerEvent(EventStrings.DRIVE);
+		//}
 		if( Input.GetKeyDown(KeyCode.X) )
 		{
 			EventManager.TriggerEvent(EventStrings.EXPLODEALLCARS);
@@ -87,14 +89,6 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		else if( Input.GetKeyDown(KeyCode.D) )
 		{
 			EventManager.TriggerEvent(EventStrings.HORIZONTAL);
-		}
-		if( Input.GetKeyDown(KeyCode.Q) )
-		{
-			EventManager.TriggerEvent(EventStrings.CAMSCALE);
-		}
-		else if( Input.GetKeyDown(KeyCode.E) )
-		{
-			EventManager.TriggerEvent(EventStrings.CAMSCALE);
 		}
 		if( Input.GetKeyDown(KeyCode.W) )
 		{

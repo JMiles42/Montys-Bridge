@@ -11,6 +11,7 @@ public class Trap : ScriptableObject
 	public int RepairCost = 15;
 	public int SellCost = 15;
 	public bool IsBlocker = false;
+	public bool IsAirTrap = false;
 	public GameObject TrapObj;
 	public GameObject PlaceHolderObj;
 }

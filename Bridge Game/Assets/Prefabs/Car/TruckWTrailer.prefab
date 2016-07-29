@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 401422}
   m_Layer: 0
-  m_Name: TruckWithTrailer
+  m_Name: TruckWTrailer
   m_TagString: vehicle
   m_Icon: {fileID: -5082302936091411984, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -170,7 +170,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.2196507, y: -0.000065549524, z: 366.5795}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 447746}
@@ -182,7 +182,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147214}
-  m_LocalRotation: {x: 0.4998787, y: -0.5001213, z: 0.49987704, w: 0.50012296}
+  m_LocalRotation: {x: -0.49987882, y: 0.5001212, z: -0.49987692, w: -0.500123}
   m_LocalPosition: {x: -3.948021, y: 1.76, z: 0.00000003072881}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
@@ -219,7 +219,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104432}
-  m_LocalRotation: {x: -0.7069846, y: -0.0000012343476, z: -0.000001233921, w: 0.70722896}
+  m_LocalRotation: {x: 0.7071066, y: 0.0000012341345, z: 0.000001234134, w: -0.70710695}
   m_LocalPosition: {x: -0, y: -0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -232,7 +232,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151516}
-  m_LocalRotation: {x: 0, y: 0.7071069, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0.42, z: 5.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -511,7 +511,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000005013643, y: 0.0000000011944612, z: -0.000000016689148}
+  m_ConnectedAnchor: {x: 2.8455563e-10, y: 0.0000000012002372, z: -0.000000016688713}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -543,7 +543,7 @@ HingeJoint:
   m_Anchor: {x: -3.94, y: 1.76, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000004736401, y: -0.00008021115, z: -0.000000040379213}
+  m_ConnectedAnchor: {x: 5.993621e-10, y: -0.00008003949, z: -0.00000004029058}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -561,8 +561,8 @@ HingeJoint:
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
-  m_BreakForce: 825
-  m_BreakTorque: 100
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
 --- !u!65 &6502032
@@ -650,6 +650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physObj: {fileID: 11400000, guid: afdc42398168d6e489d13d92913cf791, type: 2}
   m_RigidBody: {fileID: 5422386}
+  hit: 0
   joint: {fileID: 13826324}
 --- !u!114 &11449534
 MonoBehaviour:
@@ -664,6 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physObj: {fileID: 11400000, guid: afdc42398168d6e489d13d92913cf791, type: 2}
   m_RigidBody: {fileID: 5462920}
+  hit: 0
   joint: {fileID: 13899288}
 --- !u!114 &11466826
 MonoBehaviour:
@@ -678,6 +680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physObj: {fileID: 11400000, guid: 37ecba5c8cac5af42b904b42694f3452, type: 2}
   m_RigidBody: {fileID: 5421176}
+  hit: 0
 --- !u!114 &11473430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -689,12 +692,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bfdb3ce496c4146b1917133b652565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_RigidBody: {fileID: 0}
   vehicleSettings: {fileID: 11400000, guid: 6d3f894c78fc05d44a39b9c77d4f0fbd, type: 2}
-  IsDriving: 0
+  IsDriving: 1
   curlane: 0
   hit: 0
-  Trailer: {fileID: 182042}
-  Hinge: {fileID: 147214}
+  Trailer: {fileID: 5421176}
+  Hinge: {fileID: 5446410}
 --- !u!138 &13826324
 FixedJoint:
   m_ObjectHideFlags: 1

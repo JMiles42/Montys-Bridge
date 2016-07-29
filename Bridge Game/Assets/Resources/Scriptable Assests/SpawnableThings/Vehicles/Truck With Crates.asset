@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Truck With Crates
   Weight: 50
+  Score: 100
   howMuchScrapOnDestroy: 10
   agro: 1
-  Prefab: {fileID: 104838, guid: 4035d870787b66445bf9c3ae42e2a4f1, type: 2}
+  size: 3
+  Prefab: {fileID: 104838, guid: 967e92de8f0f8374cadba953fd2a4397, type: 2}

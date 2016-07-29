@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Bus
   Weight: 40
+  Score: 100
   howMuchScrapOnDestroy: 15
   agro: 0
+  size: 2
   Prefab: {fileID: 146122, guid: 184638fae35025a4d9460210e6b58026, type: 2}

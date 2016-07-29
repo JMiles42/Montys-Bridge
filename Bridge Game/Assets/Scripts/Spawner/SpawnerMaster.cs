@@ -86,8 +86,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		{
 			if( !WaveMaster.Instance.StillWave() )
 			{
-				spawning = false;
-				StopSpawner();
+				EventManager.TriggerEvent(EventStrings.STOPSPAWNER);
 				yield break;
 			}
 			GameObject g = Instantiate(WaveMaster.Instance.NextVehicle().Prefab);

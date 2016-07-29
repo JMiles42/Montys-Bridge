@@ -70,9 +70,8 @@ public class PlacableTrap : MonoBehaviour
 			GameObject vehicle = col.gameObject;
 			if( vehicle.GetComponent<VehiclesMoter>() )
 				vehicle.GetComponent<VehiclesMoter>().OnHit();
-			PlayAnim();
-			uses++;
-			usesBeforeBreak--;
+			PlayAnim(); 
+			ActivateRecord();
 		}
 	}
 	public virtual void HeardTriggerStay(Collider col)
@@ -111,6 +110,11 @@ public class PlacableTrap : MonoBehaviour
 	public virtual bool DoesBlockCars()
 	{
 		return IsBlocker;
+	}
+	public void ActivateRecord()
+	{
+		uses++;
+		usesBeforeBreak--;
 	}
 	//public virtual Grid GridToChangeTo()
 	//{

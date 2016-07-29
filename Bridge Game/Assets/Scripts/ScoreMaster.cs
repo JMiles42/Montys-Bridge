@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using JMiles42;
 
-public class Score : Singleton<Score>
+public class ScoreMaster : Singleton<ScoreMaster>
 {
 	public const string SCORESTRING = "Game Score\n <size=20><b>{0}</b></size>";
 	public Text scoreTxt;
@@ -25,7 +25,9 @@ public class Score : Singleton<Score>
 	void Start()
 	{
 		multiplyerCooldownMax = multiplyerCooldown;
-		StartCoroutine(UpdateScoreDisplay());
+		score = 0;
+		DisplayScore();
+		//StartCoroutine(UpdateScoreDisplay());
 	}
 	IEnumerator UpdateScoreDisplay()
 	{
@@ -59,8 +61,9 @@ public class Score : Singleton<Score>
 	#region Score Changing
 	public void AddScore(int _score)
 	{
-		AddMulti(1);
+		//AddMulti(1);
 		score += ScoreCalculation(multiplyer, _score);
+		DisplayScore();
 	}
 	public void AddMulti(int _multi)
 	{

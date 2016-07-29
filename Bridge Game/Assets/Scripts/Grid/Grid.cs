@@ -12,6 +12,7 @@ public class Grid : MonoBehaviour
 	public Trap m_Trap;
 	public PlacableTrap m_PlaceTrap;
 	public GameObject highlight;
+	public bool UnderBridge;
 	public bool HasTrap
 	{
 		get

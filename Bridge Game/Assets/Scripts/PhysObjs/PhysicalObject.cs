@@ -14,6 +14,13 @@ public class PhysicalObject : MonoBehaviour, IHitable
 			return physObj.Weight;
 		}
 	}
+	public int Score
+	{
+		get
+		{
+			return physObj.Score;
+		}
+	}
 	public int Scrap
 	{
 		get
@@ -47,7 +54,10 @@ public class PhysicalObject : MonoBehaviour, IHitable
 	public virtual void Explode()
 	{
 		if( hit )
+		{
+			ScoreMaster.Instance.AddScore(Score);
 			ScrapMaster.Instance.AddScrap(Scrap);
+		}
 		Destroy(this.gameObject);
 	}
 	public virtual void OnCollisionEnter(Collision col)

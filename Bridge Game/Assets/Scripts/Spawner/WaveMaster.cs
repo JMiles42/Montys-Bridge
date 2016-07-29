@@ -14,7 +14,20 @@ public class WaveMaster : Singleton<WaveMaster>
 	[SerializeField]
 	System.Random rand;
 	public float waveTestSize;
+	public int WaveNum;
 	#endregion
+
+	#region Events
+	void OnEnable()
+	{
+		EventManager.StartListening(EventStrings.GENWAVE, GenWave);
+	}
+	void OnDisable()
+	{
+		EventManager.StopListening(EventStrings.GENWAVE, GenWave);
+	}
+	#endregion
+
 	void Start()
 	{
 		rand = new System.Random(SpawnerMaster.Instance.seed.GetHashCode());
@@ -29,6 +42,10 @@ public class WaveMaster : Singleton<WaveMaster>
 		if( curWaveQueue.Count == 0 )
 			return false;
 		else return true;
+	}
+	public void GenWave()
+	{
+		GenerateWave(WaveNum);
 	}
 	public void GenerateWave(float diff)
 	{

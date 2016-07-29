@@ -109,7 +109,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 			if( hit.transform.GetComponent<Grid>() )
 			{
 				grid = hit.transform.GetComponent<Grid>();
-				if( grid.IsPlacable() )
+				if( grid.IsPlacable() && !grid.UnderBridge && !TrapMaster.Instance.TrapByIndex(trapIndex).IsAirTrap )
 					display.GetComponent<ChildrenRenderers>().SetMat(placable);
 				else
 					display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
@@ -121,7 +121,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 		RaycastToGetGrid();
 		if( grid )
 		{
-			if( !grid.IsPlacable() )
+			if( !grid.IsPlacable() || grid.UnderBridge && TrapMaster.Instance.TrapByIndex(trapIndex).IsAirTrap )
 			{
 				display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 				return;

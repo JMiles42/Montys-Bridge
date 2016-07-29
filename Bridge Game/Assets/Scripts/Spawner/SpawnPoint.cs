@@ -21,7 +21,7 @@ public class SpawnPoint : MonoBehaviour
 		{
 			if( hit.collider )
 			{
-				print(hit.transform);
+				//print(hit.transform);
 				Spawnable = false;
 			}
 			else

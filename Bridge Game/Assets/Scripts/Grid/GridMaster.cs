@@ -35,19 +35,19 @@ public class GridMaster : Singleton<GridMaster>
 		int i = 0;
 		for( i = 0; i < Lane1.Length; i++ )
 		{
-			print(string.Format("Lane one Hide : {0}",i));
+		//	print(string.Format("Lane one Hide : {0}",i));
 			Lane1[i].SetHighlight(false);
 		}
 		i = 0;
 		for( i = 0; i < Lane2.Length; i++ )
 		{
-			print(string.Format("Lane two Hide : {0}",i));
+		//	print(string.Format("Lane two Hide : {0}",i));
 			Lane2[i].SetHighlight(false);
 		}
 		i = 0;
 		for( i = 0; i < Lane3.Length; i++ )
 		{
-			print(string.Format("Lane three Hide : {0}",i));
+		//	print(string.Format("Lane three Hide : {0}",i));
 			Lane3[i].SetHighlight(false);
 		}
 	}

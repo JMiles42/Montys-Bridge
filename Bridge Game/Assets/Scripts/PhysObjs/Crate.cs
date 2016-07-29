@@ -11,9 +11,13 @@ public class Crate : PhysicalObject, IHitable
 	{
 		if( col.gameObject.tag != "vehicle" && !noParent )
 		{
-			noParent = true;
-			transform.SetParent(null);
+			Disconect();
 			OnHit();
 		}
+	}
+	public void Disconect()
+	{
+		noParent = true;
+		transform.SetParent(null);
 	}
 }

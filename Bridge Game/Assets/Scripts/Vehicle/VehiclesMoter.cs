@@ -7,13 +7,28 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 {
 	[Header("Vehicle")]
 	public const int SPEED = 20;
-	Rigidbody m_RigidBody;
+	[SerializeField]
+	protected Rigidbody m_RigidBody;
 	public VehicleSettings vehicleSettings;
 	public float Weight
 	{
 		get
 		{
 			return vehicleSettings.Weight;
+		}
+	}
+	public int Score
+	{
+		get
+		{
+			return vehicleSettings.Score;
+		}
+	}
+	public VehicleTypes VehicleSize
+	{
+		get
+		{
+			return vehicleSettings.size;
 		}
 	}
 	public int Scrap
@@ -54,7 +69,8 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	#endregion
 	public virtual void Start()
 	{
-		m_RigidBody = GetComponent<Rigidbody>();
+		if(!m_RigidBody)
+			m_RigidBody = GetComponent<Rigidbody>();
 		m_RigidBody.mass = Weight;
 		RegisterToMaster();
 		curState = CarState.Driving;
@@ -71,8 +87,9 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	{
 		while( IsDriving )
 		{
-			transform.Translate(GetForwardVec() * SPEED * Time.smoothDeltaTime);
-			yield return w4FU;
+			m_RigidBody.MovePosition(transform.position + (GetForwardVec() * SPEED * Time.smoothDeltaTime));
+			//transform.Translate(GetForwardVec() * SPEED * Time.smoothDeltaTime);
+			yield return WaitForTimes.waitForFixedupdate;
 		}
 		yield break;
 	}
@@ -82,8 +99,11 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	{
 		OnDisable();
 		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
-		if(hit)
+		if( hit )
+		{
+			ScoreMaster.Instance.AddScore(Score);
 			ScrapMaster.Instance.AddScrap(Scrap);
+		}
 		Destroy(this.gameObject);
 	}
 	public virtual void OnHit()

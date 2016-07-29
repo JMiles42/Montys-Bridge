@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Sports Car
   Weight: 20
+  Score: 100
   howMuchScrapOnDestroy: 20
   agro: 2
+  size: 1
   Prefab: {fileID: 179490, guid: 8839c973193cfc7478cc93da70bd4e1f, type: 2}

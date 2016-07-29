@@ -5,6 +5,7 @@ public class ChildrenRenderers : MonoBehaviour
 	public MeshRenderer[] renderers;
 
 #if UNITY_EDITOR
+	[ContextMenu("Get Renderers")]
 	void OnValidate()
 	{
 		renderers = GetComponentsInChildren<MeshRenderer>();
