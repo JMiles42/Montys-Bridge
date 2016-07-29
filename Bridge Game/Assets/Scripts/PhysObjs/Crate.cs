@@ -5,6 +5,7 @@ using System;
 public class Crate : PhysicalObject, IHitable
 {
 	public FixedJoint joint;
+	public Transform explosionPoint;
 	bool noParent = false;
 
 	public override void OnCollisionEnter(Collision col)
@@ -15,9 +16,16 @@ public class Crate : PhysicalObject, IHitable
 			OnHit();
 		}
 	}
-	public void Disconect()
+	public override void Disconect()
 	{
 		noParent = true;
 		transform.SetParent(null);
+		m_RigidBody.AddExplosionForce(500, explosionPoint.position, 10);
+		//StartCoroutine(Drive());
+	}
+
+	public override Vector3 GetForwardVec()
+	{
+		return Vector3.forward;
 	}
 }

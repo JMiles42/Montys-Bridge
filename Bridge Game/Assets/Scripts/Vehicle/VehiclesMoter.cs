@@ -56,12 +56,12 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	WaitForFixedUpdate w4FU = new WaitForFixedUpdate();
 
 	#region Events
-	void OnEnable()
+	protected void OnEnable()
 	{
 		EventManager.StartListening(EventStrings.DRIVE, ToggleDriving);
 		EventManager.StartListening(EventStrings.EXPLODEALLCARS, Explode);
 	}
-	void OnDisable()
+	protected void OnDisable()
 	{
 		EventManager.StopListening(EventStrings.DRIVE, ToggleDriving);
 		EventManager.StopListening(EventStrings.EXPLODEALLCARS, Explode);
@@ -87,8 +87,8 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	{
 		while( IsDriving )
 		{
-			m_RigidBody.MovePosition(transform.position + (GetForwardVec() * SPEED * Time.smoothDeltaTime));
-			//transform.Translate(GetForwardVec() * SPEED * Time.smoothDeltaTime);
+			//m_RigidBody.MovePosition(transform.position + (GetForwardVec() * SPEED * Time.smoothDeltaTime));
+			transform.Translate(GetForwardVec() * SPEED * Time.smoothDeltaTime);
 			yield return WaitForTimes.waitForFixedupdate;
 		}
 		yield break;

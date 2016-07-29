@@ -49,6 +49,7 @@ public class PhysicalObject : MonoBehaviour, IHitable
 	{
 		hit = true;
 		m_RigidBody.constraints = RigidbodyConstraints.None;
+		Disconect();
 		Invoke("Explode", UnityEngine.Random.Range(4f, 10f));
 	}
 	public virtual void Explode()
@@ -66,5 +67,26 @@ public class PhysicalObject : MonoBehaviour, IHitable
 		{
 			OnHit();
 		}
+	}
+	public virtual void Disconect()
+	{
+		transform.SetParent(null);
+		//StartCoroutine(Drive());
+	}
+	public virtual IEnumerator Drive()
+	{
+		float time = 1;
+		while( time > 0 )
+		{
+			time -= Time.deltaTime;
+			//m_RigidBody.MovePosition(transform.position + (GetForwardVec() * SPEED * Time.smoothDeltaTime));
+			transform.Translate((GetForwardVec() * VehiclesMoter.SPEED * Time.smoothDeltaTime)/4);
+			yield return WaitForTimes.waitForFixedupdate;
+		}
+		yield break;
+	}
+	public virtual Vector3 GetForwardVec()
+	{
+		return Vector3.up;
 	}
 }
