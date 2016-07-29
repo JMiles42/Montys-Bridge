@@ -97,7 +97,6 @@ GameObject:
   - 54: {fileID: 5457862}
   - 59: {fileID: 5999592}
   - 114: {fileID: 11473430}
-  - 138: {fileID: 13816394}
   m_Layer: 0
   m_Name: TruckWTrailer
   m_TagString: vehicle
@@ -232,7 +231,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.84, y: 1.94, z: -0}
+  m_LocalPosition: {x: -13.38, y: 1.94, z: 0}
   m_LocalScale: {x: 10.246405, y: 5.2159967, z: 4.0002007}
   m_Children:
   - {fileID: 441916}
@@ -609,6 +608,7 @@ MonoBehaviour:
   m_RigidBody: {fileID: 5422386}
   hit: 0
   joint: {fileID: 13826324}
+  explosionPoint: {fileID: 475174}
 --- !u!114 &11449534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -624,6 +624,7 @@ MonoBehaviour:
   m_RigidBody: {fileID: 5462920}
   hit: 0
   joint: {fileID: 13899288}
+  explosionPoint: {fileID: 498282}
 --- !u!114 &11466826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -654,20 +655,10 @@ MonoBehaviour:
   IsDriving: 1
   curlane: 0
   hit: 0
-  JointToTrailer: {fileID: 13816394}
+  JointToTrailer: {fileID: 0}
+  tray: {fileID: 0}
   Trailer: {fileID: 5421176}
   Hinge: {fileID: 5446410}
---- !u!138 &13816394
-FixedJoint:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151516}
-  m_ConnectedBody: {fileID: 5421176}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
 --- !u!138 &13826324
 FixedJoint:
   m_ObjectHideFlags: 1
