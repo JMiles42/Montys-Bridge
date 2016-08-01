@@ -18,7 +18,7 @@ public class CamMovement : Singleton<CamMovement>
 	public  Camera      perspCam;
 	public  float       perspZoomSpeed;
 	[SerializeField]
-			float		curZoom;
+			float		curZoom = 1;
 	public	Transform	perspMinZoom;
 	public	Transform	perspMaxZoom;
 	#endregion
@@ -41,7 +41,8 @@ public class CamMovement : Singleton<CamMovement>
 	#endregion
 	void Start()
 	{
-		SwitchCam(true);
+		//SwitchCam(true);
+		SwitchCam(false);
 	}
 	void LateUpdate()
 	{

@@ -44,7 +44,7 @@ GameObject:
   - 81: {fileID: 8105504}
   m_Layer: 0
   m_Name: Persp Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ GameObject:
   - 81: {fileID: 8139360}
   m_Layer: 0
   m_Name: Ortho Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,7 +262,7 @@ MonoBehaviour:
   orthoMaxZoom: 150
   perspCam: {fileID: 2072650}
   perspZoomSpeed: 2000
-  curZoom: 0
+  curZoom: 1
   perspMinZoom: {fileID: 499868}
   perspMaxZoom: {fileID: 401408}
   yMinLimit: -20

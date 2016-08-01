@@ -48,7 +48,6 @@ public class MontysDrone : PlacableTrap
 			Rigidbody vehicleRB = col.gameObject.GetComponentInParent<Rigidbody>();
 			if( crate.GetComponent<Crate>() )
 			{
-				print("HitCrate");
 				crate.velocity = vehicleRB.velocity;
 				crate.GetComponent<Crate>().Disconect();
 				//crate.GetComponent<Crate>().OnHit();

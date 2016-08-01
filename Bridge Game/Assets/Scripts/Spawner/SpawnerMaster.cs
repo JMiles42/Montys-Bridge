@@ -54,20 +54,21 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	public void Endless()
 	{
 		endless = !endless;
+		StartSpawner();
 	}
 	public void StartSpawner()
 	{
 		if( endless )
 		{
-			StartCoroutine(SpawnUnitEndless());
 			spawning = true;
 			GridMaster.Instance.HideGrid();
+			StartCoroutine(SpawnUnitEndless());
 		}
 		else
 		{
-			StartCoroutine(SpawnUnitWave());
 			spawning = true;
 			GridMaster.Instance.HideGrid();
+			StartCoroutine(SpawnUnitWave());
 		}
 	}
 	IEnumerator SpawnUnitEndless()

@@ -17,7 +17,7 @@ MonoBehaviour:
   Uses: 15
   RepairCost: 15
   SellCost: 15
-  IsBlocker: 1
+  IsBlocker: 0
   IsAirTrap: 1
   TrapObj: {fileID: 168578, guid: 24a8dea385a645c4e8c578da64779e5e, type: 2}
   PlaceHolderObj: {fileID: 168578, guid: 412a5613a1eafa949bdb7e307b8a5597, type: 2}

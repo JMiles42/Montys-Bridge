@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de703d08ba71a74d9a72a0d48a8844c, type: 3}
+  m_Name: Monty's Ufo
+  m_EditorClassIdentifier: 
+  Name: Ufo
+  Description: Will cause cars to fly up into the air.
+  Cost: 15
+  Uses: 15
+  RepairCost: 15
+  SellCost: 15
+  IsBlocker: 0
+  IsAirTrap: 1
+  TrapObj: {fileID: 168578, guid: f7e006de0df28824ea08db37723c528a, type: 2}
+  PlaceHolderObj: {fileID: 168578, guid: a3a91251bdfaeca4091bf9bb6a6e02af, type: 2}

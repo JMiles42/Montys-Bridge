@@ -46,4 +46,13 @@ public class Truck : VehiclesMoter
 		if( Trailer )
 			Trailer.transform.SetParent(null);
 	}
+	public IEnumerator DisconnectCrates()
+	{
+		Crate[] c = GetComponentsInChildren<Crate>();
+		yield return WaitForTimes.GetWaitForTime(0.5f);
+		for( int i = 0; i < c.Length; i++ )
+		{
+			c[i].Disconect();
+		}
+	}
 }

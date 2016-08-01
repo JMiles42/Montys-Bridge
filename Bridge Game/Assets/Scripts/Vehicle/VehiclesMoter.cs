@@ -47,6 +47,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	}
 	public bool IsDriving;
 	public Lane curlane;
+	public VehicleLights lights;
 	public bool hit = false;
 	Lane oldLane;
 
