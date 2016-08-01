@@ -9,7 +9,7 @@ public class MontysUfo : MontysDrone
 		if( col.tag == "vehicle" )
 		{
 			if( col.GetComponent<Truck>() )
-				col.GetComponent<Truck>().DisconnectCrates();
+				StartCoroutine(col.GetComponent<Truck>().DisconnectCrates());
 			ActivateRecord();
 		}
 		else if( col.tag == "crate" )
