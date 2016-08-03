@@ -63,6 +63,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 447664}
   - 114: {fileID: 11497358}
+  - 114: {fileID: 11464282}
   m_Layer: 0
   m_Name: Monty's_Trap_Bolard
   m_TagString: TrapA
@@ -90,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.13391, y: 3.638959, z: 295.73224}
+  m_LocalPosition: {x: -0.13098064, y: 3.601252, z: 35.30064}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437750}
@@ -243,6 +244,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11464282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffb9c7962692d54cbb46a52749dce51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 2362308}
+  - {fileID: 2382826}
 --- !u!114 &11467152
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1168,6 +1168,7 @@ MonoBehaviour:
   curlane: 0
   lights: {fileID: 11424224}
   hit: 0
+  hitBridge: 0
   JointToTrailer: {fileID: 0}
   tray: {fileID: 0}
   Trailer: {fileID: 5421176}

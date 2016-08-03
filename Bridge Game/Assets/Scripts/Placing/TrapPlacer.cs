@@ -9,6 +9,8 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	[SerializeField]
 	bool userPlacingTrap = false;
 	[SerializeField]
+	bool userSellingTrap = false;
+	[SerializeField]
 	int trapIndex;
 	[SerializeField]
 	GameObject display;
@@ -20,11 +22,13 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	{
 		StartTraps();
 		EventManager.StartListening(EventStrings.STARTTRAPPLACMENT, StartPlacingTrap);
+		EventManager.StartListening(EventStrings.SELLTRAP, SellTrap);
 	}
 	void OnDisable()
 	{
 		StopTraps();
 		EventManager.StopListening(EventStrings.STARTTRAPPLACMENT, PlaceDownTrap);
+		EventManager.StopListening(EventStrings.SELLTRAP, SellTrap);
 		EventManager.StopListening(EventStrings.PLACETRAP, PlaceDownTrap);
 	}
 	void StartTraps()
@@ -54,6 +58,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 		userPlacingTrap = true;
 		StartCoroutine(PlacingTrap());
 	}
+	#region PlaceDownTrap
 	[ContextMenu("PlaceTraping")]
 	public void StartPlacingTrap(int tN)
 	{
@@ -64,6 +69,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	IEnumerator PlacingTrap()
 	{
 		EventManager.StartListening(EventStrings.PLACETRAP, PlaceDownTrap);
+		EventManager.StartListening(EventStrings.ESC, EndTrap);
 		display = Instantiate(TrapMaster.Instance.TrapByIndex(trapIndex).PlaceHolderObj);
 		while( userPlacingTrap )
 		{
@@ -98,24 +104,6 @@ public class TrapPlacer : Singleton<TrapPlacer>
 		}
 		yield break;
 	}
-	void RaycastToGetGrid()
-	{
-		grid = null;
-		Ray ray = CamMovement.Instance.GetActiveCam().ScreenPointToRay (PlayerInputManager.Instance.MousePos);
-		//print("Shoot");
-		RaycastHit hit;
-		if( Physics.Raycast(ray, out hit) )
-		{
-			if( hit.transform.GetComponent<Grid>() )
-			{
-				grid = hit.transform.GetComponent<Grid>();
-				if( grid.IsPlacable() && !grid.UnderBridge && !TrapMaster.Instance.TrapByIndex(trapIndex).IsAirTrap )
-					display.GetComponent<ChildrenRenderers>().SetMat(placable);
-				else
-					display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
-			}
-		}
-	}
 	void PlaceDownTrap()
 	{
 		RaycastToGetGrid();
@@ -130,47 +118,130 @@ public class TrapPlacer : Singleton<TrapPlacer>
 			ScrapMaster.Instance.AddScrap(-t.Cost);
 			grid.SpawnTrap(t);
 			grid.SetMat(GridMaster.Instance.gridNotPlacable);
-			userPlacingTrap = false;
 			Destroy(display);
 			GridMaster.Instance.HideGrid();
 			StartTraps();
+			EndTrap();
 			EventManager.StopListening(EventStrings.PLACETRAP, PlaceDownTrap);
-			display = null;
-			grid = null;
 		}
 		else
 		{
 			display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 		}
 	}
+	void EndTrap()
+	{
+		userPlacingTrap = false;
+		if( display )
+		{
+			Destroy(display);
+		}
+		display = null;
+		grid = null;
+		EventManager.StopListening(EventStrings.ESC, EndTrap);
+	}
 	void PlaceTrap1()
 	{
 		trapIndex = 1;
-		StartPlacingTrap();
+		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+			StartPlacingTrap();
 	}
 	void PlaceTrap2()
 	{
 		trapIndex = 2;
-		StartPlacingTrap();
+		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+			StartPlacingTrap();
 	}
 	void PlaceTrap3()
 	{
 		trapIndex = 3;
-		StartPlacingTrap();
+		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+			StartPlacingTrap();
 	}
 	void PlaceTrap4()
 	{
 		trapIndex = 4;
-		StartPlacingTrap();
+		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+			StartPlacingTrap();
 	}
 	void PlaceTrap5()
 	{
 		trapIndex = 5;
-		StartPlacingTrap();
+		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+			StartPlacingTrap();
 	}
 	void PlaceTrap6()
 	{
 		trapIndex = 6;
-		StartPlacingTrap();
+		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+			StartPlacingTrap();
 	}
+	#endregion
+	void RaycastToGetGrid()
+	{
+		grid = null;
+		Ray ray = CamMovement.Instance.GetActiveCam().ScreenPointToRay (PlayerInputManager.Instance.MousePos);
+		//print("Shoot");
+		RaycastHit hit;
+		if( Physics.Raycast(ray, out hit) )
+		{
+			if( hit.transform.GetComponent<Grid>() )
+			{
+				grid = hit.transform.GetComponent<Grid>();
+
+				if( display )
+				{
+					if( grid.IsPlacable() && !grid.UnderBridge && !TrapMaster.Instance.TrapByIndex(trapIndex).IsAirTrap )
+						display.GetComponent<ChildrenRenderers>().SetMat(placable);
+					else
+						display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
+				}
+			}
+		}
+	}
+	#region SellTrap
+	public void SellTrap()
+	{
+		StartCoroutine(SellingTrap());
+	}
+	IEnumerator SellingTrap()
+	{
+		EventManager.StartListening(EventStrings.PLACETRAP, SellActiveTrap);
+		while( userSellingTrap )
+		{
+			RaycastToGetGrid();
+
+			if( grid != null )
+			{
+				if( grid.HasTrap )
+				{
+					
+				}
+				else
+				{
+					
+				}
+			}
+			else
+			{
+				
+			}
+			yield return null;
+		}
+		yield break;
+	}
+	void SellActiveTrap()
+	{
+		RaycastToGetGrid();
+		if( grid )
+		{
+			grid.SellTrap();
+			EventManager.StopListening(EventStrings.PLACETRAP, SellActiveTrap);
+		}
+		else
+		{
+			
+		}
+	}
+	#endregion
 }

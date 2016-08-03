@@ -41,8 +41,7 @@ public class CamMovement : Singleton<CamMovement>
 	#endregion
 	void Start()
 	{
-		//SwitchCam(true);
-		SwitchCam(false);
+		SwitchCam();
 	}
 	void LateUpdate()
 	{
@@ -65,15 +64,17 @@ public class CamMovement : Singleton<CamMovement>
 	{
 		if( ortho )
 		{
-			camMove = OrthoCamMove;
 			perspCam.gameObject.SetActive(false);
 			orthoCam.gameObject.SetActive(true);
+			camIsOrtho = true;
+			camMove = OrthoCamMove;
 		}
 		else
 		{
-			camMove = PerspCamMove;
 			perspCam.gameObject.SetActive(true);
 			orthoCam.gameObject.SetActive(false);
+			camIsOrtho = false;
+			camMove = PerspCamMove;
 		}
 	}
 	public void PerspCamMove()

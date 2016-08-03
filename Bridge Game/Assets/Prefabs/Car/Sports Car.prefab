@@ -794,6 +794,7 @@ MonoBehaviour:
   curlane: 0
   lights: {fileID: 11433240}
   hit: 0
+  hitBridge: 0
 --- !u!114 &11433240
 MonoBehaviour:
   m_ObjectHideFlags: 1

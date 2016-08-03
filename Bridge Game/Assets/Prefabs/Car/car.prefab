@@ -812,6 +812,7 @@ MonoBehaviour:
   curlane: 0
   lights: {fileID: 11428374}
   hit: 0
+  hitBridge: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 419242}
   - 114: {fileID: 11475354}
+  - 114: {fileID: 11478146}
   m_Layer: 0
   m_Name: Monty's_Trap_Manhole
   m_TagString: TrapA
@@ -275,6 +276,20 @@ MonoBehaviour:
   grid: {fileID: 0}
   uses: 0
   usesBeforeBreak: 0
+--- !u!114 &11478146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffb9c7962692d54cbb46a52749dce51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 2370778}
+  - {fileID: 2324710}
 --- !u!114 &11480758
 MonoBehaviour:
   m_ObjectHideFlags: 1

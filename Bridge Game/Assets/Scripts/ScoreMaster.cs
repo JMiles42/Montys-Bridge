@@ -21,6 +21,9 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	}
 	public float showUpdateRate;
 
+	[Range(0.0f,100.0f)]
+	public float Agro;
+
 	#region Score Display
 	void Start()
 	{
@@ -81,6 +84,34 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	int ScoreCalculation(int _multi, int _score)
 	{
 		return _score * _multi;
+	}
+	#endregion
+	#region Agro
+	public void AddAgro(VehicleTypes vT)
+	{
+		Agro = Mathf.Clamp(Agro + GetAgroAmount(vT),0.0f,100.0f);
+	}
+	public void RemoveAgro(VehicleTypes vT)
+	{
+		Agro = Mathf.Clamp(Agro - GetAgroAmount(vT), 0.0f, 100.0f);
+	}
+	public float GetAgroAmount(VehicleTypes vT)
+	{
+		switch(vT)
+		{
+			case VehicleTypes.Bus:
+			return 6;
+			case VehicleTypes.Car:
+			return 2;
+			case VehicleTypes.Special:
+			return 10;
+			case VehicleTypes.SportsCar:
+			return 4;
+			case VehicleTypes.Truck:
+			return 5;
+			default:
+			return 1;
+		}
 	}
 	#endregion
 }

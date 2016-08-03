@@ -33,23 +33,26 @@ public class MontysUfo : MontysDrone
 			GameObject vehicle = col.gameObject;
 			Rigidbody vehicleRB = vehicle.GetComponentInParent<Rigidbody>();
 			VehiclesMoter v = vehicle.GetComponentInParent<VehiclesMoter>();
-			switch( v.VehicleSize )
+			if( v && vehicleRB)
 			{
-				case VehicleTypes.Bus:
+				switch( v.VehicleSize )
+				{
+					case VehicleTypes.Bus:
 					vehicleRB.AddForceAtPosition(Vector3.up * magnetStrength, col.ClosestPointOnBounds(transform.position), ForceMode.Acceleration);
-				return;
-				case VehicleTypes.Truck:
+					return;
+					case VehicleTypes.Truck:
 					vehicleRB.AddForceAtPosition(Vector3.up * magnetStrength, col.ClosestPointOnBounds(transform.position), ForceMode.Acceleration);
-				return;
-				case VehicleTypes.Car:
-					vehicleRB.AddForceAtPosition(Vector3.up * magnetStrength,col.ClosestPointOnBounds(transform.position), ForceMode.Acceleration);
-				return;
-				case VehicleTypes.SportsCar:
+					return;
+					case VehicleTypes.Car:
 					vehicleRB.AddForceAtPosition(Vector3.up * magnetStrength, col.ClosestPointOnBounds(transform.position), ForceMode.Acceleration);
-				return;
-				case VehicleTypes.Special:
+					return;
+					case VehicleTypes.SportsCar:
 					vehicleRB.AddForceAtPosition(Vector3.up * magnetStrength, col.ClosestPointOnBounds(transform.position), ForceMode.Acceleration);
-				return;
+					return;
+					case VehicleTypes.Special:
+					vehicleRB.AddForceAtPosition(Vector3.up * magnetStrength, col.ClosestPointOnBounds(transform.position), ForceMode.Acceleration);
+					return;
+				}
 			}
 			//if( vehicle.GetComponent<VehiclesMoter>() )
 			//	vehicle.GetComponent<VehiclesMoter>().OnHit();

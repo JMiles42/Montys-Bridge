@@ -355,6 +355,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 447664}
   - 114: {fileID: 11463696}
+  - 114: {fileID: 11463810}
   m_Layer: 0
   m_Name: Monty's_Trap_Drone
   m_TagString: TrapA
@@ -1280,6 +1281,33 @@ MonoBehaviour:
   uses: 0
   usesBeforeBreak: 0
   magnetStrength: 15
+--- !u!114 &11463810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffb9c7962692d54cbb46a52749dce51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 2301196}
+  - {fileID: 2309460}
+  - {fileID: 2390344}
+  - {fileID: 2367154}
+  - {fileID: 2395480}
+  - {fileID: 2357544}
+  - {fileID: 2346682}
+  - {fileID: 2338380}
+  - {fileID: 2307928}
+  - {fileID: 2314092}
+  - {fileID: 2348600}
+  - {fileID: 2382010}
+  - {fileID: 2323456}
+  - {fileID: 2386054}
+  - {fileID: 2362308}
 --- !u!114 &11467152
 MonoBehaviour:
   m_ObjectHideFlags: 1

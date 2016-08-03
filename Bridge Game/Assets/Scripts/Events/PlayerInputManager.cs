@@ -67,10 +67,14 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.STARTSPAWNER);
 		}
-		//if( Input.GetKeyDown(KeyCode.Tab) )
-		//{
-		//	EventManager.TriggerEvent(EventStrings.DRIVE);
-		//}
+		if( Input.GetKeyDown(KeyCode.Escape) )
+		{
+			EventManager.TriggerEvent(EventStrings.ESC);
+		}
+		if( Input.GetKeyDown(KeyCode.S) )
+		{
+			EventManager.TriggerEvent(EventStrings.SELLTRAP);
+		}
 		if( Input.GetKeyDown(KeyCode.X) )
 		{
 			EventManager.TriggerEvent(EventStrings.EXPLODEALLCARS);

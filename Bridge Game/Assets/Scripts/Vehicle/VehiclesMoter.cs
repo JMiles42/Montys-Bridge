@@ -49,6 +49,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	public Lane curlane;
 	public VehicleLights lights;
 	public bool hit = false;
+	public bool hitBridge = false;
 	Lane oldLane;
 
 	float m_speed;
@@ -178,10 +179,10 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	{
 		//set car to stop if car in front is stoped at lights/trap etc.
 		//Only Respond if car is stopd for something
-		switch( agro )
-		{
-			
-		}
+		//switch( agro )
+		//{
+		//	
+		//}
 	}
 	public virtual void CheckCarDistToSide()
 	{

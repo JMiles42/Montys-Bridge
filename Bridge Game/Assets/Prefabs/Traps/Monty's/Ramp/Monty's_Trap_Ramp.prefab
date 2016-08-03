@@ -64,6 +64,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 475144}
   - 114: {fileID: 11471098}
+  - 114: {fileID: 11466182}
   m_Layer: 0
   m_Name: Monty's_Trap_Ramp
   m_TagString: TrapB
@@ -259,6 +260,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11466182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffb9c7962692d54cbb46a52749dce51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 2340850}
+  - {fileID: 2325492}
 --- !u!114 &11471098
 MonoBehaviour:
   m_ObjectHideFlags: 1

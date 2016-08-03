@@ -44,11 +44,13 @@ public class Grid : MonoBehaviour
 	}
 	public void SellTrap()
 	{
+		if( m_Trap )
+			ScrapMaster.Instance.AddScrap(m_Trap.SellCost);
 		RemoveTrap();
 	}
 	public void RemoveTrap()
 	{
-		Destroy(m_PlaceTrap);
+		Destroy(m_PlaceTrap.gameObject);
 		m_PlaceTrap = null;
 		m_Trap = null;
 	}
