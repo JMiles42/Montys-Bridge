@@ -20,10 +20,12 @@ public class WaveMaster : Singleton<WaveMaster>
 	#region Events
 	void OnEnable()
 	{
+		EventManager.StartListening(EventStrings.WAVEOVER, NextWave);
 		EventManager.StartListening(EventStrings.GENWAVE, GenWave);
 	}
 	void OnDisable()
 	{
+		EventManager.StopListening(EventStrings.WAVEOVER, NextWave);
 		EventManager.StopListening(EventStrings.GENWAVE, GenWave);
 	}
 	#endregion
@@ -32,6 +34,12 @@ public class WaveMaster : Singleton<WaveMaster>
 	{
 		rand = new System.Random(SpawnerMaster.Instance.seed.GetHashCode());
 		GenerateWave(waveTestSize);
+	}
+	[ContextMenu("Next Wave")]
+	public void NextWave()
+	{
+		WaveNum++;
+		GenerateWave(WaveNum);
 	}
 	public VehicleSettings NextVehicle()
 	{
@@ -51,7 +59,7 @@ public class WaveMaster : Singleton<WaveMaster>
 	{
 		curWaveQueue = new Queue<VehicleSettings>();
 		curWaveData = new WaveData();
-		int amount =  rand.Next(0,Mathf.RoundToInt( 30*diff));
+		int amount =  rand.Next(10, 10 + Mathf.RoundToInt( 10 * diff));
 		for( int i = 0; i < amount; i++ )
 		{
 			int gen = rand.Next(50);
@@ -104,7 +112,8 @@ public class WaveData
 				SportsCar,
 				Bus,
 				Truck,
-				Special;
+				Special,
+				Total;
 
 	public WaveData()
 	{
@@ -120,18 +129,23 @@ public class WaveData
 		{
 			case VehicleTypes.Bus:
 				Bus++;
+				Total++;
 			break;
 			case VehicleTypes.Car:
 				Car++;
+				Total++;
 			break;
 			case VehicleTypes.Special:
 				Special++;
+				Total++;
 			break;
 			case VehicleTypes.SportsCar:
 				SportsCar++;
+				Total++;
 			break;
 			case VehicleTypes.Truck:
 				Truck++;
+				Total++;
 			break;
 		}
 	}

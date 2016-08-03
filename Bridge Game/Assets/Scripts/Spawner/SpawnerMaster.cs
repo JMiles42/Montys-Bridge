@@ -93,6 +93,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		{
 			if( !WaveMaster.Instance.StillWave() )
 			{
+				EventManager.TriggerEvent(EventStrings.WAVEOVER);
 				EventManager.TriggerEvent(EventStrings.STOPSPAWNER);
 				yield break;
 			}
