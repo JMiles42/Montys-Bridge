@@ -17,6 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f624330013e5eb74eac5d5bde51c9449, type: 2}
   Trucks:
   - {fileID: 11400000, guid: 6d3f894c78fc05d44a39b9c77d4f0fbd, type: 2}
+  - {fileID: 11400000, guid: 1fb0c0c351ee75c40b5cd2ca1b619c51, type: 2}
   Buses:
   - {fileID: 11400000, guid: 74bdd014d900e054d850c3b56700f4ac, type: 2}
   Special:
