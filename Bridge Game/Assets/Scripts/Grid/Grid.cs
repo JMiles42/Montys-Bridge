@@ -38,10 +38,10 @@ public class Grid : MonoBehaviour
 		m_PlaceTrap.grid = this;
 		m_Trap = trap;
 	}
-	public void RepairTrap()
-	{
-		m_PlaceTrap.usesBeforeBreak = m_Trap.Uses;
-	}
+	//public void RepairTrap()
+	//{
+	//	m_PlaceTrap.usesBeforeBreak = m_Trap.Uses;
+	//}
 	public void SellTrap()
 	{
 		if( m_Trap )
@@ -50,7 +50,9 @@ public class Grid : MonoBehaviour
 	}
 	public void RemoveTrap()
 	{
-		Destroy(m_PlaceTrap.gameObject);
+		if(m_PlaceTrap)
+			Destroy(m_PlaceTrap.gameObject);
+		SetMat(GridMaster.Instance.gridPlacable);
 		m_PlaceTrap = null;
 		m_Trap = null;
 	}
@@ -62,17 +64,19 @@ public class Grid : MonoBehaviour
 	{
 		Material mat = GetMat();
 		SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
-		foreach( SpriteRenderer mr in renderers )
+		highlight.SetActive(!highlight.activeSelf);
+		for(int i = 0; i< renderers.Length; i++ )
 		{
-			mr.material = mat;
+			renderers[i].material = mat;
 		}
+		highlight.SetActive(!highlight.activeSelf);
 	}
 	public void SetMat(Material mat)
 	{
 		SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
-		foreach( SpriteRenderer mr in renderers )
+		for( int i = 0; i < renderers.Length; i++ )
 		{
-			mr.material = mat;
+			renderers[i].material = mat;
 		}
 	}
 	public void SetHighlight(bool onOff)

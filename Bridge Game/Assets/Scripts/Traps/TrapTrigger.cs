@@ -5,6 +5,14 @@ public class TrapTrigger : MonoBehaviour
 {
 	public PlacableTrap myTrap;
 
+	void Start()
+	{
+		if( !myTrap )
+		{
+			myTrap = GetComponentInParent<PlacableTrap>();
+		}
+	}
+
 	public void OnTriggerEnter(Collider col)
 	{
 		myTrap.HeardTriggerEnter(col);

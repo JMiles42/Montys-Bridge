@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b5cf96efb6c574bbfae34b060bcc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myTrap: {fileID: 0}
+  myTrap: {fileID: 11471098}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -318,6 +318,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: efa368d48190d844ab7f9f846f1afe1a,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: myTrap
+      value: 
+      objectReference: {fileID: 11471098}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 184374}

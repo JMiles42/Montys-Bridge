@@ -51,6 +51,10 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.CAMSWITCH);
 		}
+		if( Input.GetKeyDown(KeyCode.LeftShift) )
+		{
+			EventManager.TriggerEvent(EventStrings.TOGGLEBRIDGEMID);
+		}
 		if( Input.GetKeyDown(KeyCode.O) )
 		{
 			EventManager.TriggerEvent(EventStrings.GENWAVE);

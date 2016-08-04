@@ -9,6 +9,7 @@ public static class EventStrings
 	public const string STOPSPAWNER = "StopSpawner";
 	public const string GENWAVE = "WaveGen";
 	public const string WAVEOVER = "WaveOver";
+	public const string TOGGLEBRIDGEMID = "ToggleBridgeMid";
 	public const string ESC = "Esc";
 	public const string SELLTRAP = "SellTrap";
 	public const string DRIVE = "Drive";

@@ -217,14 +217,6 @@ public class TrapPlacer : Singleton<TrapPlacer>
 				{
 					
 				}
-				else
-				{
-					
-				}
-			}
-			else
-			{
-				
 			}
 			yield return null;
 		}
