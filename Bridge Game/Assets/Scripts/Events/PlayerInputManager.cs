@@ -47,10 +47,6 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 	}
 	void KeyPress()
 	{
-		if( Input.GetKeyDown(KeyCode.Tab) )
-		{
-			EventManager.TriggerEvent(EventStrings.CAMSWITCH);
-		}
 		if( Input.GetKeyDown(KeyCode.LeftShift) )
 		{
 			EventManager.TriggerEvent(EventStrings.TOGGLEBRIDGEMID);

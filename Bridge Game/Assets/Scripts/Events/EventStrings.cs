@@ -16,7 +16,6 @@ public static class EventStrings
 	public const string EXPLODEALLCARS = "ExplodeCars";
 	public const string PAUSE = "Pause";
 	public const string UNPAUSE = "UnPause";
-	public const string CAMSWITCH = "CamSwitch";
 	public const string LEVELLOAD = "LevelLoad";
 	#endregion
 	#region Mouse
