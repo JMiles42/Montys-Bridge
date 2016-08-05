@@ -5,13 +5,27 @@ using JMiles42;
 public class GridMaster : Singleton<GridMaster>
 {
 	public Grid[] Lane1;
+	public Transform m_lane1;
 	public Grid[] Lane2;
+	public Transform m_lane2;
 	public Grid[] Lane3;
+	public Transform m_lane3;
 	public bool GridShowing;
 	public Material gridPlacable;
 	public Material gridNotPlacable;
 	public Material gridHighlighted;
 
+	public void Start()
+	{
+		m_lane1.localEulerAngles = (Vector3.zero);
+		m_lane2.localEulerAngles = (Vector3.zero);
+		m_lane3.localEulerAngles = (Vector3.zero);
+
+
+		m_lane1.localEulerAngles = (Vector3.right * 90);
+		m_lane2.localEulerAngles = (Vector3.right * 90);
+		m_lane3.localEulerAngles = (Vector3.right * 90);
+	}
 	public void ShowGrid()
 	{
 		int i;

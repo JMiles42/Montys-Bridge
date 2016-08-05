@@ -12,6 +12,8 @@ public class WaveMaster : Singleton<WaveMaster>
 	[SerializeField]
 	WaveData curWaveData;
 	[SerializeField]
+	WaveData prevWaveData;
+	[SerializeField]
 	System.Random rand;
 	public float waveTestSize;
 	public int WaveNum;
@@ -34,6 +36,7 @@ public class WaveMaster : Singleton<WaveMaster>
 	{
 		rand = new System.Random(SpawnerMaster.Instance.seed.GetHashCode());
 		GenerateWave(waveTestSize);
+		prevWaveData = curWaveData;
 	}
 	[ContextMenu("Next Wave")]
 	public void NextWave()
@@ -57,6 +60,7 @@ public class WaveMaster : Singleton<WaveMaster>
 	}
 	public void GenerateWave(float diff)
 	{
+		prevWaveData = curWaveData;
 		curWaveQueue = new Queue<VehicleSettings>();
 		curWaveData = new WaveData();
 		int amount =  rand.Next(10, 10 + Mathf.RoundToInt( 10 * diff));

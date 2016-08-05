@@ -61,7 +61,7 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		}
 		if( Input.GetKeyDown(KeyCode.G) )
 		{
-			EventManager.TriggerEvent(EventStrings.STARTWAVESPAWNER);
+			EventManager.TriggerEvent(EventStrings.STARTWAVE);
 		}
 		if( Input.GetKeyDown(KeyCode.Z) )
 		{

@@ -1151,6 +1151,7 @@ MonoBehaviour:
   physObj: {fileID: 11400000, guid: 37ecba5c8cac5af42b904b42694f3452, type: 2}
   m_RigidBody: {fileID: 5421176}
   hit: 0
+  force: 3000
 --- !u!114 &11473430
 MonoBehaviour:
   m_ObjectHideFlags: 1

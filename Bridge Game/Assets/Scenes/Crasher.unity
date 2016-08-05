@@ -14,7 +14,7 @@ SceneSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -3639,6 +3639,13 @@ MonoBehaviour:
     Truck: 0
     Special: 0
     Total: 0
+  prevWaveData:
+    Car: 0
+    SportsCar: 0
+    Bus: 0
+    Truck: 0
+    Special: 0
+    Total: 0
   waveTestSize: 1
   WaveNum: 0
 --- !u!114 &272368213
@@ -4385,7 +4392,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &360407248
 GameObject:
   m_ObjectHideFlags: 0
@@ -8559,12 +8566,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 401408, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 122.6
+      value: 38.1
       objectReference: {fileID: 0}
     - target: {fileID: 401408, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -209.2
+      value: -62.9
       objectReference: {fileID: 0}
+    - target: {fileID: 401408, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120264, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 4142126959532110318, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 128918, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 4142126959532110318, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
   m_IsPrefabParent: 0
@@ -10164,6 +10185,10 @@ Prefab:
     - target: {fileID: 456074, guid: 3c1e2937e95ed6d4e81625dc75f36382, type: 2}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484832, guid: 3c1e2937e95ed6d4e81625dc75f36382, type: 2}
+      propertyPath: showMid
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c1e2937e95ed6d4e81625dc75f36382, type: 2}
@@ -13318,7 +13343,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &1227881023
 GameObject:
   m_ObjectHideFlags: 0
@@ -16843,7 +16868,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549056568}
-  m_LocalRotation: {x: 0.7069846, y: 0, z: 0, w: 0.70722896}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 6, y: -0, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
@@ -18721,6 +18746,7 @@ MonoBehaviour:
   - {fileID: 613721404}
   - {fileID: 93738925}
   - {fileID: 428385655}
+  m_lane1: {fileID: 1549056569}
   Lane2:
   - {fileID: 155427267}
   - {fileID: 190548789}
@@ -18734,6 +18760,7 @@ MonoBehaviour:
   - {fileID: 1901184383}
   - {fileID: 575205344}
   - {fileID: 1857063437}
+  m_lane2: {fileID: 489207693}
   Lane3:
   - {fileID: 1576355142}
   - {fileID: 1699586855}
@@ -18747,6 +18774,7 @@ MonoBehaviour:
   - {fileID: 464069553}
   - {fileID: 184277563}
   - {fileID: 604417495}
+  m_lane3: {fileID: 1277185946}
   GridShowing: 0
   gridPlacable: {fileID: 2100000, guid: f9d60d2a2abd52641a1005e6a31ed675, type: 2}
   gridNotPlacable: {fileID: 2100000, guid: 715eff97a92c90042bee9759e90f8ac1, type: 2}
@@ -22090,8 +22118,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2087577118}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: -0.036, z: 0}
+  m_LocalRotation: {x: 0.7069846, y: 0, z: 0, w: 0.70722896}
+  m_LocalPosition: {x: 0, y: -0.056, z: 0}
   m_LocalScale: {x: 200, y: 1500, z: 50}
   m_Children: []
   m_Father: {fileID: 0}

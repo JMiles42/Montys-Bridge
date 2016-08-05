@@ -24,13 +24,13 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	void OnEnable()
 	{
 		EventManager.StartListening(EventStrings.STARTSPAWNER, Endless);
-		EventManager.StartListening(EventStrings.STARTWAVESPAWNER, StartSpawner);
+		EventManager.StartListening(EventStrings.STARTWAVE, StartSpawner);
 		EventManager.StartListening(EventStrings.STOPSPAWNER, StopSpawner);
 	}
 	void OnDisable()
 	{
 		EventManager.StopListening(EventStrings.STARTSPAWNER, Endless);
-		EventManager.StopListening(EventStrings.STARTWAVESPAWNER, StartSpawner);
+		EventManager.StopListening(EventStrings.STARTWAVE, StartSpawner);
 		EventManager.StopListening(EventStrings.STOPSPAWNER, StopSpawner);
 	}
 	#endregion
@@ -68,6 +68,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		{
 			spawning = true;
 			GridMaster.Instance.HideGrid();
+			EventManager.StopListening(EventStrings.STARTWAVE, StartSpawner);
 			StartCoroutine(SpawnUnitWave());
 		}
 	}
@@ -95,6 +96,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 			{
 				EventManager.TriggerEvent(EventStrings.WAVEOVER);
 				EventManager.TriggerEvent(EventStrings.STOPSPAWNER);
+				EventManager.StartListening(EventStrings.STARTWAVE, StartSpawner);
 				yield break;
 			}
 			GameObject g = Instantiate(WaveMaster.Instance.NextVehicle().Prefab);
