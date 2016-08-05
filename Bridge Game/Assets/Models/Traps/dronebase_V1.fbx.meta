@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: edc11434a8e24f642b9ffd4862eb5d99
-timeCreated: 1469756086
+guid: 0bcdf4ab1c1dd7e4ea0ab2a82d7a97a1
+timeCreated: 1470359879
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCube3
-    100004: pCube4
     400000: //RootNode
-    400002: pCube3
-    400004: pCube4
-    2300000: pCube3
-    2300002: pCube4
-    3300000: pCube3
-    3300002: pCube4
-    4300000: pCube3
-    4300002: pCube4
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCube26
     9500000: //RootNode
   materials:
     importMaterials: 1
