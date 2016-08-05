@@ -10,7 +10,7 @@ public class Crate : PhysicalObject, IHitable
 
 	public override void OnCollisionEnter(Collision col)
 	{
-		if( col.gameObject.tag != "vehicle" && !noParent )
+		if( col.gameObject.tag != "vehicle" )
 		{
 			Disconect();
 			OnHit();
@@ -28,5 +28,21 @@ public class Crate : PhysicalObject, IHitable
 	public override Vector3 GetForwardVec()
 	{
 		return Vector3.forward;
+	}
+	public override void OnHit()
+	{
+		hit = true;
+		m_RigidBody.constraints = RigidbodyConstraints.None;
+		Disconect();
+		Invoke("Explode", UnityEngine.Random.Range(3f, 7f));
+	}
+	public override void Explode()
+	{
+		if( hit )
+		{
+			ScoreMaster.Instance.AddScore(Score);
+			ScrapMaster.Instance.AddScrap(Scrap);
+		}
+		Destroy(this.gameObject);
 	}
 }

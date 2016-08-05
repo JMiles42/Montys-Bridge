@@ -20,6 +20,7 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		Axis();
 		MousePress();
 		KeyPress();
+		Grid();
 		TrapPresses();
 	}
 	void GetAxisValues()
@@ -160,6 +161,13 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 			case 6:
 			EventManager.TriggerEvent(EventStrings.TRAP6);
 			break;
+		}
+	}
+	void Grid()
+	{
+		if( Input.GetKeyDown(KeyCode.Tab) )
+		{
+			EventManager.TriggerEvent(EventStrings.TOGGLEGRID);
 		}
 	}
 }

@@ -15,6 +15,20 @@ public class GridMaster : Singleton<GridMaster>
 	public Material gridNotPlacable;
 	public Material gridHighlighted;
 
+	public bool gridOn = true;
+
+
+	#region Events
+	void OnEnable()
+	{
+		EventManager.StartListening(EventStrings.TOGGLEGRID, ToggleGrid);
+	}
+	void OnDisable()
+	{
+		EventManager.StopListening(EventStrings.TOGGLEGRID, ToggleGrid);
+	}
+	#endregion
+
 	public void Start()
 	{
 		m_lane1.localEulerAngles = (Vector3.zero);
@@ -26,44 +40,25 @@ public class GridMaster : Singleton<GridMaster>
 		m_lane2.localEulerAngles = (Vector3.right * 90);
 		m_lane3.localEulerAngles = (Vector3.right * 90);
 	}
+	public void ToggleGrid()
+	{
+		gridOn = !gridOn;
+		if( gridOn )
+		{
+			ShowGrid();
+		}
+		else
+		{
+			HideGrid();
+		}
+	}
 	public void ShowGrid()
 	{
-		int i;
-		for( i = 0; i < Lane1.Length; i++ )
-		{
-			Lane1[i].SetHighlight(true);
-		}
-		i = 0;
-		for( i = 0; i < Lane2.Length; i++ )
-		{
-			Lane2[i].SetHighlight(true);
-		}
-		i = 0;
-		for( i = 0; i < Lane3.Length; i++ )
-		{
-			Lane3[i].SetHighlight(true);
-		}
+		EventManager.TriggerEvent(EventStrings.SHOWGRID);
 	}
 	public void HideGrid()
 	{
-		int i = 0;
-		for( i = 0; i < Lane1.Length; i++ )
-		{
-		//	print(string.Format("Lane one Hide : {0}",i));
-			Lane1[i].SetHighlight(false);
-		}
-		i = 0;
-		for( i = 0; i < Lane2.Length; i++ )
-		{
-		//	print(string.Format("Lane two Hide : {0}",i));
-			Lane2[i].SetHighlight(false);
-		}
-		i = 0;
-		for( i = 0; i < Lane3.Length; i++ )
-		{
-		//	print(string.Format("Lane three Hide : {0}",i));
-			Lane3[i].SetHighlight(false);
-		}
+		EventManager.TriggerEvent(EventStrings.HIDEGRID);
 	}
 	//IEnumerator UpdateGridHighlight()
 	//{

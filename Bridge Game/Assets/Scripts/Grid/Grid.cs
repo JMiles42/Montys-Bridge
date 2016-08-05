@@ -24,6 +24,19 @@ public class Grid : MonoBehaviour
 	public GameObject highlightTemp;
 #endif
 
+	#region Events
+	void OnEnable()
+	{
+		EventManager.StartListening(EventStrings.SHOWGRID, ShowGrid);
+		EventManager.StartListening(EventStrings.HIDEGRID, HideGrid);
+	}
+	void OnDisable()
+	{
+		EventManager.StopListening(EventStrings.SHOWGRID, ShowGrid);
+		EventManager.StopListening(EventStrings.HIDEGRID, HideGrid);
+	}
+	#endregion
+
 	public Vector3 GetTrapSpawnLocation()
 	{
 		return transform.position;
@@ -78,6 +91,14 @@ public class Grid : MonoBehaviour
 		{
 			renderers[i].material = mat;
 		}
+	}
+	public void ShowGrid()
+	{
+		SetHighlight(true);
+	}
+	public void HideGrid()
+	{
+		SetHighlight(false);
 	}
 	public void SetHighlight(bool onOff)
 	{

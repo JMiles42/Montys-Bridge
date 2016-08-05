@@ -23,14 +23,14 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	#region Events
 	void OnEnable()
 	{
-		EventManager.StartListening(EventStrings.STARTSPAWNER, Endless);
-		EventManager.StartListening(EventStrings.STARTWAVE, StartSpawner);
+		EventManager.StartListening(EventStrings.STARTSPAWNER, StartEndless);
+		EventManager.StartListening(EventStrings.STARTWAVE, StartWave);
 		EventManager.StartListening(EventStrings.STOPSPAWNER, StopSpawner);
 	}
 	void OnDisable()
 	{
-		EventManager.StopListening(EventStrings.STARTSPAWNER, Endless);
-		EventManager.StopListening(EventStrings.STARTWAVE, StartSpawner);
+		EventManager.StopListening(EventStrings.STARTSPAWNER, StartEndless);
+		EventManager.StopListening(EventStrings.STARTWAVE, StartWave);
 		EventManager.StopListening(EventStrings.STOPSPAWNER, StopSpawner);
 	}
 	#endregion
@@ -51,9 +51,9 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	{
 		return rand.Next(min, max);
 	}
-	public void Endless()
+	public void StartEndless()
 	{
-		endless = !endless;
+		endless = true;
 		StartSpawner();
 	}
 	public void StartSpawner()
@@ -87,16 +87,20 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 			yield return WaitForTimes.GetWaitForTime(spawnTime);
 		}
 	}
-
+	public void StartWave()
+	{
+		endless = false;
+		StartSpawner();
+	}
 	IEnumerator SpawnUnitWave()
 	{
 		while( spawning )
 		{
 			if( !WaveMaster.Instance.StillWave() )
 			{
+				spawning = false;
 				EventManager.TriggerEvent(EventStrings.WAVEOVER);
 				EventManager.TriggerEvent(EventStrings.STOPSPAWNER);
-				EventManager.StartListening(EventStrings.STARTWAVE, StartSpawner);
 				yield break;
 			}
 			GameObject g = Instantiate(WaveMaster.Instance.NextVehicle().Prefab);
@@ -109,6 +113,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 			g.transform.position = m_spawnPoints[lane].Location;
 			yield return WaitForTimes.GetWaitForTime(spawnTime);
 		}
+		yield break;
 	}
 	int CheckLane(int l)
 	{

@@ -31,6 +31,9 @@ public static class EventStrings
 	#region Other Calls
 	public const string STARTTRAPPLACMENT = "StartTrapPlacement";
 	public const string PLACETRAP = "PlaceTrap";
+	public const string SHOWGRID = "ShowGrid";
+	public const string HIDEGRID = "HideGrid";
+	public const string TOGGLEGRID = "ToggleGrid";
 	#endregion
 	#region TrapCalls
 	public const string TRAP1 = "Trap1";

@@ -105,7 +105,12 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 			ScoreMaster.Instance.AddScore(Score);
 			ScrapMaster.Instance.AddScrap(Scrap);
 		}
+		SpawnPartSys();
 		Destroy(this.gameObject);
+	}
+	public virtual void SpawnPartSys()
+	{
+		//ExplosionPooling.Instance.NextExplosion(transform.position);
 	}
 	public virtual void OnHit()
 	{

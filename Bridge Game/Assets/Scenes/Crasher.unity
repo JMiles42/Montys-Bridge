@@ -16872,7 +16872,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549056568}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: 0.7069846, y: 0, z: 0, w: 0.70722896}
   m_LocalPosition: {x: 6, y: -0, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
@@ -18783,6 +18783,7 @@ MonoBehaviour:
   gridPlacable: {fileID: 2100000, guid: f9d60d2a2abd52641a1005e6a31ed675, type: 2}
   gridNotPlacable: {fileID: 2100000, guid: 715eff97a92c90042bee9759e90f8ac1, type: 2}
   gridHighlighted: {fileID: 2100000, guid: 3cac1316e6adda74fb3e0759efc193d0, type: 2}
+  gridOn: 1
 --- !u!1 &1744607434
 GameObject:
   m_ObjectHideFlags: 0
@@ -21253,6 +21254,49 @@ MonoBehaviour:
   m_Spacing: 15
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
+--- !u!1 &2005333255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2005333257}
+  - 114: {fileID: 2005333256}
+  m_Layer: 0
+  m_Name: Pooling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2005333256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005333255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c489c7c1d124a4794f0b5e1d65781e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToPool:
+  - {fileID: 114574, guid: c3db006b2e2a484488e7faddc842b861, type: 2}
+  poolSize: 10
+  activeObjects: []
+--- !u!4 &2005333257
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005333255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1 &2012665138
 GameObject:
   m_ObjectHideFlags: 0
@@ -22258,6 +22302,10 @@ Prefab:
       propertyPath: seedTxt
       value: 
       objectReference: {fileID: 2128656469}
+    - target: {fileID: 11497698, guid: 7a69e3a3d377e7b48ac4138f3ae907e4, type: 2}
+      propertyPath: spawnTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a69e3a3d377e7b48ac4138f3ae907e4, type: 2}
   m_IsPrefabParent: 0

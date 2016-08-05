@@ -26,7 +26,6 @@ public class Truck : VehiclesMoter
 	}
 	public override void Explode()
 	{
-
 		OnDisable();
 		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
 		if( hit )
@@ -34,6 +33,7 @@ public class Truck : VehiclesMoter
 			ScoreMaster.Instance.AddScore(Score);
 			ScrapMaster.Instance.AddScrap(Scrap);
 		}
+		SpawnPartSys();
 		Destroy(transform.parent.gameObject);
 	}
 	public override Vector3 GetForwardVec()
