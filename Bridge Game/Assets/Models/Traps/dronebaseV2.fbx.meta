@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0bcdf4ab1c1dd7e4ea0ab2a82d7a97a1
-timeCreated: 1470359879
+guid: edcf2d3ea2513c242af04635b506f68b
+timeCreated: 1470371257
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube26
+    4300000: pCylinder11
     9500000: //RootNode
   materials:
     importMaterials: 1
