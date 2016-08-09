@@ -46,6 +46,7 @@ public class PlacableTrap : MonoBehaviour
 			return trap.IsBlocker;
 		}
 	}
+	public bool IsBroken;
 
 	#region Events
 	void OnEnable()
@@ -104,7 +105,9 @@ public class PlacableTrap : MonoBehaviour
 	}
 	public virtual void TrapBreak()
 	{
-		TrapPlacer.Instance.PlayTrapBreak();
+		if(!IsBroken)
+			TrapPlacer.Instance.PlayTrapBreak();
+		IsBroken = true;
 	}
 	public virtual void CheatTrap()
 	{
