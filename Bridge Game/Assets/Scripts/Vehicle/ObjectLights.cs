@@ -14,6 +14,10 @@ public class ObjectLights : MonoBehaviour
 	public Light R_R_Light;
 	public Light R_L_Light;
 
+//#if UNITY_EDITOR
+//	public bool headlightsOn;
+//
+//#else
 	public bool headlightsOn
 	{
 		get
@@ -26,6 +30,20 @@ public class ObjectLights : MonoBehaviour
 			m_headlightsOn = value;
 		}
 	}
+	//#endif
+
+	#region Events
+	protected void OnEnable()
+	{
+		EventManager.StartListening(EventStrings.LIGHTSOFF, LightsOff);
+		EventManager.StartListening(EventStrings.LIGHTSON, LightsOn);
+	}
+	protected void OnDisable()
+	{
+		EventManager.StopListening(EventStrings.LIGHTSOFF, LightsOff);
+		EventManager.StopListening(EventStrings.LIGHTSON, LightsOn);
+	}
+	#endregion
 
 	public virtual void ChangeLights()
 	{
@@ -44,8 +62,14 @@ public class ObjectLights : MonoBehaviour
 	{
 		ChangeLights();
 	}
-	void OnValidate()
+	void LightsOn()
 	{
+		headlightsOn = true;
+		ChangeLights();
+	}
+	void LightsOff()
+	{
+		headlightsOn = false;
 		ChangeLights();
 	}
 }

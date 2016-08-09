@@ -221,8 +221,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179490}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: -124.017654, y: 0.45249942, z: 13.160149}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: 2.0742521, y: 0.12743148, z: 368.7384}
   m_LocalScale: {x: 200, y: 200, z: -200}
   m_Children:
   - {fileID: 443134}
@@ -657,7 +657,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.5
   m_Range: 10
-  m_SpotAngle: 30
+  m_SpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -690,7 +690,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.5
   m_Range: 10
-  m_SpotAngle: 30
+  m_SpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d4d842b92b5b546a416c9366d39cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_headlightsOn: 0
+  m_headlightsOn: 1
   R_R_Light: {fileID: 10810668}
   R_L_Light: {fileID: 10804630}
   F_R_Light: {fileID: 10815456}
@@ -819,7 +819,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_headlightsOn
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 179490}

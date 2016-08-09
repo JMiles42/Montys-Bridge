@@ -45,4 +45,6 @@ public static class EventStrings
 	public const string REMOVETRAPS = "RemoveTraps";
 	public const string CHEATS = "Cheats";
 	#endregion
+	public const string LIGHTSON = "LightsOn";
+	public const string LIGHTSOFF = "LightsOff";
 }

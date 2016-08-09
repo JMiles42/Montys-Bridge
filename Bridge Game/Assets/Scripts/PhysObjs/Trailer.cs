@@ -4,6 +4,7 @@ using System.Collections;
 public class Trailer : PhysicalObject
 {
 	public float force = 3000;
+	public ObjectLights lights;
 	[ContextMenu("forceMode")]
 	void SetJoimts()
 	{

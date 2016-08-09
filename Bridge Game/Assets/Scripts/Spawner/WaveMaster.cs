@@ -8,6 +8,14 @@ using JMiles42;
 public class WaveMaster : Singleton<WaveMaster> 
 {
 	#region Vars
+	public int SportsCarMin = 30;
+	public int TruckMin = 40;
+	public int BusMin = 45;
+	public int SpecialMin = 49;
+	public int MaxSpawnNum = 50;
+
+
+
 	Queue<VehicleSettings> curWaveQueue;
 	[SerializeField]
 	WaveData curWaveData;
@@ -66,27 +74,27 @@ public class WaveMaster : Singleton<WaveMaster>
 		int amount =  rand.Next(10, 10 + Mathf.RoundToInt( 10 * diff));
 		for( int i = 0; i < amount; i++ )
 		{
-			int gen = rand.Next(50);
+			int gen = rand.Next(MaxSpawnNum);
 
-			if( gen > 30 && gen <= 40 )
+			if( gen > SportsCarMin && gen <= TruckMin )
 			{
 				//Sports Car
 				curWaveData.AddType(VehicleTypes.SportsCar);
 				curWaveQueue.Enqueue(SpawnerMaster.Instance.cars.SportsCars[Random.Range(0, SpawnerMaster.Instance.cars.SportsCars.Count)]);
 			}
-			else if( gen > 40 && gen <= 45 )
+			else if( gen > TruckMin && gen <= BusMin )
 			{
 				//Truck
 				curWaveData.AddType(VehicleTypes.Truck);
 				curWaveQueue.Enqueue(SpawnerMaster.Instance.cars.Trucks[Random.Range(0, SpawnerMaster.Instance.cars.Trucks.Count)]);
 			}
-			else if( gen > 45 && gen < 49 )
+			else if( gen > BusMin && gen < SpecialMin )
 			{
 				//Bus
 				curWaveData.AddType(VehicleTypes.Bus);
 				curWaveQueue.Enqueue(SpawnerMaster.Instance.cars.Buses[Random.Range(0, SpawnerMaster.Instance.cars.Buses.Count)]);
 			}
-			else if( gen == 49 || gen == 50 )
+			else if( gen > SpecialMin )
 			{
 				//Emergancy Vehicle
 				curWaveData.AddType(VehicleTypes.Special);

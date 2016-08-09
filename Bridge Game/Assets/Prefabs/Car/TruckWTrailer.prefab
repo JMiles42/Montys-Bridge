@@ -31,6 +31,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &104928
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 423658}
+  - 108: {fileID: 10866832}
+  m_Layer: 0
+  m_Name: R_L_Brake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &107944
 GameObject:
   m_ObjectHideFlags: 1
@@ -42,6 +58,22 @@ GameObject:
   m_Layer: 0
   m_Name: fCrate
   m_TagString: vehicle
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &108886
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 420446}
+  - 108: {fileID: 10889090}
+  m_Layer: 0
+  m_Name: R_R_Brake
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,6 +324,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &194824
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 410132}
+  - 114: {fileID: 11476250}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &198580
 GameObject:
   m_ObjectHideFlags: 1
@@ -315,7 +363,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -140.19809, y: 0.45249942, z: 13.0897455}
+  m_LocalPosition: {x: -3.4164815, y: 0.12650287, z: 366.05136}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 447746}
@@ -346,6 +394,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 486590}
   m_RootOrder: 0
+--- !u!4 &410132
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 420446}
+  - {fileID: 423658}
+  m_Father: {fileID: 460698}
+  m_RootOrder: 2
 --- !u!4 &410342
 Transform:
   m_ObjectHideFlags: 1
@@ -371,6 +433,30 @@ Transform:
   - {fileID: 460698}
   m_Father: {fileID: 404084}
   m_RootOrder: 0
+--- !u!4 &420446
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108886}
+  m_LocalRotation: {x: -0.00017401321, y: 0.7071056, z: 0.00017154437, w: 0.70710796}
+  m_LocalPosition: {x: -19.35, y: -0.84, z: -1.49}
+  m_LocalScale: {x: 1.1111106, y: 1.1111107, z: 1.1111106}
+  m_Children: []
+  m_Father: {fileID: 410132}
+  m_RootOrder: 0
+--- !u!4 &423658
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104928}
+  m_LocalRotation: {x: -0.00017401321, y: 0.7071056, z: 0.00017154437, w: 0.70710796}
+  m_LocalPosition: {x: -19.35, y: -0.84, z: 1.71}
+  m_LocalScale: {x: 1.1111106, y: 1.1111107, z: 1.1111106}
+  m_Children: []
+  m_Father: {fileID: 410132}
+  m_RootOrder: 1
 --- !u!4 &426966
 Transform:
   m_ObjectHideFlags: 1
@@ -458,6 +544,7 @@ Transform:
   m_Children:
   - {fileID: 498282}
   - {fileID: 475174}
+  - {fileID: 410132}
   m_Father: {fileID: 418170}
   m_RootOrder: 0
 --- !u!4 &469352
@@ -516,7 +603,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142004}
-  m_LocalRotation: {x: 0, y: -0.7071066, z: 0, w: -0.70710695}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 5.3199997, y: -0.42, z: 0}
   m_LocalScale: {x: 1.1111113, y: 1.1111112, z: 1.1111113}
   m_Children:
@@ -773,7 +860,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000000050136717, y: -0.000000007150826, z: -0.0000000035797725}
+  m_ConnectedAnchor: {x: 2.8455197e-10, y: -0.000000016688716, z: -0.0000000012002462}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -805,7 +892,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.21824783, y: -1.0860605, z: 0.0000030590163}
+  m_ConnectedAnchor: {x: -0.21824688, y: -1.0860609, z: 0.0000035888395}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -837,7 +924,7 @@ HingeJoint:
   m_Anchor: {x: -3.94, y: 1.76, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000004736368, y: -0.000080220685, z: -0.00000004276806}
+  m_ConnectedAnchor: {x: 5.6119637e-10, y: -0.00008003949, z: -0.000000040295348}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1009,7 +1096,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.5
   m_Range: 10
-  m_SpotAngle: 30
+  m_SpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -1075,7 +1162,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.5
   m_Range: 10
-  m_SpotAngle: 30
+  m_SpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -1129,12 +1216,78 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!108 &10866832
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104928}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 0.5
+  m_Range: 2
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!108 &10888596
 Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184960}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 0.5
+  m_Range: 2
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
+--- !u!108 &10889090
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108886}
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
@@ -1242,6 +1395,7 @@ MonoBehaviour:
   m_RigidBody: {fileID: 5421176}
   hit: 0
   force: 3000
+  lights: {fileID: 11476250}
 --- !u!114 &11473430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1264,6 +1418,20 @@ MonoBehaviour:
   tray: {fileID: 0}
   Trailer: {fileID: 5421176}
   Hinge: {fileID: 5464668}
+--- !u!114 &11476250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5c92f59b27a4243a2cc697f2904e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_headlightsOn: 1
+  R_R_Light: {fileID: 10889090}
+  R_L_Light: {fileID: 10866832}
 --- !u!114 &11494858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1275,7 +1443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d466306e5983c80478ead8965dd46651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_headlightsOn: 0
+  m_headlightsOn: 1
   R_R_Light: {fileID: 10888596}
   R_L_Light: {fileID: 10852632}
   F_R_Light: {fileID: 10850500}
