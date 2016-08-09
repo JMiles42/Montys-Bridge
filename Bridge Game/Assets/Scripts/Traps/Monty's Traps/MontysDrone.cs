@@ -14,10 +14,13 @@ public class MontysDrone : PlacableTrap
 	}
 	public override void HeardTriggerStay(Collider col)
 	{
-		if( usesBeforeBreak <= 0 )
+		if (usesBeforeBreak <= 0)
+		{
+			TrapBreak();
 			return;
+		}
 		//print (col.name);
-		if( col.tag == "vehicle" )
+		if ( col.tag == "vehicle" )
 		{
 			GameObject vehicle = col.gameObject;
 			Rigidbody vehicleRB = vehicle.GetComponentInParent<Rigidbody>();

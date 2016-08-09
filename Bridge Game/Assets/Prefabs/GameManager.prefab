@@ -108,6 +108,10 @@ MonoBehaviour:
   trapIndex: 0
   display: {fileID: 0}
   grid: {fileID: 0}
+  aC_PlaceTrap: {fileID: 8300000, guid: bcdd893eda4b8724a8a5507147b3c9e2, type: 3}
+  aC_SellTrap: {fileID: 8300000, guid: f2af0fc799530c943b74733936df1be8, type: 3}
+  aC_TrapBreak: {fileID: 8300000, guid: 7bed1905fcc94734491d2c01a95a0c65, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

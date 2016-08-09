@@ -61,10 +61,13 @@ public class PlacableTrap : MonoBehaviour
 	#endregion
 	public virtual void HeardTriggerEnter(Collider col)
 	{
-		if( usesBeforeBreak <= 0 )
+		if (usesBeforeBreak <= 0)
+		{
+			TrapBreak();
 			return;
+		}
 		//print (col.name);
-		if( col.tag == "vehicle" )
+		if ( col.tag == "vehicle" )
 		{
 			anim.SetBool("CarIn", true);
 			GameObject vehicle = col.gameObject;
@@ -98,6 +101,10 @@ public class PlacableTrap : MonoBehaviour
 	{
 		//Take Cost From Scrap
 		ResetUseCount();
+	}
+	public virtual void TrapBreak()
+	{
+		TrapPlacer.Instance.PlayTrapBreak();
 	}
 	public virtual void CheatTrap()
 	{

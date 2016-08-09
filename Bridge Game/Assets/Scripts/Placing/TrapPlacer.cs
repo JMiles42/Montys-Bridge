@@ -4,6 +4,7 @@ using JMiles42;
 
 public class TrapPlacer : Singleton<TrapPlacer>
 {
+	public float m_volume;
 	public Material placable;
 	public Material unPlacable;
 	[SerializeField]
@@ -16,6 +17,10 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	GameObject display;
 	[SerializeField]
 	Grid grid;
+	public AudioClip aC_PlaceTrap;
+	public AudioClip aC_SellTrap;
+	public AudioClip aC_TrapBreak;
+	public AudioSource audioSource;
 
 	#region Events
 	void OnEnable()
@@ -115,6 +120,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 				return;
 			}
 			Trap t = TrapMaster.Instance.TrapByIndex(trapIndex);
+			audioSource.PlayOneShot(aC_PlaceTrap, m_volume);
 			ScrapMaster.Instance.AddScrap(-t.Cost);
 			grid.SpawnTrap(t);
 			grid.SetMat(GridMaster.Instance.gridNotPlacable);
@@ -228,6 +234,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 		if( grid )
 		{
 			grid.SellTrap();
+			audioSource.PlayOneShot(aC_SellTrap,m_volume);
 			EventManager.StopListening(EventStrings.PLACETRAP, SellActiveTrap);
 		}
 		else
@@ -236,4 +243,8 @@ public class TrapPlacer : Singleton<TrapPlacer>
 		}
 	}
 	#endregion
+	public void PlayTrapBreak()
+	{
+		audioSource.PlayOneShot(aC_TrapBreak);
+	}
 }
