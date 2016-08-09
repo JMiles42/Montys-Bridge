@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &145392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483700}
+  - 114: {fileID: 11474074}
+  - 114: {fileID: 11485334}
+  - 114: {fileID: 11496856}
+  - 114: {fileID: 11482140}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483700
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11474074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6157c1e8474944848b9fe8844e872483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  pauseMenu: {fileID: 0}
+--- !u!114 &11482140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d45bdc1a832de54f8629a59e3f28c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SportsCarMin: 0
+  TruckMin: 0
+  BusMin: 0
+  SpecialMin: 1
+  MaxSpawnNum: 50
+  curWaveData:
+    Car: 0
+    SportsCar: 0
+    Bus: 0
+    Truck: 0
+    Special: 0
+    Total: 0
+  prevWaveData:
+    Car: 0
+    SportsCar: 0
+    Bus: 0
+    Truck: 0
+    Special: 0
+    Total: 0
+  waveTestSize: 1
+  WaveNum: 0
+--- !u!114 &11485334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a767a7919cbc4d345a5f5d80df0ed897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaneOne: []
+  LaneTwo: []
+  LaneThree: []
+--- !u!114 &11496856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc7cdb0d97ae2649be1e596b0b9a484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placable: {fileID: 2100000, guid: c1090f44e057e8043b579a6413049435, type: 2}
+  unPlacable: {fileID: 2100000, guid: 2d6bad1e6a0ff2b42959278235854264, type: 2}
+  userPlacingTrap: 0
+  userSellingTrap: 0
+  trapIndex: 0
+  display: {fileID: 0}
+  grid: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: SportsCarMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TruckMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BusMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: SpecialMin
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 145392}
+  m_IsPrefabParent: 1
