@@ -7,7 +7,6 @@ public class ScoreMaster : Singleton<ScoreMaster>
 {
 	//public const string SCORESTRING = "Game Score\n <size=20><b>{0}</b></size>";
 	public Text scoreTxt;
-	public Text scrapTxt;
 	public int score;
 	public int multiplyer = 1;
 	public float multiplyerCooldown = 5;
@@ -24,7 +23,7 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	{
 		multiplyerCooldownMax = multiplyerCooldown;
 		score = 0;
-		agroAmount = 0.4f;
+		agroAmount = 40f;
 		DisplayScore();
 		DisplayAgro();
 		//StartCoroutine(UpdateScoreDisplay());
@@ -53,23 +52,30 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	#region Score Changing
 	public void AddScore(int _score)
 	{
-		//AddMulti(1);
+		if (!SpawnerMaster.Instance.playing)
+			return;
 		score += ScoreCalculation(multiplyer, _score);
 		DisplayScore();
 	}
 	public void AddMulti(int _multi)
 	{
+		if (!SpawnerMaster.Instance.playing)
+			return;
 		multiplyerCooldown = 0;
 		multiplyer = Mathf.Clamp(multiplyer + _multi, 1, 8);
 		DisplayScore();
 	}
 	public void SetMulti(int _multi)
 	{
+		if (!SpawnerMaster.Instance.playing)
+			return;
 		multiplyer = _multi;
 		DisplayScore();
 	}
 	public void RemoveScore(int _score)
 	{
+		if (!SpawnerMaster.Instance.playing)
+			return;
 		score -= _score;
 		DisplayScore();
 	}
@@ -81,7 +87,11 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	#region Agro
 	public void AddAgro(VehicleTypes vT)
 	{
-		agroAmount = Mathf.Clamp(agroAmount + GetAgroAmount(vT),0.0f,100.0f);
+		agroAmount = Mathf.Clamp(agroAmount + GetAgroAmount(vT), 0.0f, 100.0f);
+	}
+	public void SetAgro(int agr)
+	{
+		agroAmount = agr;
 	}
 	public void RemoveAgro(VehicleTypes vT)
 	{

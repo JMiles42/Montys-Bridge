@@ -50,6 +50,9 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 	{
 		StopSpawner();
 		EventManager.TriggerEvent(EventStrings.EXPLODEALLCARS);
+		ScoreMaster.Instance.score = 0;
+		ScoreMaster.Instance.SetMulti(1);
+		ScoreMaster.Instance.SetAgro(40);
 		playing = true;
 		EventManager.StartListening(EventStrings.STARTWAVE, StartWave);
 	}
