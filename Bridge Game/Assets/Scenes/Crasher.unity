@@ -17686,6 +17686,70 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 6434602, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440596, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466302, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459636, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457394, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450484, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6439362, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468878, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476076, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493850, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444936, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493826, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484068, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423478, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494144, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472176, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a17167d2594b82b4197f61ad28882edf, type: 2}
   m_IsPrefabParent: 0
