@@ -5,24 +5,18 @@ using JMiles42;
 
 public class ScoreMaster : Singleton<ScoreMaster>
 {
-	public const string SCORESTRING = "Game Score\n <size=20><b>{0}</b></size>";
+	//public const string SCORESTRING = "Game Score\n <size=20><b>{0}</b></size>";
 	public Text scoreTxt;
 	public int score;
 	public int multiplyer = 1;
 	public float multiplyerCooldown = 5;
 	float multiplyerCooldownMax;
 	public float updateRate = 2;
-	public float getUpdateRate
-	{
-		get
-		{
-			return updateRate / multiplyer;
-		}
-	}
 	public float showUpdateRate;
 
 	[Range(0.0f,100.0f)]
 	public float Agro;
+	public Image agroDisp;
 
 	#region Score Display
 	void Start()
@@ -31,15 +25,7 @@ public class ScoreMaster : Singleton<ScoreMaster>
 		score = 0;
 		DisplayScore();
 		//StartCoroutine(UpdateScoreDisplay());
-	}
-	IEnumerator UpdateScoreDisplay()
-	{
-		while( true )
-		{
-			showUpdateRate = getUpdateRate;
-			DisplayScore();
-			yield return WaitForTimes.GetWaitForTime(updateRate);
-		}
+		StartCoroutine(MultyplyerCooldown());
 	}
 
 	IEnumerator MultyplyerCooldown()
@@ -58,7 +44,7 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	}
 	public void DisplayScore()
 	{
-		scoreTxt.text = string.Format(SCORESTRING, score);
+		scoreTxt.text = score.ToString(); ; //string.Format(SCORESTRING, score);
 	}
 	#endregion
 	#region Score Changing
@@ -72,14 +58,17 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	{
 		multiplyerCooldown = 0;
 		multiplyer = Mathf.Clamp(multiplyer + _multi, 1, 8);
+		DisplayScore();
 	}
 	public void SetMulti(int _multi)
 	{
 		multiplyer = _multi;
+		DisplayScore();
 	}
 	public void RemoveScore(int _score)
 	{
 		score -= _score;
+		DisplayScore();
 	}
 	int ScoreCalculation(int _multi, int _score)
 	{
@@ -112,6 +101,11 @@ public class ScoreMaster : Singleton<ScoreMaster>
 			default:
 			return 1;
 		}
+	}
+	public void DisplayAgro()
+	{
+		agroDisp.fillAmount = Agro / 100.0f;
+		agroDisp.color = Color.Lerp(Color.green, Color.red, (Agro / 100.0f));
 	}
 	#endregion
 }

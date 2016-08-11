@@ -27,7 +27,6 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 	void OnEnable()
 	{
 		EventManager.StartListening(EventStrings.STARTSPAWNER, StartEndless);
-		EventManager.StartListening(EventStrings.STARTWAVE, StartWave);
 		EventManager.StartListening(EventStrings.STOPSPAWNER, StopSpawner);
 	}
 	void OnDisable()
@@ -46,6 +45,13 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 		SetSeed(RandomStrings.GetRandomAltString(4));
 		//SimpleAnalitics.RegisterSeed(seed);
 		rand = new System.Random(seed.GetHashCode());
+	}
+	public void StartPlaying()
+	{
+		StopSpawner();
+		EventManager.TriggerEvent(EventStrings.EXPLODEALLCARS);
+		playing = true;
+		EventManager.StartListening(EventStrings.STARTWAVE, StartWave);
 	}
 	//void FixedUpdate()
 	//{
