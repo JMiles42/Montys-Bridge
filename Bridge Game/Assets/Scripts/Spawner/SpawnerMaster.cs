@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using JMiles42.Maths.Rand;
+using JMiles42;
 
-public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
+public class SpawnerMaster : Singleton<SpawnerMaster>
 {
 	public SpawnPoint[] m_spawnPoints;
 	public VehicleSettingsMaster cars;
@@ -12,6 +13,8 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	public bool endless;
 	public UnityEngine.UI.InputField seedTxt;
 	System.Random rand;
+	public bool playing = false;
+	public bool isPaused;
 	int GetRandomLane
 	{
 		get
@@ -34,19 +37,23 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 		EventManager.StopListening(EventStrings.STOPSPAWNER, StopSpawner);
 	}
 	#endregion
+	void Start()
+	{
+		StartEndless();
+	}
 	void Awake()
 	{
-		SetSeed(RandomStrings.GetRandomAltString(8));
+		SetSeed(RandomStrings.GetRandomAltString(4));
 		//SimpleAnalitics.RegisterSeed(seed);
 		rand = new System.Random(seed.GetHashCode());
 	}
-	void FixedUpdate()
-	{
-		for( int i = 0; i < m_spawnPoints.Length; i++ )
-		{
-			m_spawnPoints[i].CanSpawn();
-		}
-	}
+	//void FixedUpdate()
+	//{
+	//	for (int i = 0; i < m_spawnPoints.Length; i++)
+	//	{
+	//		m_spawnPoints[i].CanSpawn();
+	//	}
+	//}
 	public int GetNumber(int min, int max)
 	{
 		return rand.Next(min, max);
@@ -58,7 +65,7 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	}
 	public void StartSpawner()
 	{
-		if( endless )
+		if (endless)
 		{
 			spawning = true;
 			GridMaster.Instance.HideGrid();
@@ -74,14 +81,15 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	}
 	IEnumerator SpawnUnitEndless()
 	{
-		while( spawning )
+		while (spawning)
 		{
+			PhysCheckLane();
 			GameObject g = Instantiate(cars.GetAVehicle().Prefab);
 			int lane = CheckLane(GetRandomLane);
 
-			if( g.GetComponent<VehiclesMoter>() )
+			if (g.GetComponent<VehiclesMoter>())
 				g.GetComponent<VehiclesMoter>().IsDriving = true;
-			else if( g.GetComponentInChildren<VehiclesMoter>() )
+			else if (g.GetComponentInChildren<VehiclesMoter>())
 				g.GetComponentInChildren<VehiclesMoter>().IsDriving = true;
 			g.transform.position = m_spawnPoints[lane].Location;
 			yield return WaitForTimes.GetWaitForTime(spawnTime);
@@ -94,9 +102,10 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	}
 	IEnumerator SpawnUnitWave()
 	{
-		while( spawning )
+		while (spawning)
 		{
-			if( !WaveMaster.Instance.StillWave() )
+			PhysCheckLane();
+			if (!WaveMaster.Instance.StillWave())
 			{
 				spawning = false;
 				EventManager.TriggerEvent(EventStrings.WAVEOVER);
@@ -106,38 +115,45 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 			GameObject g = Instantiate(WaveMaster.Instance.NextVehicle().Prefab);
 			int lane = CheckLane(GetRandomLane);
 
-			if( g.GetComponent<VehiclesMoter>() )
+			if (g.GetComponent<VehiclesMoter>())
 				g.GetComponent<VehiclesMoter>().IsDriving = true;
-			else if( g.GetComponentInChildren<VehiclesMoter>() )
+			else if (g.GetComponentInChildren<VehiclesMoter>())
 				g.GetComponentInChildren<VehiclesMoter>().IsDriving = true;
 			g.transform.position = m_spawnPoints[lane].Location;
 			yield return WaitForTimes.GetWaitForTime(spawnTime);
 		}
 		yield break;
 	}
+	void PhysCheckLane()
+	{
+		for (int i = 0; i < m_spawnPoints.Length; i++)
+		{
+			m_spawnPoints[i].CanSpawn();
+		}
+	}
 	int CheckLane(int l)
 	{
-		if( m_spawnPoints[l].Spawnable )
+		if (m_spawnPoints[l].Spawnable)
 			return l;
-		switch( l )
+		switch (l)
 		{
 			case 0:
-			l = RandomTwoInts(RandomBools.RandomBool(),1,2);
-			break;
+				l = RandomTwoInts(RandomBools.RandomBool(), 1, 2);
+				break;
 			case 1:
-			l = RandomTwoInts(RandomBools.RandomBool(), 0, 2);
-			break;
+				l = RandomTwoInts(RandomBools.RandomBool(), 0, 2);
+				break;
 			case 2:
-			l = RandomTwoInts(RandomBools.RandomBool(), 0, 1);
-			break;
+				l = RandomTwoInts(RandomBools.RandomBool(), 0, 1);
+				break;
 			default:
-			break;
+				break;
 		}
 		return l;
 	}
 	int RandomTwoInts(bool b, int a, int c)
 	{
-		if( b ) return a;
+		if (b) return a;
 		else return c;
 	}
 	void StopSpawner()
@@ -154,6 +170,6 @@ public class SpawnerMaster : JMiles42.Singleton<SpawnerMaster>
 	public void SetSeed(string s)
 	{
 		seed = s;
-		seedTxt.text = s;
+		//seedTxt.text = s;
 	}
 }

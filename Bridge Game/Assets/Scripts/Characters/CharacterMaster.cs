@@ -12,10 +12,10 @@ public class CharacterMaster : Singleton<CharacterMaster>
 	{
 		characterIndex = index;
 	}
-	public Texture2D GetPortrat()
-	{
-		return charHolder.m_Characters[characterIndex].Portrat;
-	}
+	//public Texture2D GetPortrat()
+	//{
+	//	return charHolder.m_Characters[characterIndex].Portrat;
+	//}
 	public string GetName()
 	{
 		return charHolder.m_Characters[characterIndex].Name;

@@ -5,8 +5,8 @@ using System.Collections;
 public class Character : ScriptableObject
 {
 	public string Name;
-	public Texture2D Portrat;
-	public GameObject CaracterObj;
+	//public Texture2D Portrat;
+	//public GameObject CaracterObj;
 	public Trap Trap1;
 	public Trap Trap2;
 	public Trap Trap3;
