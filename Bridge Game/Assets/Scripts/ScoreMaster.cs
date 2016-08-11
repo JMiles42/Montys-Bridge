@@ -7,6 +7,7 @@ public class ScoreMaster : Singleton<ScoreMaster>
 {
 	//public const string SCORESTRING = "Game Score\n <size=20><b>{0}</b></size>";
 	public Text scoreTxt;
+	public Text scrapTxt;
 	public int score;
 	public int multiplyer = 1;
 	public float multiplyerCooldown = 5;
@@ -15,7 +16,7 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	public float showUpdateRate;
 
 	[Range(0.0f,100.0f)]
-	public float Agro;
+	public float agroAmount;
 	public Image agroDisp;
 
 	#region Score Display
@@ -23,7 +24,9 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	{
 		multiplyerCooldownMax = multiplyerCooldown;
 		score = 0;
+		agroAmount = 0.4f;
 		DisplayScore();
+		DisplayAgro();
 		//StartCoroutine(UpdateScoreDisplay());
 		StartCoroutine(MultyplyerCooldown());
 	}
@@ -78,11 +81,11 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	#region Agro
 	public void AddAgro(VehicleTypes vT)
 	{
-		Agro = Mathf.Clamp(Agro + GetAgroAmount(vT),0.0f,100.0f);
+		agroAmount = Mathf.Clamp(agroAmount + GetAgroAmount(vT),0.0f,100.0f);
 	}
 	public void RemoveAgro(VehicleTypes vT)
 	{
-		Agro = Mathf.Clamp(Agro - GetAgroAmount(vT), 0.0f, 100.0f);
+		agroAmount = Mathf.Clamp(agroAmount - GetAgroAmount(vT), 0.0f, 100.0f);
 	}
 	public float GetAgroAmount(VehicleTypes vT)
 	{
@@ -104,8 +107,8 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	}
 	public void DisplayAgro()
 	{
-		agroDisp.fillAmount = Agro / 100.0f;
-		agroDisp.color = Color.Lerp(Color.green, Color.red, (Agro / 100.0f));
+		agroDisp.fillAmount = agroAmount / 100.0f;
+		agroDisp.color = Color.Lerp(Color.green, Color.red, (agroAmount / 100.0f));
 	}
 	#endregion
 }
