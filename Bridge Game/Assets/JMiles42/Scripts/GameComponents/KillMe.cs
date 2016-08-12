@@ -1,5 +1,5 @@
 using UnityEngine;
-public class DestroyAfterTime : MonoBehaviour
+public class KillMe : MonoBehaviour
 {
 	public float lifeTime = 10f;//My lifetime
 	void Start ()

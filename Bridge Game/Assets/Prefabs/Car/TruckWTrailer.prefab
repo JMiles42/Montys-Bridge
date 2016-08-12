@@ -24,6 +24,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401422}
+  - 114: {fileID: 11409996}
   m_Layer: 0
   m_Name: TruckWTrailer
   m_TagString: vehicle
@@ -1348,6 +1349,18 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11409996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d8307e885c5414382d2f15f36b17b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 60
 --- !u!114 &11419402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1484,6 +1497,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: IsDriving
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: lifeTime
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

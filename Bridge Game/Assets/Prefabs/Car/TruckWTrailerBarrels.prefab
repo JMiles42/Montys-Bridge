@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 488830}
+  - 114: {fileID: 11463478}
   m_Layer: 0
   m_Name: TruckWTrailerBarrels
   m_TagString: vehicle
@@ -1344,6 +1345,18 @@ MonoBehaviour:
   hit: 0
   force: 3000
   lights: {fileID: 11465474}
+--- !u!114 &11463478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d8307e885c5414382d2f15f36b17b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 60
 --- !u!114 &11465474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1664,7 +1677,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: lifeTime
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 101412}

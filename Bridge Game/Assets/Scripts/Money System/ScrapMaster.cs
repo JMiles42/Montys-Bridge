@@ -14,8 +14,8 @@ public class ScrapMaster : Singleton<ScrapMaster>
 	public void Start()
 	{
 		//SavingLoading.SaveGameData("GameData",gamData);
-		gamData = new GameData();
-		SavingLoading.LoadGameData("GameData",out gamData);
+		//gamData = new GameData();
+		//SavingLoading.LoadGameData("GameData",out gamData);
 		//print(gamData.HasScrapToConvert());
 		DisplayScrap();
 	}

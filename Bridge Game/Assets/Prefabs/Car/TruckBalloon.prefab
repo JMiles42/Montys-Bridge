@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401422}
+  - 114: {fileID: 11423652}
   m_Layer: 0
   m_Name: TruckBalloon
   m_TagString: vehicle
@@ -1268,6 +1269,18 @@ MonoBehaviour:
   hit: 0
   joint: {fileID: 13826324}
   explosionPoint: {fileID: 0}
+--- !u!114 &11423652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d8307e885c5414382d2f15f36b17b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 60
 --- !u!114 &11424224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1374,6 +1387,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: IsDriving
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: lifeTime
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
