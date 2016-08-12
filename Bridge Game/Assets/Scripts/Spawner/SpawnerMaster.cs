@@ -55,6 +55,7 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 		ScoreMaster.Instance.SetAgro(40);
 		playing = true;
 		EventManager.StartListening(EventStrings.STARTWAVE, StartWave);
+		UI_ManagerScriptV1.Instance.InGameMenu();
 	}
 	//void FixedUpdate()
 	//{
