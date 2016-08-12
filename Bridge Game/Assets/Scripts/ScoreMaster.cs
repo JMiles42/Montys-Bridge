@@ -89,6 +89,10 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	{
 		agroAmount = Mathf.Clamp(agroAmount + GetAgroAmount(vT), 0.0f, 100.0f);
 	}
+	public void AddAgro(int value)
+	{
+		agroAmount = Mathf.Clamp(agroAmount + value, 0.0f, 100.0f);
+	}
 	public void SetAgro(int agr)
 	{
 		agroAmount = agr;

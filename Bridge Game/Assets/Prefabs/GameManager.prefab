@@ -60,6 +60,7 @@ MonoBehaviour:
   BusMin: 45
   SpecialMin: 49
   MaxSpawnNum: 50
+  waveDisp: {fileID: 0}
   curWaveData:
     Car: 0
     SportsCar: 0

@@ -31,14 +31,14 @@ public class GridMaster : Singleton<GridMaster>
 
 	public void Start()
 	{
-		m_lane1.localEulerAngles = (Vector3.zero);
-		m_lane2.localEulerAngles = (Vector3.zero);
-		m_lane3.localEulerAngles = (Vector3.zero);
-
-
-		m_lane1.localEulerAngles = (Vector3.right * 90);
-		m_lane2.localEulerAngles = (Vector3.right * 90);
-		m_lane3.localEulerAngles = (Vector3.right * 90);
+	//	m_lane1.localEulerAngles = (Vector3.zero);
+	//	m_lane2.localEulerAngles = (Vector3.zero);
+	//	m_lane3.localEulerAngles = (Vector3.zero);
+	//
+	//
+	//	m_lane1.localEulerAngles = (Vector3.right * 90);
+	//	m_lane2.localEulerAngles = (Vector3.right * 90);
+	//	m_lane3.localEulerAngles = (Vector3.right * 90);
 	}
 	public void ToggleGrid()
 	{

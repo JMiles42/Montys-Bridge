@@ -36,6 +36,11 @@ public class Bridge : Singleton<Bridge>
 				vM.hitBridge = true;
 			}
 		}
+		else if (col.gameObject.GetComponent<PhysicalObject>())
+		{
+			PhysicalObject pO = GetComponent<PhysicalObject>();
+			ScoreMaster.Instance.AddAgro(1);
+		}
 	}
 	public void HeardCollisionStay(Collision col)
 	{

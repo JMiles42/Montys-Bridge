@@ -141,6 +141,7 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 	}
 	public void Trap(int index)
 	{
+		EventManager.TriggerEvent(EventStrings.SHOWGRID);
 		switch( index )
 		{
 			case 1:

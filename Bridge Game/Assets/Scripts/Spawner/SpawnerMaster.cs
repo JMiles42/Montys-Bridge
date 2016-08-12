@@ -161,7 +161,7 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 		}
 		return l;
 	}
-	int RandomTwoInts(bool b, int a, int c)
+	public static int RandomTwoInts(bool b, int a, int c)
 	{
 		if (b) return a;
 		else return c;
@@ -171,7 +171,7 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 		spawning = false;
 		StopCoroutine(SpawnUnitEndless());
 		StopCoroutine(SpawnUnitWave());
-		GridMaster.Instance.ShowGrid();
+		//GridMaster.Instance.ShowGrid();
 	}
 	public void SetSeed()
 	{

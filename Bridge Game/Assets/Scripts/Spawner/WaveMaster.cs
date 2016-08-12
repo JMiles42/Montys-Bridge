@@ -1,5 +1,5 @@
 using UnityEngine;
-//using UnityEngine.UI;
+using UnityEngine.UI;
 //using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ public class WaveMaster : Singleton<WaveMaster>
 	public int BusMin = 45;
 	public int SpecialMin = 49;
 	public int MaxSpawnNum = 50;
-
+	public Text waveDisp;
 
 
 	Queue<VehicleSettings> curWaveQueue;
@@ -44,11 +44,13 @@ public class WaveMaster : Singleton<WaveMaster>
 	{
 		rand = new System.Random(SpawnerMaster.Instance.seed.GetHashCode());
 		GenerateWave(waveTestSize);
+		UpdateText();
 		prevWaveData = curWaveData;
 	}
 	[ContextMenu("Next Wave")]
 	public void NextWave()
 	{
+		UpdateText();
 		WaveNum++;
 		GenerateWave(WaveNum);
 	}
@@ -61,6 +63,10 @@ public class WaveMaster : Singleton<WaveMaster>
 		if( curWaveQueue.Count == 0 )
 			return false;
 		else return true;
+	}
+	public void UpdateText()
+	{
+		waveDisp.text = WaveNum.ToString("Wave : 0");
 	}
 	public void GenWave()
 	{
@@ -108,14 +114,14 @@ public class WaveMaster : Singleton<WaveMaster>
 			}
 		}
 	}
-	public void QueueWave()
-	{
-		curWaveQueue.Clear();
-		for( int i = 4; i >= 0; i-- )
-		{
-			
-		}
-	}
+	//public void QueueWave()
+	//{
+	//	curWaveQueue.Clear();
+	//	for( int i = 4; i >= 0; i-- )
+	//	{
+	//		
+	//	}
+	//}
 }
 [System.Serializable]
 public class WaveData 

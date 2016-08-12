@@ -125,10 +125,10 @@ public class TrapPlacer : Singleton<TrapPlacer>
 			grid.SpawnTrap(t);
 			grid.SetMat(GridMaster.Instance.gridNotPlacable);
 			Destroy(display);
-			GridMaster.Instance.HideGrid();
 			StartTraps();
 			EndTrap();
 			EventManager.StopListening(EventStrings.PLACETRAP, PlaceDownTrap);
+			EventManager.TriggerEvent(EventStrings.HIDEGRID);
 		}
 		else
 		{

@@ -10,9 +10,13 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
 	public GameObject TrapBar;
 	public GameObject trapHidePos;
 	public GameObject trapShowPos;
+	public GameObject HintBar;
+	public GameObject hintHidePos;
+	public GameObject hintShowPos;
 	public bool Resetwave = false; //This is for later use in resetting the waves.
 
 	public bool IsTrapsOpen = false;
+	public bool IsHintOpen = true;
 
 
 	#region Events
@@ -38,6 +42,9 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
 		MainMenu.gameObject.SetActive(true);
 
 		TrapBar.transform.position = trapHidePos.transform.position;
+		HintMenu();
+		TrapsMenu();
+		TrapsMenu();
 	}
 
 	//this is the controller for the main menu you see when you first load the game.
@@ -105,5 +112,19 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
 			//Debug.Log("traps closed");
 		}
 		IsTrapsOpen = !IsTrapsOpen;
+	}
+	public void HintMenu()
+	{
+		if (IsHintOpen)
+		{
+			HintBar.transform.position = hintShowPos.transform.position;
+			//Debug.Log("traps open");
+		}
+		else
+		{
+			HintBar.transform.position = hintHidePos.transform.position;
+			//Debug.Log("traps closed");
+		}
+		IsHintOpen = !IsHintOpen;
 	}
 }

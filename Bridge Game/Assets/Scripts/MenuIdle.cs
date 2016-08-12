@@ -48,7 +48,7 @@ public class MenuIdle : Singleton<MenuIdle>
 				Time.timeScale = 1;
 				yield break;
 			}
-			Time.timeScale = (Mathf.Clamp((Time.timeScale + Time.deltaTime/50),1f,7f));
+			Time.timeScale = (Mathf.Clamp((Time.timeScale + Time.deltaTime/50),1f,10f));
 			PlayerInputManager.Instance.Horizontal = 0.3f;
 			yield return null;
 		}
