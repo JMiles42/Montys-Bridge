@@ -27,6 +27,7 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
 	void Start()
     {
         //setting the required UIs on and off.
+
         //PauseMenu = PauseMenu.GetComponent<Canvas>();
         PauseMenu.gameObject.SetActive(false);
         //Gameplay_UI = Gameplay_UI.GetComponent<Canvas>();
