@@ -72,7 +72,7 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
 	//this is the controller to open/close the traps menu
 	public void TrapsMenu()
     {
-       if (IsTrapsOpen == false)
+       if (!IsTrapsOpen)
        {
             Vector3 t = TrapBar.gameObject.transform.position;
             t.Set(t.x - 2, t.y, t.z);
@@ -90,4 +90,3 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
         }
     }
 }
-//transform.Translate (Vector3.forward* speed);
