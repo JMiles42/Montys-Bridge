@@ -129,6 +129,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 			EndTrap();
 			EventManager.StopListening(EventStrings.PLACETRAP, PlaceDownTrap);
 			EventManager.TriggerEvent(EventStrings.HIDEGRID);
+			EventManager.TriggerEvent(EventStrings.TOGGLEBRIDGEMID);
 		}
 		else
 		{
