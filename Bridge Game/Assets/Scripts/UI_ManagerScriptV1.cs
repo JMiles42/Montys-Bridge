@@ -127,4 +127,8 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
 		}
 		IsHintOpen = !IsHintOpen;
 	}
+	public void Go()
+	{
+		EventManager.TriggerEvent(EventStrings.STARTWAVE);
+	}
 }

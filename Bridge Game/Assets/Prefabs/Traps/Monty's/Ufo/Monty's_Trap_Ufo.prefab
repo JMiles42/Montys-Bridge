@@ -29,6 +29,7 @@ GameObject:
   - 4: {fileID: 483374}
   - 33: {fileID: 3330638}
   - 23: {fileID: 2376190}
+  - 64: {fileID: 6475956}
   m_Layer: 0
   m_Name: UFO_Body
   m_TagString: Untagged
@@ -92,7 +93,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 35, z: 0}
+  m_LocalPosition: {x: 0, y: 25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 483374}
@@ -230,6 +231,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!64 &6475956
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 2637b4963ad40da40afcb9b8bb6d0a0b, type: 3}
 --- !u!65 &6587284
 BoxCollider:
   m_ObjectHideFlags: 1
