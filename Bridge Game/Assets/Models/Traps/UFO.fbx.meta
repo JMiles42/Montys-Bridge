@@ -1,36 +1,17 @@
 fileFormatVersion: 2
-guid: f1146101a5f107d45a5cb95c2865fc02
-timeCreated: 1466499406
-licenseType: Free
+guid: 2637b4963ad40da40afcb9b8bb6d0a0b
+timeCreated: 1470977558
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Wheel01
-    100004: Wheel02
-    100006: Wheel03
-    100008: Wheel04
+    100002: UFO_Body
     400000: //RootNode
-    400002: Wheel01
-    400004: Wheel02
-    400006: Wheel03
-    400008: Wheel04
-    2300000: //RootNode
-    2300002: Wheel01
-    2300004: Wheel02
-    2300006: Wheel03
-    2300008: Wheel04
-    3300000: //RootNode
-    3300002: Wheel01
-    3300004: Wheel02
-    3300006: Wheel03
-    3300008: Wheel04
-    4300000: Car_Normal
-    4300002: Wheel01
-    4300004: Wheel02
-    4300006: Wheel03
-    4300008: Wheel04
-    9500000: //RootNode
+    400002: UFO_Body
+    2300000: UFO_Body
+    3300000: UFO_Body
+    4300000: UFO_Body
   materials:
     importMaterials: 1
     materialName: 0
@@ -55,7 +36,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 50
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

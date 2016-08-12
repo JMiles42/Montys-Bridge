@@ -213,7 +213,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.28, z: -1.22}
+  m_LocalPosition: {x: 0, y: 3.28, z: -10.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 470638}
@@ -237,7 +237,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.28, z: -1.2200012}
+  m_LocalPosition: {x: 0, y: 3.28, z: -10.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 458004}
@@ -249,7 +249,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.28, z: -1.2200012}
+  m_LocalPosition: {x: 0, y: 3.28, z: -10.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496298}
@@ -344,11 +344,13 @@ MonoBehaviour:
   - {fileID: 11450616}
   - {fileID: 11423456}
   cars: {fileID: 11400000, guid: 2b7aa14c7b3f13d4885722942c615a18, type: 2}
-  spawnTime: 1.5
+  spawnTime: 1
   seed: Seed
   spawning: 0
   endless: 0
   seedTxt: {fileID: 0}
+  playing: 0
+  isPaused: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

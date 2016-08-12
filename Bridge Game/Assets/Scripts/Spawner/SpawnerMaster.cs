@@ -75,6 +75,8 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 	}
 	public void StartSpawner()
 	{
+		if (spawning)
+			return;
 		if (endless)
 		{
 			spawning = true;

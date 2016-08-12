@@ -47,26 +47,26 @@ public class ScrapMaster : Singleton<ScrapMaster>
 public class GameData
 {
 	public int Scrap;
-	public int Pistons;
+	//public int Pistons;
 	public bool[] CharactersOwned;
 
 	public GameData()
 	{
 		Scrap = 500;
-		Pistons = 5000;
+		//Pistons = 5000;
 		CharactersOwned = new bool[1];
 		CharactersOwned[0] = true;
 	}
-	public bool HasScrapToConvert()
-	{
-		return Scrap > 50 ? true : false;
-	}
-	public void ConvertScrap()
-	{
-		if( HasScrapToConvert() )
-		{
-			Scrap -= 50;
-			Pistons += 1;
-		}
-	}
+	//public bool HasScrapToConvert()
+	//{
+	//	return Scrap > 50 ? true : false;
+	//}
+	//public void ConvertScrap()
+	//{
+	//	if( HasScrapToConvert() )
+	//	{
+	//		Scrap -= 50;
+	//		//Pistons += 1;
+	//	}
+	//}
 }

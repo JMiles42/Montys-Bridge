@@ -36,6 +36,28 @@ public class Bridge : Singleton<Bridge>
 				vM.hitBridge = true;
 			}
 		}
+		else if (col.gameObject.GetComponentInChildren<VehiclesMoter>())
+		{
+			VehiclesMoter vM = col.gameObject.GetComponent<VehiclesMoter>();
+			if (vM.hitBridge)
+				return;
+			else
+			{
+				ScoreMaster.Instance.AddAgro(vM.VehicleSize);
+				vM.hitBridge = true;
+			}
+		}
+		else if (col.gameObject.GetComponentInParent<VehiclesMoter>())
+		{
+			VehiclesMoter vM = col.gameObject.GetComponent<VehiclesMoter>();
+			if (vM.hitBridge)
+				return;
+			else
+			{
+				ScoreMaster.Instance.AddAgro(vM.VehicleSize);
+				vM.hitBridge = true;
+			}
+		}
 		else if (col.gameObject.GetComponent<PhysicalObject>())
 		{
 			PhysicalObject pO = GetComponent<PhysicalObject>();
