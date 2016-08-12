@@ -114,6 +114,7 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 	}
 	IEnumerator SpawnUnitWave()
 	{
+		EventManager.StopListening(EventStrings.STARTWAVE, StartWave);
 		while (spawning)
 		{
 			PhysCheckLane();
@@ -171,6 +172,8 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 	void StopSpawner()
 	{
 		spawning = false;
+		EventManager.StopListening(EventStrings.STARTWAVE, StartWave);
+		EventManager.StartListening(EventStrings.STARTWAVE, StartWave);
 		StopCoroutine(SpawnUnitEndless());
 		StopCoroutine(SpawnUnitWave());
 		//GridMaster.Instance.ShowGrid();
