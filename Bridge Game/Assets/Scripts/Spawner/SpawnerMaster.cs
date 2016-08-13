@@ -50,9 +50,11 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 	{
 		StopSpawner();
 		EventManager.TriggerEvent(EventStrings.EXPLODEALLCARS);
+		EventManager.TriggerEvent(EventStrings.REMOVETRAPS);
 		ScoreMaster.Instance.score = 0;
 		ScoreMaster.Instance.SetMulti(1);
 		ScoreMaster.Instance.SetAgro(40);
+		ScrapMaster.Instance.gamData.Scrap = 200;
 		playing = true;
 		EventManager.StartListening(EventStrings.STARTWAVE, StartWave);
 		UI_ManagerScriptV1.Instance.InGameMenu();
@@ -186,5 +188,9 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 	{
 		seed = s;
 		//seedTxt.text = s;
+	}
+	public void QuitGame()
+	{
+		Application.Quit();
 	}
 }

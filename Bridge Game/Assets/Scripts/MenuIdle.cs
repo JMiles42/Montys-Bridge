@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 //using UnityEngine.UI;
 //using UnityEngine.SceneManagement;
 using System.Collections;
@@ -48,6 +48,7 @@ public class MenuIdle : Singleton<MenuIdle>
 				Time.timeScale = 1;
 				yield break;
 			}
+			EventManager.TriggerEvent(EventStrings.CHEATS);
 			Time.timeScale = (Mathf.Clamp((Time.timeScale + Time.deltaTime/50),1f,10f));
 			PlayerInputManager.Instance.Horizontal = 0.3f;
 			yield return null;

@@ -28,10 +28,12 @@ public class TrapPlacer : Singleton<TrapPlacer>
 		StartTraps();
 		EventManager.StartListening(EventStrings.STARTTRAPPLACMENT, StartPlacingTrap);
 		EventManager.StartListening(EventStrings.SELLTRAP, SellTrap);
+		EventManager.StartListening(EventStrings.MOUSERIGHTDOWN, SellActiveTrap);
 	}
 	void OnDisable()
 	{
 		StopTraps();
+		EventManager.StopListening(EventStrings.MOUSERIGHTDOWN, SellActiveTrap);
 		EventManager.StopListening(EventStrings.STARTTRAPPLACMENT, PlaceDownTrap);
 		EventManager.StopListening(EventStrings.SELLTRAP, SellTrap);
 		EventManager.StopListening(EventStrings.PLACETRAP, PlaceDownTrap);
@@ -76,13 +78,13 @@ public class TrapPlacer : Singleton<TrapPlacer>
 		EventManager.StartListening(EventStrings.PLACETRAP, PlaceDownTrap);
 		EventManager.StartListening(EventStrings.ESC, EndTrap);
 		display = Instantiate(TrapMaster.Instance.TrapByIndex(trapIndex).PlaceHolderObj);
-		while( userPlacingTrap )
+		while (userPlacingTrap)
 		{
 			RaycastToGetGrid();
 
-			if( grid != null )
+			if (grid != null)
 			{
-				if( grid.HasTrap )
+				if (grid.HasTrap)
 				{
 					display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 				}
@@ -94,12 +96,12 @@ public class TrapPlacer : Singleton<TrapPlacer>
 			}
 			else
 			{
-				Ray ray = CamMovement.Instance.GetActiveCam().ScreenPointToRay (PlayerInputManager.Instance.MousePos);
+				Ray ray = CamMovement.Instance.GetActiveCam().ScreenPointToRay(PlayerInputManager.Instance.MousePos);
 				RaycastHit hit;
-				if( Physics.Raycast(ray, out hit) )
+				if (Physics.Raycast(ray, out hit))
 				{
 					display.transform.position = hit.point;
-					if( display.GetComponent<ChildrenRenderers>() )
+					if (display.GetComponent<ChildrenRenderers>())
 					{
 						display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 					}
@@ -112,9 +114,9 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	void PlaceDownTrap()
 	{
 		RaycastToGetGrid();
-		if( grid )
+		if (grid)
 		{
-			if( !grid.IsPlacable() || grid.UnderBridge && TrapMaster.Instance.TrapByIndex(trapIndex).IsAirTrap )
+			if (!grid.IsPlacable() || grid.UnderBridge && TrapMaster.Instance.TrapByIndex(trapIndex).IsAirTrap)
 			{
 				display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
 				return;
@@ -139,7 +141,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	void EndTrap()
 	{
 		userPlacingTrap = false;
-		if( display )
+		if (display)
 		{
 			Destroy(display);
 		}
@@ -150,55 +152,55 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	void PlaceTrap1()
 	{
 		trapIndex = 1;
-		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+		if (ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)))
 			StartPlacingTrap();
 	}
 	void PlaceTrap2()
 	{
 		trapIndex = 2;
-		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+		if (ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)))
 			StartPlacingTrap();
 	}
 	void PlaceTrap3()
 	{
 		trapIndex = 3;
-		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+		if (ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)))
 			StartPlacingTrap();
 	}
 	void PlaceTrap4()
 	{
 		trapIndex = 4;
-		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+		if (ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)))
 			StartPlacingTrap();
 	}
 	void PlaceTrap5()
 	{
 		trapIndex = 5;
-		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+		if (ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)))
 			StartPlacingTrap();
 	}
 	void PlaceTrap6()
 	{
 		trapIndex = 6;
-		if( ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)) )
+		if (ScrapMaster.Instance.CanBuyTrap(TrapMaster.Instance.TrapByIndex(trapIndex)))
 			StartPlacingTrap();
 	}
 	#endregion
 	void RaycastToGetGrid()
 	{
 		grid = null;
-		Ray ray = CamMovement.Instance.GetActiveCam().ScreenPointToRay (PlayerInputManager.Instance.MousePos);
+		Ray ray = CamMovement.Instance.GetActiveCam().ScreenPointToRay(PlayerInputManager.Instance.MousePos);
 		//print("Shoot");
 		RaycastHit hit;
-		if( Physics.Raycast(ray, out hit) )
+		if (Physics.Raycast(ray, out hit))
 		{
-			if( hit.transform.GetComponent<Grid>() )
+			if (hit.transform.GetComponent<Grid>())
 			{
 				grid = hit.transform.GetComponent<Grid>();
 
-				if( display )
+				if (display)
 				{
-					if( grid.IsPlacable() && !grid.UnderBridge && !TrapMaster.Instance.TrapByIndex(trapIndex).IsAirTrap )
+					if (grid.IsPlacable() && !grid.UnderBridge && !TrapMaster.Instance.TrapByIndex(trapIndex).IsAirTrap)
 						display.GetComponent<ChildrenRenderers>().SetMat(placable);
 					else
 						display.GetComponent<ChildrenRenderers>().SetMat(unPlacable);
@@ -214,15 +216,15 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	IEnumerator SellingTrap()
 	{
 		EventManager.StartListening(EventStrings.PLACETRAP, SellActiveTrap);
-		while( userSellingTrap )
+		while (userSellingTrap)
 		{
 			RaycastToGetGrid();
 
-			if( grid != null )
+			if (grid != null)
 			{
-				if( grid.HasTrap )
+				if (grid.HasTrap)
 				{
-					
+
 				}
 			}
 			yield return null;
@@ -232,15 +234,15 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	void SellActiveTrap()
 	{
 		RaycastToGetGrid();
-		if( grid )
+		if (grid)
 		{
 			grid.SellTrap();
-			audioSource.PlayOneShot(aC_SellTrap,m_volume);
+			audioSource.PlayOneShot(aC_SellTrap, m_volume);
 			EventManager.StopListening(EventStrings.PLACETRAP, SellActiveTrap);
 		}
 		else
 		{
-			
+
 		}
 	}
 	#endregion
