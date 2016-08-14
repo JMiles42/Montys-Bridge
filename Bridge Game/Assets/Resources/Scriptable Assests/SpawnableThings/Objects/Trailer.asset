@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Trailer
   m_EditorClassIdentifier: 
   Name: Trailer
-  Weight: 20
-  howMuchScrapOnDestroy: 5
+  Weight: 50
+  Score: 250
+  howMuchScrapOnDestroy: 50
   Prefab: {fileID: 0}

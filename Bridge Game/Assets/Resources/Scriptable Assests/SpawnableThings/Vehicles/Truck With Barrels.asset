@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Truck With Barrels
   m_EditorClassIdentifier: 
   Name: Truck With Barrels
-  Weight: 50
-  Score: 100
-  howMuchScrapOnDestroy: 10
+  Weight: 100
+  Score: 500
+  howMuchScrapOnDestroy: 150
   agro: 1
   size: 3
   Prefab: {fileID: 101412, guid: 0be9ffe2c1ce9404fa03164ce7b55b52, type: 2}

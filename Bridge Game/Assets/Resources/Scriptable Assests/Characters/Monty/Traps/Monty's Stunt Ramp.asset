@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Stunt Ramp
   Description: Lifts up when a Car is near.
-  Cost: 15
-  Uses: 15
+  Cost: 400
+  Uses: 20
   RepairCost: 15
-  SellCost: 15
+  SellCost: 50
   IsBlocker: 0
   IsAirTrap: 0
   TrapObj: {fileID: 184374, guid: 953501e451fe27f4ab855f9eadff2ebc, type: 2}

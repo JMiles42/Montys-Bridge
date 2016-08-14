@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ufo
   Description: Will cause cars to fly up into the air.
-  Cost: 15
-  Uses: 15
+  Cost: 1000
+  Uses: 50
   RepairCost: 15
-  SellCost: 15
+  SellCost: 125
   IsBlocker: 0
   IsAirTrap: 1
   TrapObj: {fileID: 168578, guid: f7e006de0df28824ea08db37723c528a, type: 2}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: PoliceCar
   m_EditorClassIdentifier: 
   Name: Police Car
-  Weight: 20
-  Score: 300
-  howMuchScrapOnDestroy: 100
+  Weight: 500
+  Score: 2500
+  howMuchScrapOnDestroy: 750
   agro: 2
   size: 4
   Prefab: {fileID: 189902, guid: a71927e0b66a05040aece40251e45b51, type: 2}

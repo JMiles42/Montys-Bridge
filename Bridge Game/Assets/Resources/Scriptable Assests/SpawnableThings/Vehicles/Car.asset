@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Car
   Weight: 20
-  howMuchScrapOnDestroy: 5
+  Score: 100
+  howMuchScrapOnDestroy: 30
   agro: 0
+  size: 0
   Prefab: {fileID: 143840, guid: 1e12429f3be39b3488a4c1747355e813, type: 2}
