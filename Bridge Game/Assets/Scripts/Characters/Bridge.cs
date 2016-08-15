@@ -63,6 +63,10 @@ public class Bridge : Singleton<Bridge>
 			PhysicalObject pO = GetComponent<PhysicalObject>();
 			ScoreMaster.Instance.AddAgro(1);
 		}
+		else 
+		{
+			ScoreMaster.Instance.AddAgro(1);
+		}
 	}
 	public void HeardCollisionStay(Collision col)
 	{

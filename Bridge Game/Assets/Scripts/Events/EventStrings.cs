@@ -11,6 +11,7 @@ public static class EventStrings
 	public const string WAVEOVER = "WaveOver";
 	public const string TOGGLEBRIDGEMID = "ToggleBridgeMid";
 	public const string ESC = "Esc";
+	public const string STOPTRAPPLACE = "StopTrapPlace";
 	public const string SELLTRAP = "SellTrap";
 	public const string DRIVE = "Drive";
 	public const string EXPLODEALLCARS = "ExplodeCars";

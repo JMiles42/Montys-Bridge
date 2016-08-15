@@ -88,18 +88,22 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	public void AddAgro(VehicleTypes vT)
 	{
 		agroAmount = Mathf.Clamp(agroAmount + GetAgroAmount(vT), 0.0f, 100.0f);
+		DisplayAgro();
 	}
 	public void AddAgro(int value)
 	{
 		agroAmount = Mathf.Clamp(agroAmount + value, 0.0f, 100.0f);
+		DisplayAgro();
 	}
 	public void SetAgro(int agr)
 	{
 		agroAmount = agr;
+		DisplayAgro();
 	}
 	public void RemoveAgro(VehicleTypes vT)
 	{
 		agroAmount = Mathf.Clamp(agroAmount - GetAgroAmount(vT), 0.0f, 100.0f);
+		DisplayAgro();
 	}
 	public float GetAgroAmount(VehicleTypes vT)
 	{

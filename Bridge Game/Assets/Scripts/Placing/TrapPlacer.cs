@@ -37,6 +37,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 		EventManager.StopListening(EventStrings.STARTTRAPPLACMENT, PlaceDownTrap);
 		EventManager.StopListening(EventStrings.SELLTRAP, SellTrap);
 		EventManager.StopListening(EventStrings.PLACETRAP, PlaceDownTrap);
+		EventManager.StopListening(EventStrings.STOPTRAPPLACE, EndTrap);
 	}
 	void StartTraps()
 	{
@@ -80,7 +81,7 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	IEnumerator PlacingTrap()
 	{
 		EventManager.StartListening(EventStrings.PLACETRAP, PlaceDownTrap);
-		EventManager.StartListening(EventStrings.ESC, EndTrap);
+		EventManager.StartListening(EventStrings.STOPTRAPPLACE, EndTrap);
 		display = Instantiate(TrapMaster.Instance.TrapByIndex(trapIndex).PlaceHolderObj);
 		while (userPlacingTrap)
 		{
@@ -146,12 +147,11 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	{
 		userPlacingTrap = false;
 		if (display)
-		{
 			Destroy(display);
-		}
 		display = null;
 		grid = null;
-		EventManager.StopListening(EventStrings.ESC, EndTrap);
+		EventManager.StopListening(EventStrings.PLACETRAP, PlaceDownTrap);
+		EventManager.StopListening(EventStrings.STOPTRAPPLACE, EndTrap);
 	}
 	void PlaceTrap1()
 	{
