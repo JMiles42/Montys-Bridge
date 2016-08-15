@@ -61,9 +61,12 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	public void StartPlacingTrap()
 	{
 		StopTraps();
-		GridMaster.Instance.ShowGrid();
-		userPlacingTrap = true;
-		StartCoroutine(PlacingTrap());
+		if (TrapMaster.Instance.TrapByIndex(trapIndex).CanAfford())
+		{
+			GridMaster.Instance.ShowGrid();
+			userPlacingTrap = true;
+			StartCoroutine(PlacingTrap());
+		}
 	}
 	#region PlaceDownTrap
 	[ContextMenu("PlaceTraping")]

@@ -32,13 +32,41 @@ public class WaveMaster : Singleton<WaveMaster>
 	{
 		EventManager.StartListening(EventStrings.WAVEOVER, NextWave);
 		EventManager.StartListening(EventStrings.GENWAVE, GenWave);
+
+		EventManager.StartListening(EventStrings.TIME02F, SetTime02f);
+		EventManager.StartListening(EventStrings.TIME1, SetTime1);
+		EventManager.StartListening(EventStrings.TIME10, SetTime10);
+		EventManager.StartListening(EventStrings.TIME2, SetTime2);
 	}
 	void OnDisable()
 	{
 		EventManager.StopListening(EventStrings.WAVEOVER, NextWave);
 		EventManager.StopListening(EventStrings.GENWAVE, GenWave);
+
+		EventManager.StopListening(EventStrings.TIME02F, SetTime02f);
+		EventManager.StopListening(EventStrings.TIME1, SetTime1);
+		EventManager.StopListening(EventStrings.TIME10, SetTime10);
+		EventManager.StopListening(EventStrings.TIME2, SetTime2);
 	}
 	#endregion
+
+	void SetTime1()
+	{
+		Time.timeScale = 1;
+	}
+	void SetTime02f()
+	{
+		Time.timeScale = 0.2f;
+	}
+	void SetTime2()
+	{
+		Time.timeScale = 2;
+	}
+	void SetTime10()
+	{
+		Time.timeScale = 10;
+	}
+
 
 	void Start()
 	{
@@ -66,7 +94,7 @@ public class WaveMaster : Singleton<WaveMaster>
 	}
 	public void UpdateText()
 	{
-		waveDisp.text = WaveNum.ToString("Wave : 0");
+		waveDisp.text = WaveNum.ToString();
 	}
 	public void GenWave()
 	{

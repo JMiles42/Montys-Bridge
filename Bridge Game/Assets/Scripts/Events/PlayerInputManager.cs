@@ -92,6 +92,26 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.LEVELLOAD);
 		}
+
+
+
+		if(Input.GetKeyDown(KeyCode.Keypad0))
+		{
+			EventManager.TriggerEvent(EventStrings.TIME02F);
+		}
+		else if (Input.GetKeyDown(KeyCode.Keypad1))
+		{
+			EventManager.TriggerEvent(EventStrings.TIME1);
+		}
+		else if (Input.GetKeyDown(KeyCode.Keypad2))
+		{
+			EventManager.TriggerEvent(EventStrings.TIME2);
+		}
+		else if (Input.GetKeyDown(KeyCode.Keypad3))
+		{
+			EventManager.TriggerEvent(EventStrings.TIME10);
+		}
+
 	}
 	void Axis()
 	{

@@ -47,4 +47,9 @@ public static class EventStrings
 	#endregion
 	public const string LIGHTSON = "LightsOn";
 	public const string LIGHTSOFF = "LightsOff";
+
+	public const string TIME1 = "time1";
+	public const string TIME02F = "time.2f";
+	public const string TIME2 = "time2";
+	public const string TIME10 = "time10";
 }
