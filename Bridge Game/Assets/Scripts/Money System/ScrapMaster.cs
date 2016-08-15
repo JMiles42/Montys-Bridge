@@ -52,7 +52,7 @@ public class GameData
 
 	public GameData()
 	{
-		Scrap = 500000;
+		Scrap = 1000;
 		//Pistons = 5000;
 		CharactersOwned = new bool[1];
 		CharactersOwned[0] = true;

@@ -69,9 +69,13 @@ public class TrapPlacer : Singleton<TrapPlacer>
 	[ContextMenu("PlaceTraping")]
 	public void StartPlacingTrap(int tN)
 	{
-		userPlacingTrap = true;
 		trapIndex = tN;
-		StartCoroutine(PlacingTrap());
+
+		if (TrapMaster.Instance.TrapByIndex(trapIndex).CanAfford())
+		{
+			StartCoroutine(PlacingTrap());
+			userPlacingTrap = true;
+		}
 	}
 	IEnumerator PlacingTrap()
 	{

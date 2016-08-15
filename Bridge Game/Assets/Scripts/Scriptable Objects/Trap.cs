@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 [CreateAssetMenu(fileName = "New Trap", menuName = "Monty's/New Trap", order = 1)]
 public class Trap : ScriptableObject
@@ -14,4 +15,11 @@ public class Trap : ScriptableObject
 	public bool IsAirTrap = false;
 	public GameObject TrapObj;
 	public GameObject PlaceHolderObj;
+
+	public bool CanAfford()
+	{
+		if (Cost >= ScrapMaster.Instance.gamData.Scrap)
+			return true;
+		else return false;
+	}
 }

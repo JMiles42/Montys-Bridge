@@ -35,6 +35,7 @@ public class MenuIdle : Singleton<MenuIdle>
 	}
 	IEnumerator Idle()
 	{
+		float slowMoTime = 0f;
 		Time.timeScale = 1;
 		while (noPlayerInput)
 		{
@@ -49,7 +50,13 @@ public class MenuIdle : Singleton<MenuIdle>
 				yield break;
 			}
 			EventManager.TriggerEvent(EventStrings.CHEATS);
-			Time.timeScale = (Mathf.Clamp((Time.timeScale + Time.deltaTime/50),1f,10f));
+			Time.timeScale = (Mathf.Clamp((Time.timeScale + Time.deltaTime/50),0.2f,10f));
+			if(Time.timeScale == 10f)
+			{
+				slowMoTime += Time.deltaTime;
+				if(slowMoTime > 5)
+					Time.timeScale = 0.2f;
+			}
 			PlayerInputManager.Instance.Horizontal = 0.3f;
 			yield return null;
 		}

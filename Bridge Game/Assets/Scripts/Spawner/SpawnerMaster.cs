@@ -54,7 +54,7 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 		ScoreMaster.Instance.score = 0;
 		ScoreMaster.Instance.SetMulti(1);
 		ScoreMaster.Instance.SetAgro(40);
-		ScrapMaster.Instance.gamData.Scrap = 200;
+		ScrapMaster.Instance.gamData.Scrap = 1000;
 		playing = true;
 		EventManager.StartListening(EventStrings.STARTWAVE, StartWave);
 		UI_ManagerScriptV1.Instance.InGameMenu();
