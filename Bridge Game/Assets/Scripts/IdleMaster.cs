@@ -5,7 +5,7 @@ using System.Collections;
 //using System.Collections.Generic;
 using JMiles42;
 
-public class MenuIdle : Singleton<MenuIdle> 
+public class IdleMaster : Singleton<IdleMaster> 
 {
 	[SerializeField]
 	float timeToIdle;
@@ -14,11 +14,11 @@ public class MenuIdle : Singleton<MenuIdle>
 	void Start () 
 	{
 		if(!SpawnerMaster.Instance.playing)
-			StartCoroutine(IdleTimer());
+			StartCoroutine(MenuIdleTimer());
 		else
 			Time.timeScale = 1;
 	}
-	IEnumerator IdleTimer()
+	IEnumerator MenuIdleTimer()
 	{
 		timeToIdle = 0;
 		while(timeToIdle<timeToGoIdle)
@@ -31,9 +31,9 @@ public class MenuIdle : Singleton<MenuIdle>
 			}
 			yield return null;
 		}
-		StartCoroutine(Idle());
+		StartCoroutine(MenuIdle());
 	}
-	IEnumerator Idle()
+	IEnumerator MenuIdle()
 	{
 		float slowMoTime = 0f;
 		Time.timeScale = 1;
