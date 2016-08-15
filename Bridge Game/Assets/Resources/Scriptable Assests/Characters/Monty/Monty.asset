@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Name: Monty
   m_EditorClassIdentifier: 
   Name: Monty
-  Portrat: {fileID: 0}
-  CaracterObj: {fileID: 0}
   Trap1: {fileID: 11400000, guid: efa368d48190d844ab7f9f846f1afe1a, type: 2}
   Trap2: {fileID: 11400000, guid: d8b3e068c5093ab40a89b055466174fa, type: 2}
   Trap3: {fileID: 11400000, guid: 9904f5d4fd8e6ad48a95c34bf4eaf9af, type: 2}
-  Trap4: {fileID: 11400000, guid: b9d92d50e39679d4081cab1b3f3d889f, type: 2}
-  Trap5: {fileID: 11400000, guid: ec7ec9c5fbbe58748a3501c138d23cd1, type: 2}
+  Trap4: {fileID: 11400000, guid: ec7ec9c5fbbe58748a3501c138d23cd1, type: 2}
+  Trap5: {fileID: 11400000, guid: b9d92d50e39679d4081cab1b3f3d889f, type: 2}
   Trap6: {fileID: 11400000, guid: 40d766a81cf5a164ea3b0003bb2a6b4c, type: 2}

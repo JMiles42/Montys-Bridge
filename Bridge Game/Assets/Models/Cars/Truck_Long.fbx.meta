@@ -1,46 +1,22 @@
 fileFormatVersion: 2
-guid: 8f6546820a168ad4f91a754ee4cf6baf
-timeCreated: 1467084256
-licenseType: Free
+guid: e21d457146364424baca07d9a61a290b
+timeCreated: 1471223253
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: pCube3
-    100002: pCube4
-    100004: pCube7
-    100006: pCube8
-    100008: pCube9
-    100010: polySurface2
-    100012: //RootNode
-    100014: Back
-    100016: Cab
-    400000: pCube3
-    400002: pCube4
-    400004: pCube7
-    400006: pCube8
-    400008: pCube9
-    400010: polySurface2
-    400012: //RootNode
-    400014: Back
-    400016: Cab
-    2300000: pCube7
-    2300002: pCube8
-    2300004: pCube9
-    2300006: polySurface2
-    2300008: Back
-    2300010: Cab
-    3300000: pCube7
-    3300002: pCube8
-    3300004: pCube9
-    3300006: polySurface2
-    3300008: Back
-    3300010: Cab
-    4300000: polySurface2
-    4300002: pCube7
-    4300004: pCube8
-    4300006: pCube9
-    4300008: Back
-    4300010: Cab
+    100000: Back
+    100002: Cab
+    100004: //RootNode
+    400000: Back
+    400002: Cab
+    400004: //RootNode
+    2300000: Back
+    2300002: Cab
+    3300000: Back
+    3300002: Cab
+    4300000: Back
+    4300002: Cab
   materials:
     importMaterials: 1
     materialName: 0
