@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Drone
   Description: Will cause cars to fly up into the air.
-  Cost: 800
+  Cost: 400
   Uses: 40
   RepairCost: 15
-  SellCost: 100
+  SellCost: 50
   IsBlocker: 0
   IsAirTrap: 1
   TrapObj: {fileID: 168578, guid: 24a8dea385a645c4e8c578da64779e5e, type: 2}

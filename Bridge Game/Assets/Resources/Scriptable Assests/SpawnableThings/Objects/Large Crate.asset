@@ -14,5 +14,5 @@ MonoBehaviour:
   Name: Large Crate
   Weight: 20
   Score: 100
-  howMuchScrapOnDestroy: 30
+  howMuchScrapOnDestroy: 15
   Prefab: {fileID: 0}

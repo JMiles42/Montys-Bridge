@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Man hole
   Description: Lifts up when a vehicle is above.
-  Cost: 600
+  Cost: 300
   Uses: 30
   RepairCost: 10
-  SellCost: 75
+  SellCost: 50
   IsBlocker: 0
   IsAirTrap: 0
   TrapObj: {fileID: 157172, guid: d120fac694d896a49b098416aa2fbb62, type: 2}

@@ -14,5 +14,5 @@ MonoBehaviour:
   Name: Trailer
   Weight: 50
   Score: 250
-  howMuchScrapOnDestroy: 50
+  howMuchScrapOnDestroy: 25
   Prefab: {fileID: 0}
