@@ -14,5 +14,5 @@ MonoBehaviour:
   Name: Small Crate
   Weight: 10
   Score: 50
-  howMuchScrapOnDestroy: 15
+  howMuchScrapOnDestroy: 5
   Prefab: {fileID: 0}

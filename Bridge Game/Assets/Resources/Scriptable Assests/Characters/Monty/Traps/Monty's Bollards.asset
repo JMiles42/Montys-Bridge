@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Bollards
   Description: Rases up when a vehicle is near.
-  Cost: 400
+  Cost: 200
   Uses: 20
   RepairCost: 10
-  SellCost: 50
+  SellCost: 25
   IsBlocker: 0
   IsAirTrap: 0
   TrapObj: {fileID: 168578, guid: 35289a67dfb16cd47bd4bc0bf1f68661, type: 2}

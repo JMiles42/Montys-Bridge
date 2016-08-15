@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ramp
   Description: Lifts up when a vehicle is near.
-  Cost: 200
+  Cost: 100
   Uses: 10
   RepairCost: 20
   SellCost: 25
