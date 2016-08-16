@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 //using UnityEngine.UI;
 //using UnityEngine.SceneManagement;
 using System.Collections;
@@ -7,7 +7,7 @@ using System.Collections;
 
 public class StreetLights : MonoBehaviour 
 {
-	public Light light;
+	public Light m_light;
 	#region Events
 	protected void OnEnable()
 	{
@@ -23,10 +23,10 @@ public class StreetLights : MonoBehaviour
 
 	void LightsOn()
 	{
-		light.gameObject.SetActive(true);
+		m_light.gameObject.SetActive(true);
 	}
 	void LightsOff()
 	{
-		light.gameObject.SetActive(false);
+		m_light.gameObject.SetActive(false);
 	}
 }

@@ -1769,6 +1769,10 @@ Prefab:
       propertyPath: agroDisp
       value: 
       objectReference: {fileID: 201423112}
+    - target: {fileID: 11431574, guid: ea9a5e918912be24084a9454712041db, type: 2}
+      propertyPath: agroAmount
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea9a5e918912be24084a9454712041db, type: 2}
   m_IsPrefabParent: 0

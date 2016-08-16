@@ -2,11 +2,12 @@ using UnityEngine;
 using System.Collections;
 using System;
 
-public class PhysicalObject : MonoBehaviour, IHitable
+public class PhysicalObject : MonoBehaviour, IHitable, IHitBridge
 {
 	public PhysicsObject physObj;
 	public Rigidbody m_RigidBody;
 	public bool hit;
+	public bool hitBridge;
 	public float Weight
 	{
 		get
@@ -88,5 +89,14 @@ public class PhysicalObject : MonoBehaviour, IHitable
 	public virtual Vector3 GetForwardVec()
 	{
 		return Vector3.up;
+	}
+
+	public void HitBridge()
+	{
+		hitBridge = true;
+	}
+	public bool HasHitBridge()
+	{
+		return hitBridge;
 	}
 }

@@ -60,12 +60,15 @@ public class Bridge : Singleton<Bridge>
 		}
 		else if (col.gameObject.GetComponent<PhysicalObject>())
 		{
-			PhysicalObject pO = GetComponent<PhysicalObject>();
-			ScoreMaster.Instance.AddAgro(1);
+			PhysicalObject pO = col.gameObject.GetComponent<PhysicalObject>();
+			if (!pO.hitBridge)
+				ScoreMaster.Instance.AddAgro(1);
+			pO.hitBridge = true;
 		}
 		else 
 		{
 			ScoreMaster.Instance.AddAgro(1);
+			//GetComponent<IHitBridge>().HitBridge();
 		}
 	}
 	public void HeardCollisionStay(Collision col)

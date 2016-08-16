@@ -52,7 +52,6 @@ public class SpawnerMaster : Singleton<SpawnerMaster>
 		EventManager.TriggerEvent(EventStrings.EXPLODEALLCARS);
 		EventManager.TriggerEvent(EventStrings.REMOVETRAPS);
 		ScoreMaster.Instance.score = 0;
-		ScoreMaster.Instance.SetMulti(1);
 		ScoreMaster.Instance.SetAgro(40);
 		ScrapMaster.Instance.gamData.Scrap = 1000;
 		playing = true;

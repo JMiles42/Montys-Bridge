@@ -27,12 +27,14 @@ public class Truck : VehiclesMoter
 	public override void Explode()
 	{
 		OnDisable();
-		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
+		//VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
 		if( hit )
 		{
 			ScoreMaster.Instance.AddScore(Score);
 			ScrapMaster.Instance.AddScrap(Scrap);
 		}
+		if (!hitBridge)
+			ScoreMaster.Instance.AddAgro(-2);
 		SpawnPartSys();
 		Destroy(transform.parent.gameObject);
 	}

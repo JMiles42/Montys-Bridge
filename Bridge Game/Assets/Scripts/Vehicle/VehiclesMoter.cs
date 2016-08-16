@@ -1,9 +1,10 @@
 using UnityEngine;
 using System.Collections;
 using JMiles42.Maths.Rand;
+using System;
 
 [System.Serializable]
-public class VehiclesMoter : MonoBehaviour, IHitable
+public class VehiclesMoter : MonoBehaviour, IHitable, IHitBridge
 {
 	[Header("Vehicle")]
 	public const int SPEED = 20;
@@ -46,15 +47,15 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		}
 	}
 	public bool IsDriving;
-	public Lane curlane;
+	//public Lane curlane;
 	public VehicleLights lights;
 	public bool hit = false;
 	public bool hitBridge = false;
-	Lane oldLane;
+	//Lane oldLane;
 
 	float m_speed;
-	bool InCurrentLane;
-	CarState curState;
+	//bool InCurrentLane;
+	//CarState curState;
 
 	#region Events
 	protected void OnEnable()
@@ -74,14 +75,14 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 			m_RigidBody = GetComponent<Rigidbody>();
 		m_RigidBody.mass = Weight;
 		RegisterToMaster();
-		curState = CarState.Driving;
-		oldLane = curlane;
-		InCurrentLane = true;
+	//	curState = CarState.Driving;
+		//oldLane = curlane;
+	//	InCurrentLane = true;
 		StartCoroutine(Drive());
 	}
 	public void RegisterToMaster()
 	{
-		VehicleManager.Instance.AddVehicleToLane(curlane, this);
+	//	VehicleManager.Instance.AddVehicleToLane(curlane, this);
 	}
 	#region Drive
 	public virtual IEnumerator Drive()
@@ -99,12 +100,14 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	public virtual void Explode()
 	{
 		OnDisable();
-		VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
+		//VehicleManager.Instance.RemoveVehicleFromLane(curlane, this);
 		if( hit )
 		{
 			ScoreMaster.Instance.AddScore(Score);
 			ScrapMaster.Instance.AddScrap(Scrap);
 		}
+		if (!hitBridge)
+			ScoreMaster.Instance.AddAgro(-2);
 		//SpawnPartSys();
 		Destroy(gameObject);
 	}
@@ -117,7 +120,7 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 		hit = true;
 		if( m_RigidBody )
 			m_RigidBody.constraints = RigidbodyConstraints.None;
-		Invoke("Explode", Random.Range(4f, 10f));
+		Invoke("Explode", UnityEngine.Random.Range(4f, 10f));
 	}
 	public void ToggleDriving()
 	{
@@ -139,30 +142,30 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 	#region AI
 	public virtual void SetLane(Lane lane)
 	{
-		curlane = lane;
-		oldLane = lane;
+	//	curlane = lane;
+	//	oldLane = lane;
 	}
 	public virtual void SetLane(int lane)
 	{
-		curlane = (Lane) lane;
-		oldLane = (Lane) lane;
+	//	curlane = (Lane) lane;
+	//	oldLane = (Lane) lane;
 	}
-	public virtual Lane ChangeCurLane(Lane lane)
-	{
-		InCurrentLane = false;
-		oldLane = curlane;
-		switch( curlane )
-		{
-			case Lane.Lane1:
-			return Lane.Lane2;
-			case Lane.Lane2:
-			return RandomBools.RandomBool() ? Lane.Lane1 : Lane.Lane3;
-			case Lane.Lane3:
-			return Lane.Lane2;
-			default:
-			return Lane.Lane2;
-		}
-	}
+	//public virtual Lane ChangeCurLane(Lane lane)
+	//{
+	//	InCurrentLane = false;
+	//	oldLane = curlane;
+	//	switch( curlane )
+	//	{
+	//		case Lane.Lane1:
+	//		return Lane.Lane2;
+	//		case Lane.Lane2:
+	//		return RandomBools.RandomBool() ? Lane.Lane1 : Lane.Lane3;
+	//		case Lane.Lane3:
+	//		return Lane.Lane2;
+	//		default:
+	//		return Lane.Lane2;
+	//	}
+	//}
 
 	public virtual void CheckIfNewLaneFree()
 	{
@@ -180,29 +183,39 @@ public class VehiclesMoter : MonoBehaviour, IHitable
 			return;
 		}
 	}
-	public virtual void CheckCarDistInFront()
+
+	public void HitBridge()
 	{
-		//set car to stop if car in front is stoped at lights/trap etc.
-		//Only Respond if car is stopd for something
-		//switch( agro )
-		//{
-		//	
-		//}
+		hitBridge = true;
 	}
-	public virtual void CheckCarDistToSide()
+
+	public bool HasHitBridge()
 	{
-		InCurrentLane = false;
-		switch( curlane )
-		{
-			case Lane.Lane1:
-			break;
-			case Lane.Lane2:
-			break;
-			case Lane.Lane3:
-			break;
-			default:
-			break;
-		}
+		return hitBridge;
 	}
+	//public virtual void CheckCarDistInFront()
+	//{
+	//	//set car to stop if car in front is stoped at lights/trap etc.
+	//	//Only Respond if car is stopd for something
+	//	//switch( agro )
+	//	//{
+	//	//	
+	//	//}
+	//}
+	//public virtual void CheckCarDistToSide()
+	//{
+	//	InCurrentLane = false;
+	//	switch( curlane )
+	//	{
+	//		case Lane.Lane1:
+	//		break;
+	//		case Lane.Lane2:
+	//		break;
+	//		case Lane.Lane3:
+	//		break;
+	//		default:
+	//		break;
+	//	}
+	//}
 	#endregion
 }

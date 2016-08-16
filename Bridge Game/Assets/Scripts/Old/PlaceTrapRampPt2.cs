@@ -34,6 +34,4 @@ public class PlaceTrapRampPt2 : MonoBehaviour
 			//Destroy(TurretRed);
 		}
 	}
-
-
 }

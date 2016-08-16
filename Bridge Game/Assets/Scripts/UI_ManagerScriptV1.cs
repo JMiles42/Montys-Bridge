@@ -52,6 +52,7 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
 	{
 		PauseMenu.gameObject.SetActive(false);
 		Gameplay_UI.gameObject.SetActive(false);
+		SpawnerMaster.Instance.playing = false;
 		MainMenu.gameObject.SetActive(true);
 	}
 

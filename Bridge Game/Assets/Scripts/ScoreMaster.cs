@@ -26,24 +26,8 @@ public class ScoreMaster : Singleton<ScoreMaster>
 		agroAmount = 40f;
 		DisplayScore();
 		DisplayAgro();
-		//StartCoroutine(UpdateScoreDisplay());
-		StartCoroutine(MultyplyerCooldown());
 	}
 
-	IEnumerator MultyplyerCooldown()
-	{
-		while( true )
-		{
-			multiplyerCooldown = 0;
-			while( multiplyerCooldown < multiplyerCooldownMax )
-			{
-				multiplyerCooldown += Time.deltaTime;
-				yield return null;
-				AddMulti(-1);
-			}
-			yield return null;
-		}
-	}
 	public void DisplayScore()
 	{
 		scoreTxt.text = score.ToString(); ; //string.Format(SCORESTRING, score);
@@ -54,23 +38,21 @@ public class ScoreMaster : Singleton<ScoreMaster>
 	{
 		if (!SpawnerMaster.Instance.playing)
 			return;
-		score += ScoreCalculation(multiplyer, _score);
+		score += ScoreCalculation(_score);
 		DisplayScore();
 	}
-	public void AddMulti(int _multi)
+	public int GetMulti()
 	{
-		if (!SpawnerMaster.Instance.playing)
-			return;
-		multiplyerCooldown = 0;
-		multiplyer = Mathf.Clamp(multiplyer + _multi, 1, 8);
-		DisplayScore();
-	}
-	public void SetMulti(int _multi)
-	{
-		if (!SpawnerMaster.Instance.playing)
-			return;
-		multiplyer = _multi;
-		DisplayScore();
+		//int _multi = 1;
+		if (agroAmount > 30 && agroAmount <= 50)
+			return 2;
+		else if (agroAmount > 50 && agroAmount <= 80)
+			return 4;
+		else if (agroAmount > 80 && agroAmount <= 90)
+			return 4;
+		else if (agroAmount > 90 && agroAmount <= 100)
+			return 8;
+		return 1;
 	}
 	public void RemoveScore(int _score)
 	{
@@ -79,9 +61,9 @@ public class ScoreMaster : Singleton<ScoreMaster>
 		score -= _score;
 		DisplayScore();
 	}
-	int ScoreCalculation(int _multi, int _score)
+	public int ScoreCalculation(int _score)
 	{
-		return _score * _multi;
+		return _score * GetMulti();
 	}
 	#endregion
 	#region Agro
