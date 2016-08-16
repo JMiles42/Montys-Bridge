@@ -48,26 +48,14 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 	}
 	void KeyPress()
 	{
-		//if( Input.GetKeyDown(KeyCode.LeftShift) )
-		//{
-		//	EventManager.TriggerEvent(EventStrings.TOGGLEBRIDGEMID);
-		//}
-		//if( Input.GetKeyDown(KeyCode.O) )
-		//{
-		//	EventManager.TriggerEvent(EventStrings.GENWAVE);
-		//}
 		if (Input.GetKeyDown(KeyCode.G))
 		{
 			EventManager.TriggerEvent(EventStrings.STARTWAVE);
 		}
-		//if( Input.GetKeyDown(KeyCode.Z) )
-		//{
-		//	EventManager.TriggerEvent(EventStrings.STOPSPAWNER);
-		//}
-		//if( Input.GetKeyDown(KeyCode.T) )
-		//{
-		//	EventManager.TriggerEvent(EventStrings.STARTSPAWNER);
-		//}
+		if (Input.GetKeyDown(KeyCode.I))
+		{
+			EventManager.TriggerEvent(EventStrings.I);
+		}
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			EventManager.TriggerEvent(EventStrings.ESC);
@@ -76,14 +64,6 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.SELLTRAP);
 		}
-		//if( Input.GetKeyDown(KeyCode.X) )
-		//{
-		//	EventManager.TriggerEvent(EventStrings.EXPLODEALLCARS);
-		//}
-		//if( Input.GetKeyDown(KeyCode.P) )
-		//{
-		//	EventManager.TriggerEvent(EventStrings.REMOVETRAPS);
-		//}
 		if (Input.GetKeyDown(KeyCode.Delete))
 		{
 			EventManager.TriggerEvent(EventStrings.CHEATS);
@@ -92,8 +72,6 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 		{
 			EventManager.TriggerEvent(EventStrings.LEVELLOAD);
 		}
-
-
 
 		if(Input.GetKeyDown(KeyCode.Keypad0))
 		{

@@ -22,13 +22,20 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
 	#region Events
 	void OnEnable()
 	{
+		EventManager.StartListening(EventStrings.I, TogglePause);
 		EventManager.StartListening(EventStrings.ESC, TogglePause);
 	}
 	void OnDisable()
 	{
+		EventManager.StopListening(EventStrings.I, TogglePause);
 		EventManager.StopListening(EventStrings.ESC, TogglePause);
 	}
 	#endregion
+
+	void Idle()
+	{
+		MainMenu.gameObject.SetActive(!MainMenu.gameObject.activeSelf);
+	}
 
 	void Start()
 	{

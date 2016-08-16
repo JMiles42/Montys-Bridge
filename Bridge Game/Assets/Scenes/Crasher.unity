@@ -1773,6 +1773,10 @@ Prefab:
       propertyPath: agroAmount
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 11440354, guid: ea9a5e918912be24084a9454712041db, type: 2}
+      propertyPath: timeToGoIdlePlay
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea9a5e918912be24084a9454712041db, type: 2}
   m_IsPrefabParent: 0

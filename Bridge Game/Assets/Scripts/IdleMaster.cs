@@ -5,16 +5,23 @@ using System.Collections;
 //using System.Collections.Generic;
 using JMiles42;
 
-public class IdleMaster : Singleton<IdleMaster> 
+public class IdleMaster : Singleton<IdleMaster>
 {
 	[SerializeField]
 	float timeToIdle;
 	public float timeToGoIdle;
+
+	[SerializeField]
+	float timeToIdlePlay;
+	public float timeToGoIdlePlay;
 	public bool noPlayerInput;
 	void Start () 
 	{
-		if(!SpawnerMaster.Instance.playing)
+		if (!SpawnerMaster.Instance.playing)
+		{
 			StartCoroutine(MenuIdleTimer());
+			StartCoroutine(PlayingIdleTimer());
+		}
 		else
 			Time.timeScale = 1;
 	}
@@ -57,8 +64,24 @@ public class IdleMaster : Singleton<IdleMaster>
 				if(slowMoTime > 5)
 					Time.timeScale = 0.2f;
 			}
+			timeToIdlePlay = 0;
 			PlayerInputManager.Instance.Horizontal = 0.3f;
 			yield return null;
 		}
+	}
+
+	IEnumerator PlayingIdleTimer()
+	{
+		timeToIdle = 0;
+		while (timeToIdlePlay < timeToGoIdlePlay)
+		{
+			if (Input.anyKey)
+			{
+				timeToIdlePlay = 0;
+			}
+			timeToIdlePlay += Time.deltaTime;
+			yield return null;
+		}
+		UnityEngine.SceneManagement.SceneManager.LoadScene(0);
 	}
 }

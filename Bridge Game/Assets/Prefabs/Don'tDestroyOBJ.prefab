@@ -76,7 +76,7 @@ MonoBehaviour:
   multiplyerCooldown: 5
   updateRate: 1
   showUpdateRate: 0
-  agroAmount: 0
+  agroAmount: 40
   agroDisp: {fileID: 0}
 --- !u!114 &11440354
 MonoBehaviour:
@@ -91,6 +91,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToIdle: 0
   timeToGoIdle: 10
+  timeToIdlePlay: 0
+  timeToGoIdlePlay: 120
   noPlayerInput: 1
 --- !u!114 &11446364
 MonoBehaviour:
