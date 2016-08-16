@@ -1757,23 +1757,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 11459940, guid: ea9a5e918912be24084a9454712041db, type: 2}
+    - target: {fileID: 0}
       propertyPath: scrapTxt
       value: 
       objectReference: {fileID: 1201331502}
-    - target: {fileID: 11431574, guid: ea9a5e918912be24084a9454712041db, type: 2}
+    - target: {fileID: 0}
       propertyPath: scoreTxt
       value: 
       objectReference: {fileID: 95747659}
-    - target: {fileID: 11431574, guid: ea9a5e918912be24084a9454712041db, type: 2}
+    - target: {fileID: 0}
       propertyPath: agroDisp
       value: 
       objectReference: {fileID: 201423112}
-    - target: {fileID: 11431574, guid: ea9a5e918912be24084a9454712041db, type: 2}
+    - target: {fileID: 0}
       propertyPath: agroAmount
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 11440354, guid: ea9a5e918912be24084a9454712041db, type: 2}
+    - target: {fileID: 0}
       propertyPath: timeToGoIdlePlay
       value: 120
       objectReference: {fileID: 0}
@@ -3955,6 +3955,60 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1778731466}
+--- !u!1001 &1779972304
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 474062, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474062, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474062, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474062, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474062, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474062, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474062, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 474062, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405150, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: scrapTxt
+      value: 
+      objectReference: {fileID: 1201331502}
+    - target: {fileID: 11489660, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: agroDisp
+      value: 
+      objectReference: {fileID: 201423112}
+    - target: {fileID: 11489660, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: scoreTxt
+      value: 
+      objectReference: {fileID: 95747659}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1786985668
 GameObject:
   m_ObjectHideFlags: 0
