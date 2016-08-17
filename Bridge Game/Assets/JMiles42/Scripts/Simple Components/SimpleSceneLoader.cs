@@ -35,4 +35,12 @@ public class SimpleSceneLoader : MonoBehaviour
 	{
 		SceneManager.LoadScene(0);
 	}
+	public static void EndGame()
+	{
+		SceneManager.LoadScene(2);
+	}
+	public static void LoadGame(int lvl)
+	{
+		SceneManager.LoadScene(lvl);
+	}
 }

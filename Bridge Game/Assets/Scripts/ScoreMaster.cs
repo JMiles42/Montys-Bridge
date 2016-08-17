@@ -40,6 +40,10 @@ public class ScoreMaster : Singleton<ScoreMaster>
 			return;
 		score += ScoreCalculation(_score);
 		DisplayScore();
+		if(agroAmount == 0)
+		{
+			SimpleSceneLoader.EndGame();
+		}
 	}
 	public int GetMulti()
 	{
