@@ -30,4 +30,9 @@ public class SimpleSceneLoader : MonoBehaviour
 	{
 		SceneManager.LoadScene(s);
 	}
+
+	public static void ResetGame()
+	{
+		SceneManager.LoadScene(0);
+	}
 }

@@ -81,6 +81,8 @@ public class WaveMaster : Singleton<WaveMaster>
 	{
 		UpdateText();
 		WaveNum++;
+		if (WaveNum > 10)
+			SimpleSceneLoader.ResetGame();
 		GenerateWave(WaveNum);
 	}
 	public VehicleSettings NextVehicle()
