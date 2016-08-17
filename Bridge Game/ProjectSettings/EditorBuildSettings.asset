@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Loader.unity
   - enabled: 1
     path: Assets/Scenes/Crasher.unity
+  - enabled: 1
+    path: Assets/Scenes/End Game.unity
