@@ -11,6 +11,21 @@ public class ScrapMaster : Singleton<ScrapMaster>
 
 	public Text scrapTxt;
 
+	#region Events
+	void OnEnable()
+	{
+		EventManager.StartListening(EventStrings.CHEATS, FreeMoney);
+	}
+	void OnDisable()
+	{
+		EventManager.StopListening(EventStrings.CHEATS, FreeMoney);
+	}
+	#endregion
+
+	public void FreeMoney()
+	{
+		AddScrap(10000);
+	}
 	public void Start()
 	{
 		//SavingLoading.SaveGameData("GameData",gamData);
