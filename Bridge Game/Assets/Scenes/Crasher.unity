@@ -2525,6 +2525,14 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 548347624}
+    - target: {fileID: 8289446, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6143bf9960f83f446966de40c74a37cf, type: 3}
+    - target: {fileID: 8289446, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
   m_IsPrefabParent: 0
