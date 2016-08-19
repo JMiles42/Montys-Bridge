@@ -3064,7 +3064,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Lead Programmer\r\n\r<b>Jordan Miles\r</b>\nProject Lead\r\n\r<b>Matthew
     Malin\r</b>\nArt Lead\r\n\r<b>Hope Hill\r</b>\nArt/Gameplay Balance\r\n\r<b>Johnny
-    Kuzmanovski\r</b>\nArt/Programmer\r\n\r<b>Izaak Jobling</b>\nSounds\n\r<b>Name\r</b>\nAnimator\n\r<b>Name\r</b>"
+    Kuzmanovski\r</b>\nArt/Programmer\r\n\r<b>Izaak Jobling</b>\nAnimator\n\r<b>Alex
+    Seddon\r</b>"
 --- !u!114 &11462324
 MonoBehaviour:
   m_ObjectHideFlags: 1
