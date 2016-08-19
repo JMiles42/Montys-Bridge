@@ -937,7 +937,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &363940162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,19 +2493,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11483906, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 548347624}
     - target: {fileID: 11467740, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 548347624}
-    - target: {fileID: 11449974, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 548347624}
-    - target: {fileID: 11448776, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
+    - target: {fileID: 11414020, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1905878729}
@@ -2517,22 +2509,22 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 548347624}
-    - target: {fileID: 11414020, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1905878729}
     - target: {fileID: 11405772, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 548347624}
-    - target: {fileID: 8289446, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
-      propertyPath: m_audioClip
+    - target: {fileID: 11449974, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8300000, guid: 6143bf9960f83f446966de40c74a37cf, type: 3}
-    - target: {fileID: 8289446, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 548347624}
+    - target: {fileID: 11483906, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 548347624}
+    - target: {fileID: 11448776, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1905878729}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 790769d25ee06a64d891ea1e190826d9, type: 2}
   m_IsPrefabParent: 0
@@ -2750,7 +2742,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
 --- !u!1 &1256340738
 GameObject:
   m_ObjectHideFlags: 0
@@ -4694,7 +4686,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496554, guid: 7a69e3a3d377e7b48ac4138f3ae907e4, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 374.3
+      value: 355
       objectReference: {fileID: 0}
     - target: {fileID: 496554, guid: 7a69e3a3d377e7b48ac4138f3ae907e4, type: 2}
       propertyPath: m_LocalRotation.x
