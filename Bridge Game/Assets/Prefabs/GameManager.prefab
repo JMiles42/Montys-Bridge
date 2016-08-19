@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc7cdb0d97ae2649be1e596b0b9a484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_volume: 0.6
+  m_volume: 0.2
   placable: {fileID: 2100000, guid: c1090f44e057e8043b579a6413049435, type: 2}
   unPlacable: {fileID: 2100000, guid: 2d6bad1e6a0ff2b42959278235854264, type: 2}
   userPlacingTrap: 0
