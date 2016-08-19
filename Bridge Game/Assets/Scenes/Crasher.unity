@@ -2156,10 +2156,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 11474074, guid: 4ec3ac38b4a4492489e487c0df0fda73, type: 2}
-      propertyPath: pauseMenu
-      value: 
-      objectReference: {fileID: 1265709809}
     - target: {fileID: 11482140, guid: 4ec3ac38b4a4492489e487c0df0fda73, type: 2}
       propertyPath: waveDisp
       value: 
@@ -2168,6 +2164,10 @@ Prefab:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1156855575}
+    - target: {fileID: 11474074, guid: 4ec3ac38b4a4492489e487c0df0fda73, type: 2}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1265709809}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ec3ac38b4a4492489e487c0df0fda73, type: 2}
   m_IsPrefabParent: 0
