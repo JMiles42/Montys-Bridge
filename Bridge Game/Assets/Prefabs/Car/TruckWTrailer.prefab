@@ -368,7 +368,6 @@ GameObject:
   - 54: {fileID: 5431258}
   - 59: {fileID: 5983038}
   - 114: {fileID: 11434548}
-  - 65: {fileID: 6547262}
   m_Layer: 0
   m_Name: TruckWTrailer
   m_TagString: vehicle
@@ -1403,7 +1402,7 @@ HingeJoint:
   m_Anchor: {x: -3.94, y: 1.76, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000002079129, y: -0.054403212, z: 0.0065733604}
+  m_ConnectedAnchor: {x: 0.00000020791289, y: -0.054403212, z: 0.0065731863}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1461,18 +1460,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99999976, y: 0.97573036, z: 0.9999999}
   m_Center: {x: 0.0000011749195, y: 0.012224438, z: -0.0000044051853}
---- !u!65 &6547262
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181890}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.34082273, y: 5.198195, z: 2.9984558}
-  m_Center: {x: -1.0061325, y: 4.5798645, z: 0.0066944617}
 --- !u!65 &6548058
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1495,8 +1482,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.7040887, y: 5.5129547, z: 4.4037814}
-  m_Center: {x: 2.596066, y: 2.8655903, z: 0.000023576946}
+  m_Size: {x: 6.6322455, y: 5.512954, z: 4.4037814}
+  m_Center: {x: 2.1319723, y: 2.8656008, z: 0.000023576942}
 --- !u!95 &9590426
 Animator:
   serializedVersion: 3
