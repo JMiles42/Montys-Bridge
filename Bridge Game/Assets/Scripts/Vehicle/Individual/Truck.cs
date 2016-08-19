@@ -36,7 +36,7 @@ public class Truck : VehiclesMoter
 		if (!hitBridge)
 			ScoreMaster.Instance.AddAgro(-2);
 		SpawnPartSys();
-		Destroy(transform.parent.gameObject);
+		Destroy(gameObject);
 	}
 	public override Vector3 GetForwardVec()
 	{

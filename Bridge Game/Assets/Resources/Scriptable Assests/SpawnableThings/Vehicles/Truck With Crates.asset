@@ -17,4 +17,4 @@ MonoBehaviour:
   howMuchScrapOnDestroy: 100
   agro: 1
   size: 3
-  Prefab: {fileID: 104838, guid: 967e92de8f0f8374cadba953fd2a4397, type: 2}
+  Prefab: {fileID: 181890, guid: 967e92de8f0f8374cadba953fd2a4397, type: 2}
