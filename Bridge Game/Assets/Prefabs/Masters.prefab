@@ -46,7 +46,7 @@ MonoBehaviour:
   timeToIdle: 0
   timeToGoIdle: 10
   timeToIdlePlay: 0
-  timeToGoIdlePlay: 120
+  timeToGoIdlePlay: 500
   noPlayerInput: 1
 --- !u!114 &11405150
 MonoBehaviour:

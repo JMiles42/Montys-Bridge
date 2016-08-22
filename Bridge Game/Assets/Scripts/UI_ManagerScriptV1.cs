@@ -91,18 +91,21 @@ public class UI_ManagerScriptV1 : Singleton<UI_ManagerScriptV1>
 
 	public void TogglePause()
 	{
-		//MainMenu.enabled = !MainMenu.enabled;
-		if (SpawnerMaster.Instance.playing && SpawnerMaster.Instance.isPaused)
+		if (!MainMenu.gameObject.activeSelf)
 		{
-			SpawnerMaster.Instance.isPaused = false;
+			//MainMenu.enabled = !MainMenu.enabled;
+			if (SpawnerMaster.Instance.playing && SpawnerMaster.Instance.isPaused)
+			{
+				SpawnerMaster.Instance.isPaused = false;
+			}
+			else
+			{
+				Time.timeScale = 1;
+				SpawnerMaster.Instance.isPaused = true;
+			}
+			Gameplay_UI.gameObject.SetActive(!Gameplay_UI.gameObject.activeSelf);
+			PauseMenu.gameObject.SetActive(!PauseMenu.gameObject.activeSelf);
 		}
-		else
-		{
-			Time.timeScale = 1;
-			SpawnerMaster.Instance.isPaused = true;
-		}
-		Gameplay_UI.gameObject.SetActive(!Gameplay_UI.gameObject.activeSelf);
-		PauseMenu.gameObject.SetActive(!PauseMenu.gameObject.activeSelf);
 	}
 
 	//The traps menu is attached to an empty game object called "TrapBar_GO"
