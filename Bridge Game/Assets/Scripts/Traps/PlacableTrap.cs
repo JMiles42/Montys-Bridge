@@ -52,12 +52,12 @@ public class PlacableTrap : MonoBehaviour
 	void OnEnable()
 	{
 		EventManager.StartListening(EventStrings.CHEATS, CheatTrap);
-		//EventManager.StartListening(EventStrings.REMOVETRAPS, grid.RemoveTrap);
+		EventManager.StartListening(EventStrings.REMOVETRAPS, RemoveTrap);
 	}
 	void OnDisable()
 	{
 		EventManager.StopListening(EventStrings.CHEATS, CheatTrap);
-		//EventManager.StopListening(EventStrings.REMOVETRAPS, grid.RemoveTrap);
+		EventManager.StopListening(EventStrings.REMOVETRAPS, RemoveTrap);
 	}
 	#endregion
 	public virtual void HeardTriggerEnter(Collider col)
@@ -85,6 +85,10 @@ public class PlacableTrap : MonoBehaviour
 	public virtual void HeardTriggerExit(Collider col)
 	{
 		anim.SetBool("CarIn", false);
+	}
+	public void RemoveTrap()
+	{
+		grid.RemoveTrap();
 	}
 	public virtual void Start()
 	{

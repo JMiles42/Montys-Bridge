@@ -10,10 +10,6 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
 	public float MouseScroll;
 	public bool startedPlacingTrap;
 
-	void Start()
-	{
-		DontDestroyOnLoad(this);
-	}
 	void Update()
 	{
 		GetAxisValues();

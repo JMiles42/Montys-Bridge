@@ -3972,12 +3972,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 474062, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 11405150, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
-      propertyPath: scrapTxt
-      value: 
-      objectReference: {fileID: 1201331502}
     - target: {fileID: 11489660, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
       propertyPath: scoreTxt
       value: 
@@ -3986,6 +3982,10 @@ Prefab:
       propertyPath: agroDisp
       value: 
       objectReference: {fileID: 201423112}
+    - target: {fileID: 11405150, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
+      propertyPath: scrapTxt
+      value: 
+      objectReference: {fileID: 1201331502}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b441615df0f3abe43b86c41098b62d4a, type: 2}
   m_IsPrefabParent: 0
